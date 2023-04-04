@@ -1,2 +1,3 @@
 # CNWeb-30
-bài tập lớn môn CN Web của nhóm 30 - Subject here
+bài tập lớn học phần Công Nghệ Web & Dịch Vụ Trực Tuyến của nhóm 30 
+
