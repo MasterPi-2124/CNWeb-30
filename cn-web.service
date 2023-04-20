@@ -2,7 +2,7 @@
 Description=Deploy Service
 
 [Service]
-WorkingDirectory=/root/cnweb-30
+WorkingDirectory=/root/CNWeb-30
 ExecStart=/bin/bash -c "PORT=3004 PATH=/root/.nvm/versions/node/v19.1.0/bin/:$PATH /root/.nvm/versions/node/v19.1.0/bin/npm start"
 
 [Install]
