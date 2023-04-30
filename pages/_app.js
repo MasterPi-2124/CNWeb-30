@@ -1,8 +1,9 @@
 import '@/styles/globals.css'
 import "@/styles/header.css";
-import Script from "next/script"
+import "@/styles/login.css";
 import localFont from 'next/font/local';
 import { ThemeProvider } from "next-themes";
+import { SessionProvider } from "next-auth/react"
 
 const segoe = localFont({
   src: [
@@ -36,10 +37,14 @@ const segoe = localFont({
   fallback: ['ui-sans-serif'],
 });
 
-export default function App({ Component, pageProps }) {
-  return <ThemeProvider enableSystem={true} attribute="class">
-    <div className={`${segoe.variable} font-segoe`}>
-      <Component {...pageProps} />
-    </div>
-  </ThemeProvider>;
+export default function App({ Component, pageProps: { session, ...pageProps } }) {
+  return (
+    <SessionProvider session={session}>
+      <ThemeProvider enableSystem={true} attribute="class">
+        <div className={`${segoe.variable} font-segoe`}>
+          <Component {...pageProps} />
+        </div>
+      </ThemeProvider>
+    </SessionProvider>
+  );
 }

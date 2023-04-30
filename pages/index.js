@@ -4,17 +4,8 @@ import Layout from '@/components/layout';
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
-  const ref = useRef();
-  const [isScroll, setIsScroll] = useState(false);
-  const executeScroll = () => {
-    setIsScroll(true);
-  };
-
   return (
-    <Layout page="home"
-      currentRef={ref}
-      pageTitle="CNWeb"
-      isScroll={isScroll}>
+    <Layout pageTitle="Home | CNWeb">
       <Header currentPath={"Home"} />
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -132,7 +123,7 @@ export default function Home() {
         </div>
       </main>
     </Layout>
-  )
+  );
 }
 
 
