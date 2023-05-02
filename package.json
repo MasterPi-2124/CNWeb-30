@@ -1,0 +1,36 @@
+{
+  "name": "cnweb-30",
+  "version": "1.0.0",
+  "description": "bài tập lớn học phần Công Nghệ Web & Dịch Vụ Trực Tuyến của nhóm 30",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterPi-2124/CNWeb-30.git"
+  },
+  "author": "Master Pi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MasterPi-2124/CNWeb-30/issues"
+  },
+  "homepage": "https://github.com/MasterPi-2124/CNWeb-30#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.14",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.4",
+    "next": "13.3.0",
+    "next-auth": "^4.22.1",
+    "next-themes": "^0.2.1",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reactstrap": "^9.1.9",
+    "tailwindcss": "3.3.1"
+  }
+}
