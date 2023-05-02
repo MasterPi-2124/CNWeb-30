@@ -5,51 +5,59 @@ import CNWeb from "@/assets/logo/cnweb-30.png";
 import Link from "next/link";
 import DropDown from "./dropdown";
 import { useTheme } from "next-themes";
-import LightIcon from "@/assets/icons/thick/sun.svg";
-import DarkIcon from "@/assets/icons/thick/moon.svg";
-import AddIcon from "@/assets/icons/thick/add.svg";
-import DashboardIcon from "@/assets/icons/thick/dashboard.png";
-import ExportIcon from "@/assets/icons/thick/export.svg";
-import NotiIcon from "@/assets/icons/thick/notification.svg";
-import PreIcon from "@/assets/icons/thick/settings.svg";
-import UserIcon from "@/assets/icons/thick/human.svg";
+import LightIcon from "@/assets/icons/thin/sun.svg";
+import DarkIcon from "@/assets/icons/thin/moon.svg";
+import AddIcon from "@/assets/icons/thin/add.svg";
+import DashboardIcon from "@/assets/icons/thin/dashboard.png";
+import ExportIcon from "@/assets/icons/thin/export.svg";
+import NotiIcon from "@/assets/icons/thin/notification.svg";
+import PreIcon from "@/assets/icons/thin/settings.svg";
+import UserIcon from "@/assets/icons/thin/human.svg";
+import QuizIcon from "@/assets/icons/thin/quiz.svg";
+import ClassIcon from "@/assets/icons/thin/class.svg";
 
 const navButton = [
     {
         text: "New Quiz",
         path: "/new-quiz",
+        img: AddIcon,
     },
     {
         text: "Dashboard",
         path: "/dashboard",
+        img: DashboardIcon,
         subNav: [
             {
                 text: "Quizzes",
                 path: "/dashboard/quizzes",
+                img: QuizIcon,
             },
             {
                 text: "Classes",
                 path: "/dashboard/classes",
+                img: ClassIcon,
             }
         ]
     },
     {
         text: "Export",
         path: "/export",
+        img: ExportIcon,
     },
     {
         text: "Notifications",
         path: "/notifications",
+        img: NotiIcon,
     },
     {
         text: "Preferences",
         path: "/preferences",
+        img: PreIcon,
     }
 ];
 
-const Menu = ({ currentPath }) => {
+const Menu = ({ currentPath, minimized }) => {
     const [isShows, setIsShows] = useState([]);
-
     useEffect(() => {
         let showArray = navButton.map((_) => {
             return false;
@@ -84,13 +92,19 @@ const Menu = ({ currentPath }) => {
 
         if (currentTheme === "dark") {
             return (
-                <Image src={LightIcon} alt="sun icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('light')} />
+                <div>
+                    <Image src={LightIcon} alt="sun icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('light')} />
+                    <p>Light Mode</p>
+                </div>
             )
         }
 
         else {
             return (
-                <Image src={DarkIcon} alt="moon icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('dark')} />
+                <div>
+                    <Image src={DarkIcon} alt="moon icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('dark')} />
+                    <p>Dark Mode</p>
+                </div>
             )
         }
     };
@@ -101,7 +115,7 @@ const Menu = ({ currentPath }) => {
             light
             expand="md"
         >
-            <div className="logo flex items-center font-semibold text-2xl">
+            <div className="logo flex items-center font-semibold text-xl">
                 <Image
                     src={CNWeb}
                     alt="cnweb logo"
@@ -122,31 +136,22 @@ const Menu = ({ currentPath }) => {
                             onMouseLeave={() => {
                                 handleMouseLeave(button, index);
                             }}
-                            className="sub-nav-div"
+                            className="menu-bar-item"
+                            style={{
+                                background: currentPath === button.text && "rgba(73, 73, 73, 0.595)",
+                            }}
                         >
-                            {!button.subNav ? (
-                                <Link
-                                    href={button.path}
-                                    className="nav-button"
-                                    style={{
-                                        color: currentPath === button.text && "#C4181A",
-                                    }}
-                                >
-                                    {button.text}
-                                </Link>
-                            ) : (
-                                <Link
-                                    href={button.path}
-                                    className="nav-button"
-                                    style={{
-                                        color: currentPath === button.text && "#C4181A",
-                                    }}
-                                >
-                                    {button.text}
-                                </Link>
-                            )}
+                            <Image src={button.img} />
+                            <Link
+                                href={button.path}
+                                className="nav-button"
+
+                            >
+                                {button.text}
+                            </Link>
                             {button.subNav && (
                                 <DropDown
+                                    minimized={minimized}
                                     buttonList={button.subNav}
                                     isShow={isShows[index]}
                                 />
@@ -155,12 +160,20 @@ const Menu = ({ currentPath }) => {
                     );
                 })}
             </div>
-            <div className="header-right flex items-center">
-                <a className="get-started leading-10 bg-indigo-700 font-thin text-white w-32 items-center text-center">
-                    Get Started
-                </a>
+            <div className="menu-down flex items-center">
+                <div>
+                    <Image src={UserIcon} />
+                    <Link
+                        href="/account"
+                        className="nav-button"
+                        style={{
+                            color: currentPath === "Account" && "#C4181A",
+                        }}
+                    >
+                        Account
+                    </Link>
+                </div>
                 {renderThemeChanger()}
-
             </div>
         </Navbar>
     );

@@ -1,37 +1,39 @@
 import Link from "next/link";
+import Image from "next/image";
 
-const DropDown = ({ isShow, buttonList }) => {
+const DropDown = ({ minimized, isShow, buttonList }) => {
   return (
     isShow && (
       <div
+        className="dropdown w-40 text-white absolute text-center"
         style={{
-          backgroundColor: "white",
+          top: "200px",
+          left: minimized === false && "80px" || "200px",
           borderRadius: "10px",
-          position: "relative",
-          textAlign: "center",
-          border: "1px solid #C4181A",
-          zIndex: 999,
+          border: "1px solid rgba(86, 86, 86, 0.736)",
+          zIndex: 14,
         }}
       >
         <ul
-          style={{
-            padding: 0,
-            margin: 0,
-            textAlign: "center",
-            fontSize: "1rem",
-          }}
+          className="p-0 m-0 text-center text-base"
+
         >
           {buttonList.map((button, index) => {
             return (
               <li
                 key={index}
                 style={{
-                  padding: ".5rem 1rem",
                   margin: "10px 0",
+                  gap: "10px",
                 }}
-                className="sub-nav-li"
+                className="p-2 flex flex-row"
               >
-                <Link href={button.path} className="nav-button">
+                <Image src={button.img} />
+                <Link
+                  href={button.path}
+                  className="nav-button"
+
+                >
                   {button.text}
                 </Link>
               </li>

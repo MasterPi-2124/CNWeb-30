@@ -14,10 +14,10 @@ function Dashboard() {
     <Layout pageTitle="Dashboard | CNWeb">
       <div className="dashboard bg-background-1 h-screen bg-center bg-cover bg-no-repeat flex items-center justify-center">
         <div className={full ? `sidebar` : `sidebar minimal-size`} ref={sidebar}>
-          <Menu />
+          <Menu currentPath={"Dashboard"} minimized={full} />
           <a className={full ? `resize-btn` : `resize-btn minimal-btn`} onClick={resize}>
-            <span class="up-arrow"></span>
-            <span class="down-arrow"></span>
+            <span className="up-arrow"></span>
+            <span className="down-arrow"></span>
           </a>
         </div>
         <div className="main-container">
