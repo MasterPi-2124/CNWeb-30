@@ -3,7 +3,7 @@
 }
 
 .dashboard .sidebar {
-    width: 300px;
+    width: 233px;
     margin: 12px;
     position: relative;
     font-weight: 200;
@@ -180,6 +180,7 @@
 }
 
 .main-container {
-    width: 100%;
+    flex: 1 1 auto;
+    border: 1px solid red;
     min-height: 100%;
 }
