@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import LightIcon from "@/assets/icons/thin/sun.svg";
 import DarkIcon from "@/assets/icons/thin/moon.svg";
 import AddIcon from "@/assets/icons/thin/add.svg";
-import DashboardIcon from "@/assets/icons/thin/dashboard.png";
+import DashboardIcon from "@/assets/icons/thin/dashboard.svg";
 import ExportIcon from "@/assets/icons/thin/export.svg";
 import NotiIcon from "@/assets/icons/thin/notification.svg";
 import PreIcon from "@/assets/icons/thin/settings.svg";
