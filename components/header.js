@@ -35,13 +35,13 @@ const Header = ({ currentPath }) => {
 
         if (currentTheme === "dark") {
             return (
-                <Image src={LightIcon} className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('light')} />
+                <Image src={LightIcon} alt="sun icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('light')} />
             )
         }
 
         else {
             return (
-                <Image src={DarkIcon} className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('dark')} />
+                <Image src={DarkIcon} alt="moon icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('dark')} />
             )
         }
     };

@@ -72,7 +72,7 @@ const LogInForm = ({ currentPath }) => {
 
                 <div className="separator flex items-center text-center">Or</div>
                 <button type="button" className="h-12 bg-blue w-full font-thin text-lg">Continue with Google</button>
-                <button type="button" className="h-12 bg-blue w-full font-thin text-lg" onClick={() => router.push('/register')}>Don't have an account? Sign Up</button>
+                <button type="button" className="h-12 bg-blue w-full font-thin text-lg" onClick={() => router.push('/register')}>Don&apos;t have an account? Sign Up</button>
                 <a className="block font-thin text-center underline w-full">Forgot your password?</a>
             </div>
 
