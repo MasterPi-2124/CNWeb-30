@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import "@/styles/header.css";
-import "@/styles/login.css";
+import "@/styles/auth.css";
 import localFont from 'next/font/local';
 import { ThemeProvider } from "next-themes";
 import { SessionProvider } from "next-auth/react"

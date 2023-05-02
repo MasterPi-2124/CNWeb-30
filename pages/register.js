@@ -1,15 +1,15 @@
-import LogInForm from "@/components/auth/log-in";
+import RegisterForm from "@/components/auth/register";
 import Layout from "@/components/layout";
 import React, { useEffect } from "react";
 
-function LoginPage() {
+function RegisterPage() {
   return (
-    <Layout pageTitle="Log In | CNWeb">
+    <Layout pageTitle="Register | CNWeb">
       <div className="log-in bg-background-1 h-screen bg-center bg-cover bg-no-repeat flex items-center justify-center">
-        <LogInForm />
+        <RegisterForm />
       </div>
     </Layout>
   );
 }
 
-export default LoginPage;
+export default RegisterPage;
