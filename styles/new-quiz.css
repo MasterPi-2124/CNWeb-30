@@ -1,0 +1,10 @@
+.main-container .content {
+    border: 1px solid white;
+}
+
+.content img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border: 1px solid red;
+}

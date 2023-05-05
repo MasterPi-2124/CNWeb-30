@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
+import { signIn } from "next-auth";
 
 const LogInForm = ({ currentPath }) => {
     const router = useRouter();
@@ -71,7 +72,7 @@ const LogInForm = ({ currentPath }) => {
                 </form>
 
                 <div className="separator flex items-center text-center">Or</div>
-                <button type="button" className="h-12 bg-blue w-full font-thin text-lg">Continue with Google</button>
+                <button type="button" className="h-12 bg-blue w-full font-thin text-lg" onClick={() => signIn()}>Continue with Google</button>
                 <button type="button" className="h-12 bg-blue w-full font-thin text-lg" onClick={() => router.push('/register')}>Don&apos;t have an account? Sign Up</button>
                 <a className="block font-thin text-center underline w-full">Forgot your password?</a>
             </div>

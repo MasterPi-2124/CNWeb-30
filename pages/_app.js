@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import "@/styles/header.css";
 import "@/styles/auth.css";
+import "@/styles/new-quiz.css";
 import "@/styles/dashboard.css";
 import localFont from 'next/font/local';
 import { ThemeProvider } from "next-themes";
