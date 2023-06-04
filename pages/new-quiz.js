@@ -1,8 +1,7 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
 import React, { useState } from "react";
-import Logo from "@/assets/logo/cnweb-30.png";
-import Image from "next/image";
+import NewQuiz from "@/components/new-quiz/new-quiz"
 // import { getServerSession } from "next-auth";
 // import { NextAuth } from "@/pages/api/[...nextauth]";
 
@@ -25,15 +24,7 @@ function Dashboard() {
           </a>
         </div>
         <div className="main-container">
-          <div className="content">
-            <h1>Let's create a quiz</h1>
-            <Image src={Logo} ></Image>
-            <div className="form">
-              <label>Choose a class to continue</label>
-
-              <button type="button">Continue</button>
-            </div>
-          </div>
+          <NewQuiz />
         </div>
       </div>
     </Layout>

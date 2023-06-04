@@ -1,10 +1,25 @@
 .main-container .content {
     border: 1px solid white;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1 {
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .content img {
-    height: 100px;
-    width: 100px;
+    height: 160px;
+    width: 160px;
     object-fit: cover;
     border: 1px solid red;
+    margin: 100px 0px;
+}
+
+.content form  {
+    display: flex;
+    flex-direction: column;
 }
