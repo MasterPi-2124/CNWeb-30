@@ -5,6 +5,7 @@ import "@/styles/new-quiz.css";
 import "@/styles/dashboard.css";
 import localFont from 'next/font/local';
 import { ThemeProvider } from "next-themes";
+import { BoardProvider } from "@/components/dashboard/quiz/context";
 import { SessionProvider } from "next-auth/react"
 
 const segoe = localFont({
@@ -41,10 +42,12 @@ const segoe = localFont({
 
 export default function App({ Component, pageProps: { session, ...pageProps } }) {
   return (
-      <ThemeProvider enableSystem={true} attribute="class">
+    <ThemeProvider enableSystem={true} attribute="class">
+      <BoardProvider>
         <div className={`${segoe.variable} font-segoe`}>
           <Component {...pageProps} />
         </div>
-      </ThemeProvider>
+      </BoardProvider>
+    </ThemeProvider>
   );
 }

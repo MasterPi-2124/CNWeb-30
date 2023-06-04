@@ -1,0 +1,95 @@
+{
+  "boards": [
+    {
+      "id": 0,
+      "name": "Quizzes",
+      "slug": "quizzes",
+      "tasks": [
+        {
+          "title": "Build UI for onboarding flow",
+          "id": 0,
+          "slug": "build-ui-for-onboarding-flow",
+          "description": "",
+          "status": "Todo",
+          "subtasks": [
+            {
+              "title": "Sign up page",
+              "isCompleted": true
+            },
+            {
+              "title": "Sign in page",
+              "isCompleted": false
+            },
+            {
+              "title": "Welcome page",
+              "isCompleted": false
+            }
+          ]
+        },
+        {
+          "title": "Create paper prototypes and conduct 10 usability tests with potential customers",
+          "id": 1,
+          "slug": "create-paper-prototypes-and-conduct-10-usability-tests-with-potential-customers",
+          "description": "",
+          "status": "Doing",
+          "subtasks": [
+            {
+              "title": "Create paper prototypes for version one",
+              "isCompleted": true
+            },
+            {
+              "title": "Complete 10 usability tests",
+              "isCompleted": true
+            }
+          ]
+        },
+        {
+          "title": "Competitor analysis",
+          "id": 2,
+          "slug": "competitor-analysis",
+          "description": "",
+          "status": "Done",
+          "subtasks": [
+            {
+              "title": "Find direct and indirect competitors",
+              "isCompleted": true
+            },
+            {
+              "title": "SWOT analysis for each competitor",
+              "isCompleted": true
+            }
+          ]
+        }
+      ],
+      "columns": [
+        {
+          "id": 1,
+          "name": "Todo",
+          "slug": "todo",
+          "color": "#49C4E5",
+          "tasks": [
+            0
+          ]
+        },
+        {
+          "name": "Doing",
+          "id": 2,
+          "slug": "doing",
+          "color": "#8471F2",
+          "tasks": [
+            1
+          ]
+        },
+        {
+          "name": "Done",
+          "id": 3,
+          "slug": "done",
+          "color": "#67E2AE",
+          "tasks": [
+            2
+          ]
+        }
+      ]
+    }
+  ]
+}
