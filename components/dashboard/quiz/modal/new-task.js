@@ -13,11 +13,6 @@ const NewTaskModal = ({ onClose }) => {
 
     const validate = Yup.object({
         title: Yup.string().required("Can't be empty"),
-        subtasks: Yup.array().of(
-            Yup.object({
-                title: Yup.string().required("Can't be empty"),
-            }),
-        )
 
     })
     return (
@@ -25,7 +20,6 @@ const NewTaskModal = ({ onClose }) => {
             initialValues={{
                 title: "",
                 description: "",
-                subtasks: ['', ''],
                 status: status
             }}
             validationSchema={validate}
@@ -42,8 +36,6 @@ const NewTaskModal = ({ onClose }) => {
                     <Form>
                         <TextInput label="Title" name="title" type="text" placeholder="e.g. Take coffee break" />
                         <TextArea label="Description" name="description" type="text" placeholder="e.g. It’s always good to take a break. This 15 minute break will recharge the batteries a little." />
-
-                        <InputArray label="subtasks" array={formik.values.subtasks} />
 
                         <StatusDropdown status={status} setStatus={setStatus} />
 
