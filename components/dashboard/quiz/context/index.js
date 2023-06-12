@@ -13,51 +13,52 @@ function BoardProvider({ children }) {
 
   const columns = currentBoard?.columns;
 
-  const createTask = (task) => {
-    task.id = uuidv4();
-    const column = columns.find((column) => column.name === task.status);
-    task.status = column.name;
-    console.log(task);
-    column.tasks.push(task.id);
-    currentBoard.tasks.push(task);
+  const createItem = (item) => {
+    item.id = uuidv4();
+    const column = columns.find((column) => column.name === item.status);
+    item.status = column.name;
+    console.log(item);
+    column.items.push(item.id);
+    currentBoard.items.push(item);
     setBoards([...boards]);
   };
 
-  const updateTask = (updatedTask) => {
-    const task = currentBoard.tasks.find((task) => task.id === updatedTask.id);
-    task.title = updatedTask.title;
-    if (updatedTask.status !== task.status) {
+  const updateItem = (updatedItem) => {
+    const item = currentBoard.items.find((item) => item.id === updatedItem.id);
+    item.title = updatedItem.title;
+    if (updatedItem.status !== item.status) {
       const column = currentBoard.columns.find(
-        (column) => column.name === updatedTask.status
+        (column) => column.name === updatedItem.status
       );
       const columnToRemove = currentBoard.columns.find(
-        (column) => column.name === task.status
+        (column) => column.name === item.status
       );
-      columnToRemove.tasks.splice(columnToRemove.tasks.indexOf(task.id), 1);
-      column.tasks.push(task.id);
+      columnToRemove.items.splice(columnToRemove.items.indexOf(item.id), 1);
+      column.items.push(item.id);
     }
-    task.status = updatedTask.status;
+    item.status = updatedItem.status;
     setBoards([...boards]);
   };
 
-  const changeTaskStatus = (taskId, status) => {
-    const task = currentBoard.tasks.find((task) => task.id === taskId);
+  const changeItemStatus = (itemId, status) => {
+    const item = currentBoard.items.find((item) => item.id === itemId);
     const column = columns.find((column) => column.name === status);
-    const prevColumn = columns.find((column) => column.name === task.status);
+    const prevColumn = columns.find((column) => column.name === item.status);
     console.log(prevColumn);
-    prevColumn.tasks = prevColumn.tasks.filter((id) => id !== taskId);
-    column.tasks.push(taskId);
-    task.status = column.name;
+    prevColumn.items = prevColumn.items.filter((id) => id !== itemId);
+    column.items.push(itemId);
+    item.status = column.name;
     setBoards([...boards]);
   };
 
-  const deleteTask = (taskId) => {
-    const task = currentBoard.tasks.find((task) => task.id === taskId);
-    const column = columns.find((column) => column.name === task.status);
-    column.tasks = column.tasks.filter((id) => id !== taskId);
-    console.log(currentBoard.tasks);
-    currentBoard.tasks = currentBoard.tasks.filter(
-      (task) => task.id !== taskId
+  const deleteItem = (itemId) => {
+    console.log("ahihi");
+    const item = currentBoard.items.find((item) => item.id === itemId);
+    const column = columns.find((column) => column.name === item.status);
+    column.items = column.items.filter((id) => id !== itemId);
+    console.log(currentBoard.items);
+    currentBoard.items = currentBoard.items.filter(
+      (item) => item.id !== itemId
     );
     setBoards([...boards]);
     console.log(boards);
@@ -68,10 +69,10 @@ function BoardProvider({ children }) {
     setBoards,
     currentBoard,
     columns,
-    createTask,
-    changeTaskStatus,
-    updateTask,
-    deleteTask,
+    createItem,
+    changeItemStatus,
+    updateItem,
+    deleteItem,
   };
   return (
     <BoardContext.Provider value={value}>{children}</BoardContext.Provider>

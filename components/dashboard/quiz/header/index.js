@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useState } from "react";
-import NewTask from "./new-task";
+import NewItem from "./new-item";
 import { useBoards } from "../context";
 
 const Header = () => {
@@ -64,7 +64,7 @@ const Header = () => {
         </AnimatePresence>
       </div>
       <div className="flex items-center gap-4 md:pr-4">
-        <NewTask />
+        <NewItem />
       </div>
     </header>
   );

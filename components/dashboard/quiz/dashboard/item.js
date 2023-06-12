@@ -1,52 +1,53 @@
 import { useState } from "react";
 
 import Modal from "../modal";
-import TaskDetailModal from "../modal/task-detail";
-import UpdateTaskModal from "../modal/update-task";
-import DeleteTaskModal from "../modal/delete-task";
+import ItemDetailModal from "../modal/item-detail";
+import UpdateItemModal from "../modal/update-item";
+import DeleteItemModal from "../modal/delete-item";
 import { useBoards } from "../context";
 
-const Task = ({ data, index }) => {
-    const [openTaskModal, setOpenTaskModal] = useState(false);
+const Item = ({ data, index }) => {
+    const [openItemModal, setOpenItemModal] = useState(false);
     const [updateModal, setUpdateModal] = useState(false);
     const [deleteModal, setDeleteModal] = useState(false);
-    const { deleteTask } = useBoards();
+    const { deleteItem } = useBoards();
 
     return (
         <>
-            <li className="group select-none shadow-main px-4 py-6 rounded-lg cursor-pointer bg-white text-black dark:bg-darkGrey dark:text-white"
-                onClick={() => setOpenTaskModal(true)}>
+            <li className="items-group select-none shadow-main px-4 py-6 rounded-lg cursor-pointer dark:bg-darkGrey dark:text-white"
+                onClick={() => setOpenItemModal(true)}>
                 <h4 className="heading-md mb-2 group-hover:text-mainPurple">{data.title}</h4>
             </li>
-            <Modal show={openTaskModal} onClose={() => setOpenTaskModal(false)}>
-                <TaskDetailModal
+            <Modal show={openItemModal} onClose={() => setOpenItemModal(false)}>
+                <ItemDetailModal
                     data={data}
-                    close={() => setOpenTaskModal(false)}
+                    close={() => setOpenItemModal(false)}
                     switchToUpdate={() => {
-                        setOpenTaskModal(false);
+                        setOpenItemModal(false);
                         setUpdateModal(true);
                     }}
                     switchToDelete={() => {
-                        setOpenTaskModal(false);
+                        setOpenItemModal(false);
                         setDeleteModal(true);
                     }} />
             </Modal>
             <Modal show={updateModal} onClose={() => setUpdateModal(!updateModal)}>
-                <UpdateTaskModal data={data} close={() => setUpdateModal(false)} />
+                <UpdateItemModal data={data} close={() => setUpdateModal(false)} />
             </Modal>
             <Modal show={deleteModal} onClose={() => setDeleteModal(!deleteModal)}>
-                <DeleteTaskModal
+                <DeleteItemModal
                     title={data.title}
                     onClose={() => {
                         setDeleteModal(false);
-                        setOpenTaskModal(true);
+                        setOpenItemModal(true);
                     }}
                     onConfirm={() => {
-                        deleteTask(data.id)
+                        console.log("asd")
+                        deleteItem(data.id)
                         setDeleteModal(false);
                     }} />
             </Modal>
         </>
     )
 }
-export default Task
+export default Item

@@ -3,7 +3,7 @@ import { useBoards } from "../context";
 import { useState } from "react";
 
 const StatusDropdown = ({ label = "Status", data = null, status, setStatus }) => {
-  const { columns, changeTaskStatus } = useBoards();
+  const { columns, changeItemStatus } = useBoards();
   const [showMenu, setShowMenu] = useState(false);
 
   const menuVariations = {
@@ -27,7 +27,7 @@ const StatusDropdown = ({ label = "Status", data = null, status, setStatus }) =>
         <button
             onClick={() => setShowMenu(!showMenu )}
             type="button"
-            className="inline-flex justify-between items-center w-full rounded-md outline outline-1 outline-lightGreyLine shadow-sm px-4 py-2 bg-white text-sm font-medium text-black focus:outline-mainPurple dark:bg-darkGrey dark:text-white dark:outline-darkGreyLine"
+            className="inline-flex justify-between items-center w-full rounded-md outline outline-1 outline-lightGreyLine shadow-sm px-4 py-2 bg-black text-sm font-medium text-black focus:outline-mainPurple dark:bg-darkGrey dark:text-white dark:outline-darkGreyLine"
             id="menu-button"
             aria-expanded="true"
             aria-haspopup="true"
@@ -38,7 +38,7 @@ const StatusDropdown = ({ label = "Status", data = null, status, setStatus }) =>
             </svg>
         </button>
         <motion.div
-        className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white  focus:outline-none dark:bg-veryDarkGrey"
+        className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-black focus:outline-none dark:bg-veryDarkGrey"
         variants={menuVariations}
         initial="closed"
         animate={showMenu ? "open" : "closed"}>
@@ -49,7 +49,7 @@ const StatusDropdown = ({ label = "Status", data = null, status, setStatus }) =>
                         if(status) {
                             setStatus(column.name);
                         } else {
-                            changeTaskStatus(data.id, column.name);
+                            changeItemStatus(data.id, column.name);
                         }
                         setShowMenu(false)
                     }}

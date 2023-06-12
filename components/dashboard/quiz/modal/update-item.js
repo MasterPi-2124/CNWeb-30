@@ -7,8 +7,8 @@ import { useState } from 'react';
 import TextArea from "../shared/textArea";
 import InputArray from "../shared/inputArray";
 
-const UpdateTaskModal = ({ data, close }) => {
-    const { updateTask } = useBoards();
+const UpdateItemModal = ({ data, close }) => {
+    const { updateItem } = useBoards();
     const [status, setStatus] = useState(data.status);
 
 
@@ -29,13 +29,13 @@ const UpdateTaskModal = ({ data, close }) => {
             validationSchema={validate}
             onSubmit={(values) => {
                 values.status = status;
-                updateTask(values)
+                updateItem(values)
                 close();
             }}
         >
             {formik => (
-                <div className="w-full mx-auto rounded-md p-6 bg-white dark:bg-darkGrey md:p-8">
-                    <h1 className="heading-lg mb-6">Edit Task</h1>
+                <div className="modal w-full mx-auto rounded-md p-6 dark:bg-darkGrey md:p-8">
+                    <h1 className="heading-lg mb-6">Edit Item</h1>
                     <Form>
                         <TextInput label="Title" name="title" type="text" placeholder="e.g. Take coffee break" />
                         <TextArea label="Description" name="description" type="text" placeholder="e.g. It’s always good to take a break. This 15 minute break will recharge the batteries a little." />
@@ -50,4 +50,4 @@ const UpdateTaskModal = ({ data, close }) => {
 
     )
 }
-export default UpdateTaskModal
+export default UpdateItemModal

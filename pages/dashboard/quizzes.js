@@ -1,9 +1,7 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QuizDashboard from "@/components/dashboard/quiz/dashboard";
-// import { getServerSession } from "next-auth";
-// import { NextAuth } from "@/pages/api/[...nextauth]";
 
 function Dashboard() {
     let sidebar = React.createRef();
@@ -12,6 +10,22 @@ function Dashboard() {
     const resize = () => {
         setFull(!full);
     }
+
+    // const getQuizzes = async () => {
+    //     try {
+    //         let classes = await axios.get(`${API}/quizzes`).then((res) => {
+    //             setClasses(res.data.data)
+    //         })
+    //         console.log(classes)
+    //     }
+    //     catch (err) {
+    //         console.error(err);
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     getQuizzes();
+    // });
 
     return (
         <Layout pageTitle="Quizzes | CNWeb">

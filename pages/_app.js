@@ -3,6 +3,7 @@ import "@/styles/header.css";
 import "@/styles/auth.css";
 import "@/styles/new-quiz.css";
 import "@/styles/dashboard.css";
+import "@/styles/dashboard-class.css";
 import localFont from 'next/font/local';
 import { ThemeProvider } from "next-themes";
 import { BoardProvider } from "@/components/dashboard/quiz/context";

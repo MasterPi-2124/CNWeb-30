@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import useOnClickOutside from "../hooks/useOnClickOutside";
+import EditIcon from '@/assets/icons/thin/edit.svg';
 
 const EditButton = ({
   type,
@@ -37,10 +38,10 @@ const EditButton = ({
     <div className="relative">
       <button className="h-8 w-8" onClick={() => setShowMenu(!showMenu)}>
         <Image
-          src="/icon-vertical-ellipsis.svg"
+          src={EditIcon}
           alt="vertical ellipsis"
-          height={16}
-          width={4}
+          // height={16}
+          // width={4}
         />
       </button>
       <motion.div
@@ -48,7 +49,7 @@ const EditButton = ({
         variants={menuVariations}
         initial="closed"
         animate={showMenu ? "open" : "closed"}
-        className={`${className} flex flex-col items-start space-y-4 absolute body-lg rounded-lg p-4 w-48 shadow-main capitalize bg-white dark:bg-veryDarkGrey`}
+        className={`edit-button ${className} flex flex-col items-start space-y-4 absolute body-lg rounded-lg p-4 w-48 shadow-main capitalize dark:bg-veryDarkGrey`}
       >
         <button className="text-mediumGrey" onClick={() => switchToUpdate()}>
           Edit {type}
