@@ -4,7 +4,7 @@ import { Dropdown } from "@nextui-org/react";
 import Image from "next/image";
 import Logo from "@/assets/logo/cnweb-30.png";
 
-const API = process.env.NEXT_PUBLIC_API
+const API = process.env.NEXT_PUBLIC_API;
 
 const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
     const [classes, setClasses] = useState()
@@ -53,7 +53,7 @@ const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
                                 <button
                                     onClick={() => {
                                         setClassSelected({
-                                            classID: data.codename,
+                                            classID: data._id,
                                             className: data.subject
                                         });
                                         console.log(classSelected);

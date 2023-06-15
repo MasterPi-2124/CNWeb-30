@@ -1,8 +1,7 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
 import React, { useState } from "react";
-// import { getServerSession } from "next-auth";
-// import { NextAuth } from "@/pages/api/[...nextauth]";
+
 
 function Dashboard() {
   let sidebar = React.createRef();

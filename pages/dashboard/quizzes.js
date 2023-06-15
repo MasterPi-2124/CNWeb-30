@@ -1,31 +1,56 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import QuizDashboard from "@/components/dashboard/quiz/dashboard";
+import data from "@/components/dashboard/data.json";
+import axios from "axios";
+import { BoardProvider } from '@/components/dashboard/quiz/context';
 
-function Dashboard() {
+const API = process.env.NEXT_PUBLIC_API;
+
+export async function getServerSideProps() {
+    let props = {};
+
+    try {
+        await axios.get(`${API}/quizzes/`).then((res) => {
+            data.boards.quizzes.items = res.data.data;
+            data.boards.quizzes.columns.map((column, i) => {
+                let temp = [];
+                res.data.data.map((item, j) => {
+                    if (column.name === item.status) {
+                        temp.push(item._id);
+                    }
+                })
+                column.items = temp;
+            })
+        })
+    }
+    catch (err) {
+        console.error(err);
+    }
+
+    try {
+        await axios.get(`${API}/classes/`).then((res) => {
+            data.boards.classes.items = res.data.data;
+        })
+    }
+    catch (err) {
+        console.error(err);
+    }
+
+    props = data;
+    return {
+        props,
+    }
+}
+
+const Dashboard = (props) => {
     let sidebar = React.createRef();
     const [full, setFull] = useState(true);
 
     const resize = () => {
         setFull(!full);
     }
-
-    // const getQuizzes = async () => {
-    //     try {
-    //         let classes = await axios.get(`${API}/quizzes`).then((res) => {
-    //             setClasses(res.data.data)
-    //         })
-    //         console.log(classes)
-    //     }
-    //     catch (err) {
-    //         console.error(err);
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     getQuizzes();
-    // });
 
     return (
         <Layout pageTitle="Quizzes | CNWeb">
@@ -38,9 +63,9 @@ function Dashboard() {
                     </a>
                 </div>
                 <div className="main-container">
-                    <div className="content">
+                    <BoardProvider data={props} type="quizzes" >
                         <QuizDashboard />
-                    </div>
+                    </BoardProvider>
                 </div>
             </div>
         </Layout>

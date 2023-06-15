@@ -30,7 +30,7 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
             startTime: startDateTime,
             endTime: endDateTime,
             formLink: url,
-            classId: classSelected.classID
+            _class: classSelected.classID
         }
 
         console.log(data)
@@ -115,7 +115,7 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
                 </>
             ) : (
                 <>
-                    <h1>The quiz for Class {classSelected.classID} is created!</h1>
+                    <h1>The quiz for Class {classSelected.className} is created!</h1>
                     <p>You can get the QR code by going to Dashboard - Quiz - Quiz</p>
                     <button>Let's go!</button>
                 </>
