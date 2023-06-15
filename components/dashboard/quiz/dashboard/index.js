@@ -13,7 +13,7 @@ const QuizDashboard = () => {
                         {
                             column.items.map((itemId, j) => {
                                 const item = currentBoard.items.filter(item => item._id === itemId)[0];
-                                return <Item data={item} index={j} />
+                                return <Item data={item} key={j} />
                             })
                         }
                     </Column>

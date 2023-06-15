@@ -13,7 +13,7 @@ const GetName = ({ quizDetail, classDetail, studentName, setStudentName, handleS
             <p>Subject: {classDetail.subject} - {classDetail.semester}</p>
             <br />
             <form className="form" onSubmit={handleSubmit}>
-                <label>What's your full name?</label>
+                <label>What&apos;s your full name?</label>
                 <Input
                     width="186px"
                     label="Your full name"

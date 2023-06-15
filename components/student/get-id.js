@@ -13,7 +13,7 @@ const GetID = ({ quizDetail, classDetail, studentID, studentName, setStudentID, 
             <p>Subject: {classDetail.subject} - {classDetail.semester}</p>
             <br />
             <form className="form" onSubmit={handleSubmit}>
-                <label>Hello {studentName}, what's your ID?</label>
+                <label>Hello {studentName}, what&apos;s your ID?</label>
                 <Input
                     width="186px"
                     label="Your full ID"

@@ -54,7 +54,7 @@ const GetLocation = ({ quizDetail, classDetail, location, checkLat, checkLon, se
                 <>
                     {distance <= 40 ? (
                         <div>
-                            <p>Thank you. Press "Start" button below to continue</p>
+                            <p>Thank you. Press &quot;Start&quot; button below to continue</p>
                             <button type="submit" onClick={handleSubmit}>Start</button>
                         </div>
                     ) : (
