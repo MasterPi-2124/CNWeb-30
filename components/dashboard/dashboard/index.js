@@ -4,7 +4,6 @@ import Item from './item';
 
 const Dashboard = () => {
     const { currentBoard } = useBoards();
-    console.log(currentBoard)
     return (
         <main className='dashboard overflow-y-hidden scrollbar-thin scrollbar-thumb-mainPurple scrollbar-track-transparent flex-1 p-4 space-x-4 bg-lightGrey dark:bg-veryDarkGrey flex'>
             {
@@ -13,7 +12,7 @@ const Dashboard = () => {
                         {
                             column.items.map((itemId, j) => {
                                 const item = currentBoard.items.filter(item => item._id === itemId)[0];
-                                return <Item data={item} key={j} />
+                                return <Item type={currentBoard.name} data={item} key={j} />
                             })
                         }
                     </Column>

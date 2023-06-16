@@ -1,5 +1,4 @@
 const Column = ({ data, children }) => {
-
   return (
     <div className="dashboard-column column w-[280px] shrink-0">
       <h3 className="heading-sm uppercase mb-6">

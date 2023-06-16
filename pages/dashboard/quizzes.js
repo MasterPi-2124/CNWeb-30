@@ -1,10 +1,10 @@
-import Menu from "@/components/dashboard/menu";
-import Layout from "@/components/layout";
-import React, { useState } from "react";
-import QuizDashboard from "@/components/dashboard/quiz/dashboard";
-import data from "@/components/dashboard/data.json";
 import axios from "axios";
-import { BoardProvider } from '@/components/dashboard/quiz/context';
+import React, { useState } from "react";
+import Layout from "@/components/layout";
+import Menu from "@/components/dashboard/menu";
+import Dashboard from "@/components/dashboard/dashboard";
+import { BoardProvider } from '@/components/dashboard/context';
+import data from "@/components/dashboard/data.json";
 
 const API = process.env.NEXT_PUBLIC_API;
 
@@ -55,7 +55,7 @@ const QuizzesDashboard = (props) => {
                 </div>
                 <div className="main-container">
                     <BoardProvider data={props} type="quizzes" >
-                        <QuizDashboard />
+                        <Dashboard />
                     </BoardProvider>
                 </div>
             </div>
