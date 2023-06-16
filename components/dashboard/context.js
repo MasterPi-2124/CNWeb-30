@@ -4,7 +4,7 @@ const BoardContext = createContext();
 
 function BoardProvider({ data, type, children }) {
   const [boards, setBoards] = useState(data.boards);
-  const currentBoard =  type === "quizzes" ?boards.quizzes : boards.classes;
+  const currentBoard =  type === "quizzes" ? boards.quizzes : boards.classes;
   const columns = currentBoard?.columns;
 
   const deleteItem = (itemId) => {

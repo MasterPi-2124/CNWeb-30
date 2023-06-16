@@ -1,18 +1,20 @@
 import { useState } from "react";
-import Modal from "../modal";
-import ItemDetailModal from "../modal/item-detail";
-import DeleteItemModal from "../modal/delete-item";
-import QRModal from "../modal/qr-full";
-import { useBoards } from "../context";
+import Modal from "../../class/modal";
+import ItemDetailModal from "../../class/modal/item-detail";
+import DeleteItemModal from "../../class/modal/delete-item";
+import QRModal from "../../class/modal/qr-full";
+import { useBoards } from "../../context";
 import ClassIcon from "@/assets/icons/thin/class.svg";
 import TimeIcon from "@/assets/icons/thin/time.svg";
 import DateIcon from "@/assets/icons/thin/date.svg";
 import HumanIcon from "@/assets/icons/thin/human.svg";
 import Image from "next/image";
 import axios from "axios";
-const API = process.env.NEXT_PUBLIC_API;
 
-const Item = ({ data, index }) => {
+const API = process.env.NEXT_PUBLIC_API;
+const HOST = process.env.NEXTAUTH_URL;
+
+const QuizItem = ({ data }) => {
     const [openItemModal, setOpenItemModal] = useState(false);
     const [deleteModal, setDeleteModal] = useState(false);
     const [qrModal, setQRModal] = useState(false);
@@ -99,10 +101,13 @@ const Item = ({ data, index }) => {
             </Modal>
             <Modal show={qrModal} onClose={() => setQRModal(!qrModal)}>
                 <QRModal
-                    url={`http://localhost:3000/quiz/${data._id}`}
+                    url={`${HOST}/quiz/${data._id}`}
                 />
             </Modal>
         </>
     )
+
+
+
 }
-export default Item
+export default QuizItem

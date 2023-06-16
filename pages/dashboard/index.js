@@ -1,5 +1,6 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
+import Link from "next/link";
 import React, { useState } from "react";
 
 
@@ -23,7 +24,16 @@ function Dashboard() {
         </div>
         <div className="main-container">
           <div className="content">
-            asdafasfdasdf
+            <div className="quiz-dashboard">
+              <Link href="/dashboard/quizzes">
+                Quiz Dashboard
+              </Link>
+            </div>
+            <div className="quiz-dashboard">
+              <Link href="/dashboard/classes">
+                Class Dashboard
+              </Link>
+            </div>
           </div>
         </div>
       </div>

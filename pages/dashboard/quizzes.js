@@ -1,10 +1,10 @@
-import Menu from "@/components/dashboard/menu";
-import Layout from "@/components/layout";
-import React, { useState } from "react";
-import QuizDashboard from "@/components/dashboard/quiz/dashboard";
-import data from "@/components/dashboard/data.json";
 import axios from "axios";
-import { BoardProvider } from '@/components/dashboard/quiz/context';
+import React, { useState } from "react";
+import Layout from "@/components/layout";
+import Menu from "@/components/dashboard/menu";
+import Dashboard from "@/components/dashboard/dashboard";
+import { BoardProvider } from '@/components/dashboard/context';
+import data from "@/components/dashboard/data.json";
 
 const API = process.env.NEXT_PUBLIC_API;
 
@@ -29,22 +29,13 @@ export async function getServerSideProps() {
         console.error(err);
     }
 
-    try {
-        await axios.get(`${API}/classes/`).then((res) => {
-            data.boards.classes.items = res.data.data;
-        })
-    }
-    catch (err) {
-        console.error(err);
-    }
-
     props = data;
     return {
         props,
     }
 }
 
-const Dashboard = (props) => {
+const QuizzesDashboard = (props) => {
     let sidebar = React.createRef();
     const [full, setFull] = useState(true);
 
@@ -64,7 +55,7 @@ const Dashboard = (props) => {
                 </div>
                 <div className="main-container">
                     <BoardProvider data={props} type="quizzes" >
-                        <QuizDashboard />
+                        <Dashboard />
                     </BoardProvider>
                 </div>
             </div>
@@ -72,4 +63,4 @@ const Dashboard = (props) => {
     );
 }
 
-export default Dashboard;
+export default QuizzesDashboard;
