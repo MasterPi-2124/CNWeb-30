@@ -1,0 +1,103 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.student-login-name-7Ft {
+  box-sizing: border-box;
+  padding: 15.75rem 69.5rem 36.4rem 69.5rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #000616;
+}
+.student-login-name-7Ft .text-cyL {
+  margin-bottom: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.student-login-name-7Ft .title-wki {
+  margin: 0rem 0.1rem 21.3rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.student-login-name-7Ft .title-GHC {
+  margin: 0rem 0.1rem 4.5rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.student-login-name-7Ft .title-Bf4 {
+  margin: 0rem 0.1rem 0.85rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.student-login-name-7Ft .line-1-72v {
+  margin-bottom: 6.97rem;
+  width: 100%;
+  height: 0.03rem;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+.student-login-name-7Ft .continue-button-3hG {
+  margin: 0rem 11.5rem 0rem 11.4rem;
+  width: calc(100% - 22.9rem);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #0e48e0;
+  border-radius: 4.5rem;
+  flex-shrink: 0;
+}

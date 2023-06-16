@@ -1,0 +1,84 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.student-login-failed-expired-tyU {
+  background-color: #000616;
+  box-sizing: border-box;
+  padding: 25.55rem 68.2rem 38.6rem 68.1rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+
+  .text-bst {
+    color: #ffffff;
+    font-family: Segoe UI, 'Source Sans Pro';
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1.2575;
+    flex-shrink: 0;
+    margin: 0rem 0rem 1.9rem 0.1rem;
+    display: flex;
+    font-size: 4rem;
+    white-space: nowrap;
+  }
+  .title-JXQ {
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 20rem;
+    display: flex;
+    font-weight: 300;
+    line-height: 1.2575;
+    font-family: Segoe UI, 'Source Sans Pro';
+    white-space: nowrap;
+    flex-shrink: 0;
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+  .title-EAA {
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    color: #ffffff;
+    font-family: Segoe UI, 'Source Sans Pro';
+    margin-bottom: 4.85rem;
+    display: flex;
+    font-size: 3rem;
+    line-height: 1.2575;
+    white-space: nowrap;
+  }
+  .continue-button-MEn {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    background-color: #0e48e0;
+    margin: 0 12.8rem;
+    width: calc(100% - 25.6rem);
+    height: 5rem;
+    line-height: 1.2575;
+    color: #ffffff;
+    font-family: Segoe UI, 'Source Sans Pro';
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 4.5rem;
+    flex-shrink: 0;
+  }
+}
