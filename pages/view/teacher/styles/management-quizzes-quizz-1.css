@@ -1,0 +1,2617 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.management-quizzes-quizz-1-vbx {
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #000616;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ {
+  margin-right: 0.5rem;
+  width: 27.2rem;
+  height: 104.4rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .background-y4S {
+  width: 26.2rem;
+  height: 104.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(0.6rem);
+  background-color: rgba(255, 255, 255, 0.0599999987);
+  border-radius: 1.9rem;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .account-5dG {
+  width: 13.8rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 96.4rem;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .account-5dG .logo-118 {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .account-5dG .title-8Le {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .preferences-FAN {
+  width: 14.8rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 58.7rem;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .preferences-FAN .logo-aCe {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .preferences-FAN .title-uVp {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .notification-3M8 {
+  width: 14.8rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 50.6rem;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .notification-3M8 .logo-NuC {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .notification-3M8 .title-KJe {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .export-Tfk {
+  width: 10.3rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 42.5rem;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .export-Tfk .logo-b1G {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .export-Tfk .title-8Wz {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU {
+  width: 20rem;
+  height: 14.5rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 23.6rem;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-zob4-QjQ {
+  margin: 0rem 6rem 0.3rem 0rem;
+  width: calc(100% - 6rem);
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-zob4-QjQ .logo-LNA {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-zob4-QjQ .title-UUN {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-cypy-2Ez {
+  margin-left: 1.5rem;
+  width: calc(100% - 1.5rem);
+  display: flex;
+  align-items: flex-end;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-cypy-2Ez .line-AMC {
+  margin: 0rem 0.5rem 1.25rem 0rem;
+  width: 1.7rem;
+  height: 9.75rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-cypy-2Ez .auto-group-wv3t-6Er {
+  width: 16.3rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-cypy-2Ez .auto-group-wv3t-6Er .auto-group-zqdy-dEn {
+  margin-bottom: 2.6rem;
+  box-sizing: border-box;
+  padding: 0.6rem 0.9rem;
+  width: 100%;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.5400000215);
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .management-sjU .auto-group-cypy-2Ez .auto-group-wv3t-6Er .title-uTC {
+  margin-left: 0.9rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .new-quiz-EEa {
+  box-sizing: border-box;
+  padding: 1.3rem 8rem 1.3rem 2rem;
+  width: 22.7rem;
+  height: 5.8rem;
+  position: absolute;
+  left: 1.3rem;
+  top: 14.2rem;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 48, 218, 0.4699999988);
+  border-radius: 1rem;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .new-quiz-EEa .logo-7pA {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .new-quiz-EEa .title-qkA {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #e4e4e4;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .logo-MyQ {
+  width: 16.35rem;
+  height: 4.7rem;
+  position: absolute;
+  left: 2.2rem;
+  top: 3.1rem;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .logo-MyQ .logo-6g6 {
+  margin-right: 2.55rem;
+  width: 4.7rem;
+  height: 4.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .logo-MyQ .logo-EnJ {
+  margin-bottom: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .expand-button-mXL {
+  width: 2.1rem;
+  height: 2.3rem;
+  position: absolute;
+  left: 25.1rem;
+  top: 4.1rem;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .expand-button-mXL .ellipse-1-uNe {
+  width: 2.1rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.0599999987);
+  border-radius: 1.05rem;
+}
+.management-quizzes-quizz-1-vbx .nav-bar-SaJ .expand-button-mXL .item--dZY {
+  width: 0.8rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 0.55rem;
+  top: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU {
+  width: 162.8rem;
+  height: 108.1rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav {
+  width: 137.6rem;
+  height: 83.8rem;
+  position: absolute;
+  left: 6.8rem;
+  top: 16.8rem;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa {
+  box-sizing: border-box;
+  padding-right: 4.6rem;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ {
+  margin-right: 4.6rem;
+  box-sizing: border-box;
+  padding: 2.4rem 2.3rem 1.6rem 2.1rem;
+  width: 41.5rem;
+  background-color: rgba(255, 255, 255, 0.5400000215);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .auto-group-1t2z-S9c {
+  margin: 0rem 23.5rem 2.8rem 0rem;
+  width: calc(100% - 23.5rem);
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .auto-group-1t2z-S9c .title-ALW {
+  margin: 0rem 2.4rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .auto-group-1t2z-S9c .count-Uc6 {
+  margin-top: 0.1rem;
+  width: 2.2rem;
+  height: 2.6rem;
+  position: relative;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .auto-group-1t2z-S9c .count-Uc6 .rectangle-6-pfx {
+  width: 2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .auto-group-1t2z-S9c .count-Uc6 .navigation-9y8 {
+  width: 1.1rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 0.55rem;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg {
+  margin-bottom: 1.9rem;
+  box-sizing: border-box;
+  padding: 2.2rem 1.8rem 0.8rem 1.9rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .auto-group-3msu-ANS {
+  margin: 0rem 0.4rem 1.9rem 0rem;
+  width: calc(100% - 0.4001rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .auto-group-3msu-ANS .title-5kJ {
+  margin: 0rem 18.4rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .auto-group-3msu-ANS .qr-button-C4E {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+  width: 7.1rem;
+  height: 100%;
+  background-color: #2b80ff;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .auto-group-3msu-ANS .qr-button-C4E .group-3-X6W {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .auto-group-3msu-ANS .qr-button-C4E .group-3-X6W .navigation-H5g {
+  margin: 0rem 0.7rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .auto-group-3msu-ANS .qr-button-C4E .group-3-X6W .logo-CCe {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .line-7-fc2 {
+  margin-bottom: 0.5rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 {
+  margin: 0rem 0.2rem 0rem 0.1rem;
+  width: calc(100% - 0.3001rem);
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .class-WMk {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .class-WMk .logo-rwQ {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .class-WMk .navigation-asQ {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .interval-88E {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .interval-88E .logo-ftr {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .interval-88E .navigation-b1p {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .date-vJz {
+  margin-right: 6.1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .date-vJz .logo-Aj8 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .date-vJz .navigation-t9L {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .date-DhQ {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .date-DhQ .logo-NaJ {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-Ejg .footer-hv6 .auto-group-5em4-oy8 .date-DhQ .navigation-6FQ {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE {
+  margin-bottom: 1.9rem;
+  box-sizing: border-box;
+  padding: 2.2rem 1.8rem 0.8rem 1.9rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .auto-group-a4tw-7wC {
+  margin: 0rem 0.4rem 1.9rem 0rem;
+  width: calc(100% - 0.4001rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .auto-group-a4tw-7wC .title-3K4 {
+  margin: 0rem 18.4rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .auto-group-a4tw-7wC .qr-button-B3t {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+  width: 7.1rem;
+  height: 100%;
+  background-color: #2b80ff;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .auto-group-a4tw-7wC .qr-button-B3t .group-3-Gr2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .auto-group-a4tw-7wC .qr-button-B3t .group-3-Gr2 .navigation-1Yi {
+  margin: 0rem 0.7rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .auto-group-a4tw-7wC .qr-button-B3t .group-3-Gr2 .logo-t6i {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .line-7-LjQ {
+  margin-bottom: 0.5rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai {
+  margin: 0rem 0.2rem 0rem 0.1rem;
+  width: calc(100% - 0.3001rem);
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .class-nbQ {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .class-nbQ .logo-k2S {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .class-nbQ .navigation-rrA {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .interval-nzi {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .interval-nzi .logo-x8W {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .interval-nzi .navigation-5D8 {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .date-oev {
+  margin-right: 6.1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .date-oev .logo-AVU {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .date-oev .navigation-twG {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .date-SSz {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .date-SSz .logo-CBG {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-CpE .footer-Bbc .auto-group-ywxj-Uai .date-SSz .navigation-JVC {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N {
+  box-sizing: border-box;
+  padding: 2.2rem 1.8rem 0.8rem 1.9rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .auto-group-inge-Kv6 {
+  margin: 0rem 0.4rem 1.9rem 0rem;
+  width: calc(100% - 0.4001rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .auto-group-inge-Kv6 .title-r9L {
+  margin: 0rem 18.4rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .auto-group-inge-Kv6 .qr-button-xy4 {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.7rem;
+  width: 7.1rem;
+  height: 100%;
+  background-color: #2b80ff;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .auto-group-inge-Kv6 .qr-button-xy4 .group-3-Vi6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .auto-group-inge-Kv6 .qr-button-xy4 .group-3-Vi6 .navigation-qmx {
+  margin: 0rem 0.7rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .auto-group-inge-Kv6 .qr-button-xy4 .group-3-Vi6 .logo-xLn {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .line-7-25k {
+  margin-bottom: 0.5rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr {
+  margin: 0rem 0.2rem 0rem 0.1rem;
+  width: calc(100% - 0.3001rem);
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .class-GVt {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .class-GVt .logo-Rta {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .class-GVt .navigation-9pa {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .interval-gZc {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .interval-gZc .logo-2tN {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .interval-gZc .navigation-AUn {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .date-uhG {
+  margin-right: 6.1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .date-uhG .logo-rsQ {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .date-uhG .navigation-MZG {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .date-VfU {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .date-VfU .logo-rF8 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .upcoming-izJ .object1-D6N .footer-GMU .auto-group-d2kn-ASr .date-VfU .navigation-mst {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC {
+  box-sizing: border-box;
+  padding: 2.4rem 2.3rem 1.5rem 2.1rem;
+  width: 41.5rem;
+  background-color: rgba(255, 255, 255, 0.5400000215);
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .auto-group-6spx-mmQ {
+  margin: 0rem 23.5rem 2.8rem 0rem;
+  width: calc(100% - 23.5rem);
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .auto-group-6spx-mmQ .title-6og {
+  margin: 0rem 1.7rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .auto-group-6spx-mmQ .count-cn2 {
+  margin-top: 0.1rem;
+  width: 2.2rem;
+  height: 2.6rem;
+  position: relative;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .auto-group-6spx-mmQ .count-cn2 .rectangle-6-m98 {
+  width: 2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .auto-group-6spx-mmQ .count-cn2 .navigation-UpE {
+  width: 1.1rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 0.55rem;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt {
+  box-sizing: border-box;
+  padding: 2.45rem 1.7rem 0.8rem 1.9rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .auto-group-rysz-HWn {
+  margin: 0rem 0.1rem 2.25rem 0rem;
+  width: calc(100% - 0.1rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .auto-group-rysz-HWn .title-DQS {
+  margin-right: 17.4rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .auto-group-rysz-HWn .title-x78 {
+  text-align: right;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN {
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .line-7-qRp {
+  margin: 0rem 0.1rem 0.5rem 0rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .class-JqC {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .class-JqC .logo-ffk {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .class-JqC .navigation-Pre {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .interval-8JS {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .interval-8JS .logo-UdC {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .interval-8JS .navigation-bSv {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .date-Y7G {
+  margin-right: 5.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .date-Y7G .logo-Hae {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .date-Y7G .navigation-p4n {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .date-ZHG {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .date-ZHG .logo-vNi {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .auto-group-avrc-BUa .happening-4MC .object1-ZKt .footer-ULN .auto-group-rqwt-mqG .date-ZHG .navigation-3iE {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY {
+  width: 45.4rem;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .rectangle-4-fzW {
+  width: 41.5rem;
+  height: 83.8rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5400000215);
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg {
+  box-sizing: border-box;
+  padding: 2.2rem 1.7rem 0.8rem 1.9rem;
+  width: 37.1rem;
+  height: 9.9rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 7.9rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .auto-group-xktp-6a2 {
+  margin: 0rem 0.3rem 1.9rem 0rem;
+  width: calc(100% - 0.3rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .auto-group-xktp-6a2 .title-DPk {
+  margin: 0rem 17.1rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .auto-group-xktp-6a2 .qr-button-LUN {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.8rem;
+  width: 8.6rem;
+  height: 100%;
+  background-color: #2bff80;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .auto-group-xktp-6a2 .qr-button-LUN .group-3-GN2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .auto-group-xktp-6a2 .qr-button-LUN .group-3-GN2 .navigation-peS {
+  margin: 0rem 0.6rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .auto-group-xktp-6a2 .qr-button-LUN .group-3-GN2 .logo-jWW {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 {
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .line-7-cqC {
+  margin: 0rem 0.1rem 0.5rem 0rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .class-dEW {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .class-dEW .logo-MwC {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .class-dEW .navigation-UW2 {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .interval-pJz {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .interval-pJz .logo-mk2 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .interval-pJz .navigation-u5Y {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .date-3Se {
+  margin-right: 5.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .date-3Se .logo-bj4 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .date-3Se .navigation-vmL {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .date-fU2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .date-fU2 .logo-DkS {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-1Hg .footer-rr2 .auto-group-ucf8-iNS .date-fU2 .navigation-Lq4 {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE {
+  box-sizing: border-box;
+  padding: 2.2rem 1.7rem 0.8rem 1.9rem;
+  width: 37.1rem;
+  height: 9.9rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 19.1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .auto-group-7ea2-XuY {
+  margin: 0rem 0.3rem 1.9rem 0rem;
+  width: calc(100% - 0.3rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .auto-group-7ea2-XuY .title-ejG {
+  margin: 0rem 17.1rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .auto-group-7ea2-XuY .qr-button-m3C {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.8rem;
+  width: 8.6rem;
+  height: 100%;
+  background-color: #2bff80;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .auto-group-7ea2-XuY .qr-button-m3C .group-3-6bG {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .auto-group-7ea2-XuY .qr-button-m3C .group-3-6bG .navigation-f8a {
+  margin: 0rem 0.6rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .auto-group-7ea2-XuY .qr-button-m3C .group-3-6bG .logo-yf4 {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp {
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .line-7-ryk {
+  margin: 0rem 0.1rem 0.5rem 0rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .class-jne {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .class-jne .logo-VWv {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .class-jne .navigation-1VG {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .interval-M3L {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .interval-M3L .logo-u4r {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .interval-M3L .navigation-QXQ {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .date-wXL {
+  margin-right: 5.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .date-wXL .logo-hFc {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .date-wXL .navigation-pLE {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .date-YX8 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .date-YX8 .logo-7KL {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-FSE .footer-uHp .auto-group-u6t8-nsQ .date-YX8 .navigation-EPx {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC {
+  width: 43.3rem;
+  height: 9.9rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 30.3rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .background-tUW {
+  width: 37.1rem;
+  height: 9.9rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC {
+  width: 33.5rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 1.9rem;
+  top: 7.3rem;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .line-7-M7C {
+  margin: 0rem 0.1rem 0.5rem 0rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .class-DfC {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .class-DfC .logo-yeN {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .class-DfC .navigation-WPQ {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .interval-3eE {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .interval-3eE .logo-Cn2 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .interval-3eE .navigation-Kre {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .date-sNN {
+  margin-right: 5.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .date-sNN .logo-dMY {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .date-sNN .navigation-9an {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .date-6F8 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .date-6F8 .logo-Fdp {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .footer-dBC .auto-group-o5ca-Gzr .date-6F8 .navigation-avz {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .qr-button-inJ {
+  width: 16.8rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 26.5rem;
+  top: 2.2rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .qr-button-inJ .background-rNi {
+  width: 8.6rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #2bff80;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .qr-button-inJ .group-3-PdY {
+  width: 10.9rem;
+  height: 2.2rem;
+  position: absolute;
+  left: 5.9rem;
+  top: 0.3rem;
+  display: flex;
+  align-items: flex-start;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .qr-button-inJ .group-3-PdY .logo-Wy4 {
+  margin: 0.4rem 4.6rem 0rem 0rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .qr-button-inJ .group-3-PdY .navigation-qVY {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-kdC .title-n9t {
+  width: 7.5rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 1.9rem;
+  top: 2.45rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS {
+  box-sizing: border-box;
+  padding: 2.2rem 1.7rem 0.8rem 1.9rem;
+  width: 37.1rem;
+  height: 9.9rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 41.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .auto-group-gjzs-z14 {
+  margin: 0rem 0.3rem 1.9rem 0rem;
+  width: calc(100% - 0.3rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .auto-group-gjzs-z14 .title-6Jz {
+  margin: 0rem 17.1rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .auto-group-gjzs-z14 .qr-button-ojC {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.8rem;
+  width: 8.6rem;
+  height: 100%;
+  background-color: #2bff80;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .auto-group-gjzs-z14 .qr-button-ojC .group-3-KxS {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .auto-group-gjzs-z14 .qr-button-ojC .group-3-KxS .navigation-5wc {
+  margin: 0rem 0.6rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .auto-group-gjzs-z14 .qr-button-ojC .group-3-KxS .logo-Z66 {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup {
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .line-7-q3c {
+  margin: 0rem 0.1rem 0.5rem 0rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .class-W9k {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .class-W9k .logo-4SA {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .class-W9k .navigation-Nxe {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .interval-iFp {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .interval-iFp .logo-TUJ {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .interval-iFp .navigation-P74 {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .date-ur6 {
+  margin-right: 5.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .date-ur6 .logo-4iz {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .date-ur6 .navigation-yqx {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .date-KQ2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .date-KQ2 .logo-H5x {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-HcS .footer-fup .auto-group-zpkz-ZVQ .date-KQ2 .navigation-bMY {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 {
+  box-sizing: border-box;
+  padding: 2.2rem 1.7rem 0.8rem 1.9rem;
+  width: 37.1rem;
+  height: 9.9rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 52.7rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .auto-group-ccxg-ajG {
+  margin: 0rem 0.3rem 1.9rem 0rem;
+  width: calc(100% - 0.3rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .auto-group-ccxg-ajG .title-tzr {
+  margin: 0rem 17.1rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .auto-group-ccxg-ajG .qr-button-oM8 {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.8rem;
+  width: 8.6rem;
+  height: 100%;
+  background-color: #2bff80;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .auto-group-ccxg-ajG .qr-button-oM8 .group-3-LM4 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .auto-group-ccxg-ajG .qr-button-oM8 .group-3-LM4 .navigation-HXC {
+  margin: 0rem 0.6rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .auto-group-ccxg-ajG .qr-button-oM8 .group-3-LM4 .logo-bXt {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx {
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .line-7-fGr {
+  margin: 0rem 0.1rem 0.5rem 0rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .class-via {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .class-via .logo-Uk6 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .class-via .navigation-ziS {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .interval-jR8 {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .interval-jR8 .logo-5zn {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .interval-jR8 .navigation-1dY {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .date-9jk {
+  margin-right: 5.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .date-9jk .logo-uU2 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .date-9jk .navigation-dev {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .date-NcW {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .date-NcW .logo-w9p {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-6p6 .footer-WPx .auto-group-ugri-auc .date-NcW .navigation-rna {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p {
+  box-sizing: border-box;
+  padding: 2.2rem 1.7rem 0.8rem 1.9rem;
+  width: 37.1rem;
+  height: 9.9rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 63.9rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .auto-group-8v46-GLW {
+  margin: 0rem 0.3rem 1.9rem 0rem;
+  width: calc(100% - 0.3rem);
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .auto-group-8v46-GLW .title-BTU {
+  margin: 0rem 16.1rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .auto-group-8v46-GLW .qr-button-JHC {
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem 0.7rem 0.8rem;
+  width: 8.6rem;
+  height: 100%;
+  background-color: #2bff80;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .auto-group-8v46-GLW .qr-button-JHC .group-3-2iz {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .auto-group-8v46-GLW .qr-button-JHC .group-3-2iz .navigation-zQv {
+  margin: 0rem 0.6rem 0.1rem 0rem;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .auto-group-8v46-GLW .qr-button-JHC .group-3-2iz .logo-W8N {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz {
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .line-7-PT4 {
+  margin: 0rem 0.1rem 0.5rem 0rem;
+  width: 33.4001rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ {
+  height: 1.3rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .class-FVG {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .class-FVG .logo-1US {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .class-FVG .navigation-vrJ {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .interval-Fta {
+  margin-right: 6rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .interval-Fta .logo-cDL {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .interval-Fta .navigation-Y6z {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .date-UFY {
+  margin-right: 5.9rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .date-UFY .logo-q66 {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .date-UFY .navigation-MaE {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .date-VRY {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .date-VRY .logo-Sbg {
+  margin: 0.2rem 0.4rem 0rem 0rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .object1-P1p .footer-dCz .auto-group-7cgw-ugJ .date-VRY .navigation-AXg {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .count-VK4 {
+  width: 2.2rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 7.5rem;
+  top: 2.5rem;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .count-VK4 .rectangle-6-EGe {
+  width: 2.2rem;
+  height: 2.2rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .count-VK4 .navigation-Ms4 {
+  width: 1.1rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 0.55rem;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .view-Fav .past-LBY .title-3jt {
+  width: 3.8rem;
+  height: 2.6rem;
+  position: absolute;
+  left: 2.1rem;
+  top: 2.4rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .navigation-wKU {
+  width: 21.9rem;
+  height: 4.1rem;
+  position: absolute;
+  left: 5.1rem;
+  top: 7rem;
+  display: flex;
+  align-items: center;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .navigation-wKU .rectangle-5-eza {
+  margin-right: 1.9rem;
+  width: 0.4rem;
+  height: 4.1rem;
+  background-color: #d9d9d9;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .navigation-wKU .navigation-bev {
+  margin: 0rem 1.55rem 0.1rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .navigation-wKU .item--uQi {
+  margin: 0rem 0.85rem 0.2rem 0rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .navigation-wKU .navigation-cpv {
+  margin-bottom: 0.1rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 {
+  box-sizing: border-box;
+  padding: 10.05rem 7.4rem 13.1rem 5.2rem;
+  width: 46.5rem;
+  height: 108rem;
+  position: absolute;
+  left: 116.3rem;
+  top: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #191e2b;
+  box-shadow: -1.1rem 0 2.3rem rgba(0, 0, 0, 0.5799999833);
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .title-cyL {
+  margin: 0rem 0rem 4.25rem 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .logo-6tW {
+  margin: 0rem 0rem 5.8rem 2.3rem;
+  width: 14.4rem;
+  height: 14.4rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW {
+  margin: 0rem 2.3rem 1.5rem 0rem;
+  height: 6.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-4-GAi {
+  margin-right: 2.1rem;
+  box-sizing: border-box;
+  padding: 1.4rem 1rem 0.95rem 1rem;
+  width: 9.3rem;
+  height: 100%;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-4-GAi .logo-vm4 {
+  margin-bottom: 0.75rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-4-GAi .navigation-4sG {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-5-PuY {
+  margin-right: 1.6rem;
+  box-sizing: border-box;
+  padding: 1.4rem 1rem 0.95rem 1rem;
+  width: 9.3rem;
+  height: 100%;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-5-PuY .logo-iS2 {
+  margin-bottom: 0.75rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-5-PuY .navigation-3z6 {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-6-z8e {
+  box-sizing: border-box;
+  padding: 1.4rem 1rem 0.95rem 1rem;
+  width: 9.3rem;
+  height: 100%;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-6-z8e .logo-Wsg {
+  margin-bottom: 0.75rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-rkhl-ySW .group-6-z8e .navigation-48W {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-dbdy-nKQ {
+  margin: 0rem 13.7rem 3.2rem 0rem;
+  width: calc(100% - 13.7rem);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-dbdy-nKQ .group-8-hhG {
+  margin: 0.2rem 1.6rem 0rem 0rem;
+  box-sizing: border-box;
+  padding: 1.4rem 1.9rem 0.95rem 1rem;
+  width: 9.3rem;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-dbdy-nKQ .group-8-hhG .logo-okJ {
+  margin-bottom: 0.75rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-dbdy-nKQ .group-8-hhG .navigation-kQe {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-dbdy-nKQ .group-7-Gtn {
+  margin-bottom: 0.2rem;
+  box-sizing: border-box;
+  padding: 1.4rem 1rem 0.95rem 1rem;
+  width: 9.3rem;
+  background-color: #d9d9d9;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-dbdy-nKQ .group-7-Gtn .logo-zZt {
+  margin-bottom: 0.75rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .auto-group-dbdy-nKQ .group-7-Gtn .navigation-8g6 {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2575;
+  color: #000000;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .line-7-euL {
+  margin: 0rem 0.05rem 1.95rem 0rem;
+  width: 33.8503rem;
+  height: 0;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .title-myx {
+  margin: 0rem 25.7rem 31.55rem 0rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.management-quizzes-quizz-1-vbx .right-bar-KBU .quizz-info-x86 .qr-button-5ze {
+  width: 100%;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #2b80ff;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}

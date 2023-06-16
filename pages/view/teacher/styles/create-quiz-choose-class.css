@@ -1,0 +1,423 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.create-quiz-choose-class-auU {
+  box-sizing: border-box;
+  padding-left: 1rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #000616;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC {
+  margin-right: 1rem;
+  width: 27.2rem;
+  height: 104.4rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .background-pYv {
+  width: 26.2rem;
+  height: 104.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(0.6rem);
+  background-color: rgba(255, 255, 255, 0.0599999987);
+  border-radius: 1.9rem;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .account-8Ji {
+  width: 13.8rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 96.4rem;
+  display: flex;
+  align-items: center;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .account-8Ji .logo-TLz {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .account-8Ji .title-y4S {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .preferences-thC {
+  width: 14.8rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 58.7rem;
+  display: flex;
+  align-items: center;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .preferences-thC .logo-cdC {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .preferences-thC .title-9NE {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .notification-sZ8 {
+  width: 14.8rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 50.6rem;
+  display: flex;
+  align-items: center;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .notification-sZ8 .logo-bzv {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .notification-sZ8 .title-YQN {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .export-Hcr {
+  width: 10.3rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 42.5rem;
+  display: flex;
+  align-items: center;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .export-Hcr .logo-134 {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .export-Hcr .title-jjk {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS {
+  width: 20rem;
+  height: 14.5rem;
+  position: absolute;
+  left: 3.3rem;
+  top: 23.6rem;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-cvej-zva {
+  margin: 0rem 6rem 0.3rem 0rem;
+  width: calc(100% - 6rem);
+  display: flex;
+  align-items: center;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-cvej-zva .logo-81C {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-cvej-zva .title-rC6 {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-trb4-z3Q {
+  margin-left: 1.5rem;
+  width: calc(100% - 1.5rem);
+  display: flex;
+  align-items: flex-end;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-trb4-z3Q .line-vSr {
+  margin: 0rem 0.5rem 1.25rem 0rem;
+  width: 1.7rem;
+  height: 9.75rem;
+  object-fit: contain;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-trb4-z3Q .auto-group-h9mx-qJv {
+  width: 16.3rem;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-trb4-z3Q .auto-group-h9mx-qJv .auto-group-ghua-P5Y {
+  margin-bottom: 2.6rem;
+  box-sizing: border-box;
+  padding: 0.6rem 0.9rem;
+  width: 100%;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.1299999952);
+  border-radius: 0.5rem;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .management-USS .auto-group-trb4-z3Q .auto-group-h9mx-qJv .title-FQa {
+  margin-left: 0.9rem;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .new-quiz-AGe {
+  box-sizing: border-box;
+  padding: 1.3rem 8rem 1.3rem 2rem;
+  width: 22.7rem;
+  height: 5.8rem;
+  position: absolute;
+  left: 1.3rem;
+  top: 14.2rem;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 48, 218, 0.4699999988);
+  border-radius: 1rem;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .new-quiz-AGe .logo-cuL {
+  margin-right: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .new-quiz-AGe .title-vv2 {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2575;
+  color: #e4e4e4;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .logo-SdU {
+  width: 16.35rem;
+  height: 4.7rem;
+  position: absolute;
+  left: 2.2rem;
+  top: 3.1rem;
+  display: flex;
+  align-items: center;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .logo-SdU .logo-yNW {
+  margin-right: 2.55rem;
+  width: 4.7rem;
+  height: 4.7rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .logo-SdU .logo-i5C {
+  margin-bottom: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .expand-button-DXk {
+  width: 2.1rem;
+  height: 2.3rem;
+  position: absolute;
+  left: 25.1rem;
+  top: 4.1rem;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .expand-button-DXk .ellipse-1-L6a {
+  width: 2.1rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.0599999987);
+  border-radius: 1.05rem;
+}
+.create-quiz-choose-class-auU .nav-bar-hjC .expand-button-DXk .item--FUS {
+  width: 0.8rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 0.55rem;
+  top: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv {
+  box-sizing: border-box;
+  padding: 14.25rem 61.1rem 28.3rem 61.1rem;
+  width: 162.8rem;
+  height: 108.1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .text-SYv {
+  margin-bottom: 9.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .logo-kpW {
+  margin: 0rem 3rem 8.55rem 0rem;
+  width: 20.6rem;
+  height: 20.6rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .title-UkW {
+  margin-bottom: 3.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .class-input-CgW {
+  margin-bottom: 4.1rem;
+  width: 100%;
+  height: 5.7rem;
+  position: relative;
+  border-radius: 4.5rem;
+  flex-shrink: 0;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .class-input-CgW .item--YVU {
+  width: 0.8rem;
+  height: 2.1rem;
+  position: absolute;
+  left: 37.35rem;
+  top: 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .class-input-CgW .title-qjU {
+  width: 8.5rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 2.3rem;
+  top: 1.25rem;
+  display: flex;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .class-input-CgW .input-w1p {
+  width: 40.6rem;
+  height: 5.7rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: solid 0.2rem #ffffff;
+  box-sizing: border-box;
+  border-radius: 4.5rem;
+}
+.create-quiz-choose-class-auU .right-bar-9Jv .continue-button-eS2 {
+  margin: 0rem 5.3rem 0rem 5.2rem;
+  width: calc(100% - 10.5rem);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2575;
+  color: #ffffff;
+  font-family: Segoe UI, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #0e48e0;
+  border-radius: 4.5rem;
+  flex-shrink: 0;
+}

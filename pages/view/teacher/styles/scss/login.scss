@@ -1,0 +1,210 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.login-APQ {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 14.6rem 29rem 16rem 17.8rem;
+  width: 100%;
+
+  .logo-Y94 {
+    object-fit: cover;
+    vertical-align: top;
+    flex-shrink: 0;
+    margin: 0rem 23rem 0.8rem 0rem;
+    width: 78.2rem;
+    height: 76.6rem;
+  }
+  .login-card-pMU {
+    flex-direction: column;
+    backdrop-filter: blur(0.6rem);
+    background-color: rgba(0, 0, 0, 0.1000000015);
+    border-radius: 1.9rem;
+    margin-top: 1.3rem;
+    box-sizing: border-box;
+    width: 44rem;
+    display: flex;
+    flex-shrink: 0;
+    padding: 10.6rem 6.5rem 10.1rem 6.5rem;
+    align-items: center;
+
+    .label-FbC {
+      color: #000000;
+      font-family: Segoe UI, 'Source Sans Pro';
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin: 0rem 7.6rem 7.4rem 0rem;
+      font-size: 3.6rem;
+      font-weight: 600;
+      line-height: 1.2575;
+    }
+    .sign-form-8Q6 {
+      margin-bottom: 3.3rem;
+      width: 100%;
+      row-gap: 3rem;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+
+      .username-input-4Hk {
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding: 1.05rem 1.8rem;
+        width: 100%;
+        display: flex;
+        font-family: Segoe UI, 'Source Sans Pro';
+        white-space: nowrap;
+        border-radius: 1.7rem;
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.2575;
+        color: #e4e4e4;
+        background-color: rgba(250, 250, 250, 0.4699999988);
+      }
+      .password-input-4wx {
+        font-weight: 300;
+        font-family: Segoe UI, 'Source Sans Pro';
+        white-space: nowrap;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding: 1.05rem 1.8rem;
+        font-size: 1.6rem;
+        color: #000000;
+        background-color: rgba(255, 255, 255, 0.4699999988);
+        border-radius: 1.7rem;
+        width: 100%;
+        display: flex;
+        line-height: 1.2575;
+      }
+      .remember-me-Kcz {
+        flex-shrink: 0;
+        margin-right: 20.9rem;
+        box-sizing: border-box;
+        padding-right: 0.3rem;
+        width: calc(100% - 20.9rem);
+        display: flex;
+        align-items: center;
+        border-radius: 0.5rem;
+
+        .background-qLS {
+          margin-right: 1rem;
+          width: 1.6rem;
+          height: 1.6rem;
+          background-color: rgba(255, 255, 255, 0.4699999988);
+          border-radius: 0.5rem;
+          flex-shrink: 0;
+        }
+        .placeholder-M3t {
+          font-size: 1.2rem;
+          font-weight: 300;
+          line-height: 1.2575;
+          color: #000000;
+          font-family: Segoe UI, 'Source Sans Pro';
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+      }
+      .submit-button-4U6 {
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        line-height: 1.2575;
+        color: #000000;
+        font-family: Segoe UI, 'Source Sans Pro';
+        background-color: #0c48bf;
+        justify-content: center;
+        font-weight: 600;
+        flex-shrink: 0;
+        width: 100%;
+        height: 5.1rem;
+        font-size: 2rem;
+        border-radius: 1.7rem;
+      }
+    }
+    .divider-V3c {
+      align-items: center;
+      flex-shrink: 0;
+      margin-bottom: 3.3rem;
+      width: 100%;
+      display: flex;
+      column-gap: 0.9rem;
+
+      .line-3-bcS {
+        width: 14rem;
+        height: 0.05rem;
+        background: linear-gradient(90deg, #ffffff 50.52%, rgba(0, 0, 0, 0) 100%);
+        flex-shrink: 0;
+        margin-top: 0.45rem;
+      }
+      .placeholder-FBC {
+        line-height: 1.2575;
+        color: #000000;
+        font-family: Segoe UI, 'Source Sans Pro';
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+        display: flex;
+        white-space: nowrap;
+      }
+      .line-2-NFp {
+        margin-top: 0.45rem;
+        width: 14rem;
+        height: 0.05rem;
+        background: linear-gradient(90deg, #ffffff 50.52%, rgba(0, 0, 0, 0) 100%);
+        flex-shrink: 0;
+      }
+    }
+    .microsoft-button-Grz {
+      line-height: 1.2575;
+      color: #000000;
+      font-family: Segoe UI, 'Source Sans Pro';
+      flex-shrink: 0;
+      font-size: 1.4rem;
+      white-space: nowrap;
+      background-color: #0c48bf;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1.7rem;
+      margin-bottom: 2.3rem;
+      height: 4.4rem;
+      display: flex;
+      font-weight: 400;
+    }
+    .signup-button-WFY {
+      width: 100%;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 400;
+      display: flex;
+      color: #000000;
+      white-space: nowrap;
+      background-color: #0c48bf;
+      border-radius: 1.7rem;
+      flex-shrink: 0;
+      justify-content: center;
+      line-height: 1.2575;
+      height: 4.4rem;
+      font-family: Segoe UI, 'Source Sans Pro';
+    }
+  }
+}
