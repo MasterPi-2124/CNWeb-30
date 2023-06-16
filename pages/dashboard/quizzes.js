@@ -29,22 +29,13 @@ export async function getServerSideProps() {
         console.error(err);
     }
 
-    try {
-        await axios.get(`${API}/classes/`).then((res) => {
-            data.boards.classes.items = res.data.data;
-        })
-    }
-    catch (err) {
-        console.error(err);
-    }
-
     props = data;
     return {
         props,
     }
 }
 
-const Dashboard = (props) => {
+const QuizzesDashboard = (props) => {
     let sidebar = React.createRef();
     const [full, setFull] = useState(true);
 
@@ -72,4 +63,4 @@ const Dashboard = (props) => {
     );
 }
 
-export default Dashboard;
+export default QuizzesDashboard;

@@ -1,11 +1,33 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
 import React, { useState } from "react";
-// import ClassDashboard from "@/components/dashboard/class/dashboard";
-// import { getServerSession } from "next-auth";
-// import { NextAuth } from "@/pages/api/[...nextauth]";
+import Dashboard from "@/components/dashboard/dashboard";
+import data from "@/components/dashboard/data.json";
+import axios from "axios";
+import { BoardProvider } from '@/components/dashboard/context';
 
-function Dashboard() {
+const API = process.env.NEXT_PUBLIC_API;
+
+export async function getServerSideProps() {
+    let props = {};
+
+    try {
+        await axios.get(`${API}/classes?groupBy=semester`).then((res) => {
+            data.boards.classes.items = res.data.data;
+        })
+    }
+    catch (err) {
+        console.error(err);
+    }
+
+    props = data;
+    console.log(data)
+    return {
+        props,
+    }
+}
+
+const ClassesDashboard = (props) => {
     let sidebar = React.createRef();
     const [full, setFull] = useState(true);
 
@@ -24,13 +46,14 @@ function Dashboard() {
                     </a>
                 </div>
                 <div className="main-container">
-                    <div className="content">
-                        {/* <ClassDashboard /> */}
-                    </div>
+                    <BoardProvider data={props} type="classes" >
+                        <Dashboard />
+                    </BoardProvider>
                 </div>
             </div>
         </Layout>
     );
 }
 
-export default Dashboard;
+export default ClassesDashboard;
+a
