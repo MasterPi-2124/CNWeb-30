@@ -10,10 +10,23 @@ const API = process.env.NEXT_PUBLIC_API;
 
 export async function getServerSideProps() {
     let props = {};
-
+    
     try {
         await axios.get(`${API}/classes?groupBy=semester`).then((res) => {
-            data.boards.classes.items = res.data.data;
+            let classes = [];
+            let columns = [];
+            res.data.data.map((semester, id) => {
+                semester._classes.map(item => {
+                    classes.push(item);
+                })
+                columns.push({
+                    "name": semester.semester,
+                    "color": "#123456",
+                    "items": semester._classes.map(item => item._id)
+                })
+            })
+        data.boards.classes.items = classes;
+        data.boards.classes.columns = columns;
         })
     }
     catch (err) {
@@ -21,7 +34,6 @@ export async function getServerSideProps() {
     }
 
     props = data;
-    console.log(data)
     return {
         props,
     }
@@ -56,4 +68,3 @@ const ClassesDashboard = (props) => {
 }
 
 export default ClassesDashboard;
-a
