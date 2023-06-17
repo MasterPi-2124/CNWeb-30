@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import useOnClickOutside from "../hooks/useOnClickOutside";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 import EditIcon from '@/assets/icons/thin/edit.svg';
 
 const EditButton = ({
