@@ -4,6 +4,7 @@ import Item from './item';
 
 const Dashboard = () => {
     const { currentBoard } = useBoards();
+    console.log(currentBoard)
     return (
         <main className='dashboard overflow-y-hidden scrollbar-thin scrollbar-thumb-mainPurple scrollbar-track-transparent flex-1 p-4 space-x-4 bg-lightGrey dark:bg-veryDarkGrey flex'>
             {

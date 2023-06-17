@@ -12,10 +12,9 @@ const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
 
     const getClasses = async () => {
         try {
-            let classes = await axios.get(`${API}/classes`).then((res) => {
+            await axios.get(`${API}/classes`).then((res) => {
                 setClasses(res.data.data)
             })
-            console.log(classes)
         }
         catch (err) {
             console.error(err);

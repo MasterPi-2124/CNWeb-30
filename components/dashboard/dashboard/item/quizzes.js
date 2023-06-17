@@ -1,8 +1,8 @@
-import { useState } from "react";
-import Modal from "../../class/modal";
-import ItemDetailModal from "../../class/modal/item-detail";
-import DeleteItemModal from "../../class/modal/delete-item";
-import QRModal from "../../class/modal/qr-full";
+import { useState, useEffect } from "react";
+import Modal from "../../quiz/modal";
+import ItemDetailModal from "../../quiz/modal/item-detail";
+import DeleteItemModal from "../../quiz/modal/delete-item";
+import QRModal from "../../quiz/modal/qr-full";
 import { useBoards } from "../../context";
 import ClassIcon from "@/assets/icons/thin/class.svg";
 import TimeIcon from "@/assets/icons/thin/time.svg";
@@ -19,14 +19,19 @@ const QuizItem = ({ data }) => {
     const [deleteModal, setDeleteModal] = useState(false);
     const [qrModal, setQRModal] = useState(false);
     const { deleteItem } = useBoards();
+    const [responses, setResponses] = useState([]);
 
-    const getResponse = async () => {
+    useEffect(() => {
         try {
-            let data = await axios.get(`${API}/quizRecords/${data._id}`)
+            axios.get(`${API}/quizRecords?quiz=${data._id}`).then(res => {
+                console.log("ahihi",res.data)
+                setResponses(res.data.data[0].studentList);
+            })
+
         } catch (err) {
             console.error(err);
         }
-    }
+    }, []);
 
     return (
         <>
@@ -34,9 +39,10 @@ const QuizItem = ({ data }) => {
                 onClick={() => setOpenItemModal(true)}>
                 <div className="item-title">
                     <h4 className="heading-md mb-2 group-hover:text-mainPurple">{data._id}</h4>
-                    {data.status === "in progress" ? (
+                    {data.status === "In Progress" ? (
                         <button onClick={() => {
                             setQRModal(true);
+                            setOpenItemModal(false);
                         }}>
                             Get QR
                         </button>
@@ -69,7 +75,7 @@ const QuizItem = ({ data }) => {
                     </div>
                     <div className="footer-class-name">
                         <Image src={HumanIcon} />
-                        <p>{data._class.subject}</p>
+                        <p>{responses.length}/{data._class.studentCount}</p>
                     </div>
                 </div>
             </li>

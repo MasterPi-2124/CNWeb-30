@@ -32,7 +32,6 @@ const DropDown = ({ minimized, isShow, buttonList }) => {
                 <Link
                   href={button.path}
                   className="nav-button"
-
                 >
                   {button.text}
                 </Link>

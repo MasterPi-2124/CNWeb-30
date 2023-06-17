@@ -19,12 +19,13 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
 
         const calculateEndTime = (startDate, startTime, interval) => {
             const startDateTime = new Date(`${startDate}T${startTime}`);
-            startDateTime.setMinutes(startDateTime.getMinutes() + interval);
+            startDateTime.setMinutes(startDateTime.getMinutes() + parseInt(interval));
             const endDateTime = startDateTime.toISOString();
             return endDateTime;
         }
         const startDateTime = new Date(`${startDate}T${startTime}`).toISOString();
         const endDateTime = calculateEndTime(startDate, startTime, interval);
+        console.log(startDateTime, endDateTime)
 
         const data = {
             startTime: startDateTime,
