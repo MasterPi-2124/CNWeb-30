@@ -23,6 +23,11 @@ const navButton = [
         img: AddIcon,
     },
     {
+        text: "New Class",
+        path: "/new-class",
+        img: AddIcon,
+    },
+    {
         text: "Dashboard",
         path: "/dashboard",
         img: DashboardIcon,
@@ -48,11 +53,6 @@ const navButton = [
         text: "Notifications",
         path: "/notifications",
         img: NotiIcon,
-    },
-    {
-        text: "Preferences",
-        path: "/preferences",
-        img: PreIcon,
     }
 ];
 
@@ -93,7 +93,7 @@ const Menu = ({ currentPath, minimized }) => {
         if (currentTheme === "dark") {
             return (
                 <div>
-                    <Image src={LightIcon} alt="sun icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('light')} />
+                    <Image src={LightIcon} alt="sun icon" className="invert dark:invert-0" role="button" onClick={() => setTheme('light')} />
                     <p>Light Mode</p>
                 </div>
             )
@@ -102,7 +102,7 @@ const Menu = ({ currentPath, minimized }) => {
         else {
             return (
                 <div>
-                    <Image src={DarkIcon} alt="moon icon" className="w-7 h-7 invert dark:invert-0" role="button" onClick={() => setTheme('dark')} />
+                    <Image src={DarkIcon} alt="moon icon" className="invert dark:invert-0" role="button" onClick={() => setTheme('dark')} />
                     <p>Dark Mode</p>
                 </div>
             )

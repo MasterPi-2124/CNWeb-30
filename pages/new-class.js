@@ -1,11 +1,9 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
 import React, { useState } from "react";
-import NewQuiz from "@/components/new-quiz/new-quiz"
-// import { getServerSession } from "next-auth";
-// import { NextAuth } from "@/pages/api/[...nextauth]";
+import NewClass from "@/components/new-class"
 
-function NewQuizPage() {
+function NewClassPage() {
   let sidebar = React.createRef();
   const [full, setFull] = useState(true);
 
@@ -14,21 +12,21 @@ function NewQuizPage() {
   }
 
   return (
-    <Layout pageTitle="New Quiz | Dashboard">
+    <Layout pageTitle="New Class | Dashboard">
       <div className="dashboard bg-background-1 h-screen bg-center bg-cover bg-no-repeat flex items-center">
         <div className={full ? `sidebar` : `sidebar minimal-size`} ref={sidebar}>
-          <Menu currentPath={"New Quiz"} minimized={full} />
+          <Menu currentPath={"New Class"} minimized={full} />
           <a className={full ? `resize-btn` : `resize-btn minimal-btn`} onClick={resize}>
             <span className="up-arrow"></span>
             <span className="down-arrow"></span>
           </a>
         </div>
         <div className="main-container">
-          <NewQuiz />
+          <NewClass />
         </div>
       </div>
     </Layout>
   );
 }
 
-export default NewQuizPage;
+export default NewClassPage;

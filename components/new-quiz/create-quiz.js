@@ -63,6 +63,7 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
 
                         <Input
                             width="186px"
+                            required
                             label="Date"
                             type="date"
                             onChange={(e) => setStartDate(e.target.value)}
@@ -71,12 +72,14 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
                         <Input
                             width="186px"
                             label="Time"
+                            required
                             type="time"
                             onChange={(e) => setStartTime(e.target.value)}
                         />
 
                         <Input
                             width="186px"
+                            required
                             label="Interval"
                             type="number"
                             bordered
@@ -92,6 +95,7 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
                         {console.log(quizzed)}
                         {quizzed ? <Input
                             label="Url"
+                            required
                             type="url"
                             labelLeft="https://"
                             labelRight=".org"

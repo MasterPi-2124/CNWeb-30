@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Modal from "../../quiz/modal";
-import ItemDetailModal from "../../quiz/modal/item-detail";
-import DeleteItemModal from "../../quiz/modal/delete-item";
-import QRModal from "../../quiz/modal/qr-full";
+import Modal from "../../modal";
+import ItemDetailModal from "../../modal/item-detail";
+import DeleteItemModal from "../../modal/delete-item";
+import QRModal from "../../modal/qr-full";
 import { useBoards } from "../../context";
 import ClassIcon from "@/assets/icons/thin/class.svg";
 import TimeIcon from "@/assets/icons/thin/time.svg";
@@ -23,9 +23,9 @@ const QuizItem = ({ data }) => {
 
     useEffect(() => {
         try {
-            axios.get(`${API}/quizRecords?quiz=${data._id}`).then(res => {
-                console.log("ahihi",res.data)
-                setResponses(res.data.data[0].studentList);
+            axios.get(`${API}/quizRecords/${data._id}`).then(res => {
+                console.log("ahihi", res.data)
+                setResponses(res.data.data.studentList);
             })
 
         } catch (err) {
@@ -38,7 +38,7 @@ const QuizItem = ({ data }) => {
             <li className="items-group select-none shadow-main px-4 py-6 rounded-lg cursor-pointer dark:bg-darkGrey dark:text-white"
                 onClick={() => setOpenItemModal(true)}>
                 <div className="item-title">
-                    <h4 className="heading-md mb-2 group-hover:text-mainPurple">{data._id}</h4>
+                    <h4 className="heading-md mb-2 group-hover:text-mainPurple">Quiz #{data._id.substring(0, 5)}</h4>
                     {data.status === "In Progress" ? (
                         <button onClick={() => {
                             setQRModal(true);
@@ -53,9 +53,7 @@ const QuizItem = ({ data }) => {
                             See Result
                         </button>
                     ) : (
-                        <div>
-                            aasdasd
-                        </div>
+                        <></>
                     )}
 
                 </div>
@@ -81,27 +79,26 @@ const QuizItem = ({ data }) => {
             </li>
             <Modal show={openItemModal} onClose={() => setOpenItemModal(false)}>
                 <ItemDetailModal
+                    type="quiz"
                     data={data}
+                    responses={responses}
                     close={() => setOpenItemModal(false)}
-                    switchToUpdate={() => {
-                        setOpenItemModal(false);
-                        setUpdateModal(true);
-                    }}
                     switchToDelete={() => {
                         setOpenItemModal(false);
                         setDeleteModal(true);
-                    }} />
+                    }}
+                />
             </Modal>
             <Modal show={deleteModal} onClose={() => setDeleteModal(!deleteModal)}>
                 <DeleteItemModal
-                    title={data._id}
+                    type="quiz"
+                    data={data}
                     onClose={() => {
                         setDeleteModal(false);
                         setOpenItemModal(true);
                     }}
                     onConfirm={() => {
-                        console.log("asd")
-                        deleteItem(data.id)
+                        deleteItem(data._id)
                         setDeleteModal(false);
                     }} />
             </Modal>

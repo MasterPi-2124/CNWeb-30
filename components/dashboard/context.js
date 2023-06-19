@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
+import axios from "axios";
 
+const API = process.env.NEXT_PUBLIC_API;
 const BoardContext = createContext();
 
 function BoardProvider({ data, type, children }) {
@@ -8,14 +10,39 @@ function BoardProvider({ data, type, children }) {
   const columns = currentBoard?.columns;
 
   const deleteItem = (itemId) => {
-    const item = currentBoard.items.find((item) => item.id === itemId);
-    const column = columns.find((column) => column.name === item.status);
-    column.items = column.items.filter((id) => id !== itemId);
-    console.log(currentBoard.items);
-    currentBoard.items = currentBoard.items.filter(
-      (item) => item.id !== itemId
-    );
-    setBoards([...boards]);
+    if (type === "quizzes") {
+      try {
+        axios.delete(`${API}/quizzes/${itemId}`).then(() => {
+          const item = currentBoard.items.find((item) => item._id === itemId);
+          const column = columns.find((column) => column.name === item.status);
+          column.items = column.items.filter((id) => id !== itemId);
+          currentBoard.items = currentBoard.items.filter(
+            (item) => item.id !== itemId
+          );
+          setBoards(prevBoards => ({...prevBoards, ...boards}));
+        });
+
+      } catch (err) {
+        console.error(err);
+      }
+
+    } else if (type === "classes") {
+      try {
+        axios.delete(`${API}/classes/${itemId}`).then(() => {
+          const item = currentBoard.items.find((item) => item._id === itemId);
+          const column = columns.find((column) => column.name === item.semester);
+          column.items = column.items.filter((id) => id !== itemId);
+          currentBoard.items = currentBoard.items.filter(
+            (item) => item.id !== itemId
+          );
+          setBoards(prevBoards => ({...prevBoards, ...boards}));
+        });
+
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
   };
 
   const value = {
