@@ -17,21 +17,21 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
         <p className="body-lg text-mediumGrey">
           Subject: {data.subject}
         </p>
-  
+
         <p className="body-lg text-mediumGrey">
           Semester: {data.semester}
         </p>
-  
+
         <p className="body-lg text-mediumGrey">
           Total Student: {data.studentCount}
         </p>
-  
+
         <p className="body-lg text-mediumGrey">
           Note: {data.note}
         </p>
-  
-  
-  
+
+
+
       </div>
     )
   } else {
@@ -61,10 +61,10 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
         <p className="body-lg text-mediumGrey">
           Start Time: {data.startTime}
         </p>
-  
+
       </div>
     )
   }
-  
+
 }
 export default ItemDetailModal

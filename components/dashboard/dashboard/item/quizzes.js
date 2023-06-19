@@ -12,7 +12,7 @@ import Image from "next/image";
 import axios from "axios";
 
 const API = process.env.NEXT_PUBLIC_API;
-const HOST = process.env.NEXTAUTH_URL;
+const HOST = process.env.NEXT_PUBLIC_BASE_URL;
 
 const QuizItem = ({ data }) => {
     const [openItemModal, setOpenItemModal] = useState(false);
@@ -104,6 +104,8 @@ const QuizItem = ({ data }) => {
             </Modal>
             <Modal show={qrModal} onClose={() => setQRModal(!qrModal)}>
                 <QRModal
+                    startTime={data.startTime}
+                    endTime={data.endTime}
                     url={`${HOST}/quiz/${data._id}`}
                 />
             </Modal>

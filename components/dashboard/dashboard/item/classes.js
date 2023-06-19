@@ -8,7 +8,6 @@ import Image from "next/image";
 import DeleteItemModal from "../../modal/delete-item";
 
 const API = process.env.NEXT_PUBLIC_API;
-const HOST = process.env.NEXTAUTH_URL;
 
 const ClassItem = ({ data }) => {
     const [openItemModal, setOpenItemModal] = useState(false);
