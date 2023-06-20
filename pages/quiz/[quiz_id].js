@@ -29,7 +29,6 @@ export async function getServerSideProps(context) {
     }
 }
 
-
 const QuizForm = (props) => {
     const router = useRouter();
     const [latitude, setLatitude] = useState('');
@@ -46,7 +45,10 @@ const QuizForm = (props) => {
     return (
         <Layout pageTitle="Quiz | CNWeb-30">
             <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
+                <div className="main-container">
+
                 <StudentQuiz IP={props.IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={latitude} checkLon={longitude} />
+                </div>
             </div>
         </Layout>
     );
