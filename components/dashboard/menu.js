@@ -7,7 +7,6 @@ import DropDown from "./dropdown";
 import { useTheme } from "next-themes";
 import LightIcon from "@/assets/icons/thin/sun.svg";
 import DarkIcon from "@/assets/icons/thin/moon.svg";
-import AddIcon from "@/assets/icons/thin/add.svg";
 import DashboardIcon from "@/assets/icons/thin/dashboard.svg";
 import ExportIcon from "@/assets/icons/thin/export.svg";
 import NotiIcon from "@/assets/icons/thin/notification.svg";
@@ -20,12 +19,12 @@ const navButton = [
     {
         text: "New Quiz",
         path: "/new-quiz",
-        img: AddIcon,
+        img: QuizIcon,
     },
     {
         text: "New Class",
         path: "/new-class",
-        img: AddIcon,
+        img: ClassIcon,
     },
     {
         text: "Dashboard",
