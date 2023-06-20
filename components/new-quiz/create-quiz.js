@@ -59,7 +59,7 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
             {!submitOK ? (
                 <>
                     <h1>Create a new Quiz</h1>
-                    <Image src={Logo}></Image>
+                    <Image alt="logo" src={Logo}></Image>
                     <form className="form" onSubmit={handleSubmit}>
                         <label>Create a quiz in class {classSelected.className}</label>
 

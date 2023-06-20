@@ -23,16 +23,16 @@ const ClassItem = ({ data }) => {
                 <hr />
                 <div className="items-footer">
                     <div className="footer-item">
-                        <Image src={HumanIcon} />
+                        <Image alt="a human icon" src={HumanIcon} />
                         <p>{data.studentCount} students</p>
                     </div>
 
                     <div className="footer-item">
-                        <Image src={ClassIcon} />
+                        <Image alt="a class icon" src={ClassIcon} />
                         <p>{data.semester}</p>
                     </div>
                     <div className="footer-item">
-                        <Image src={SubjectIcon} />
+                        <Image alt="a subject icon" src={SubjectIcon} />
                         <p>{data.subject}</p>
                     </div>
 

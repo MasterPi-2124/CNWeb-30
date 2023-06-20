@@ -46,7 +46,7 @@ const NewClass = () => {
             {!submitted ? (
                 <div className="content">
                     <h1>Create a new Class</h1>
-                    <Image src={Logo}></Image>
+                    <Image alt="logo" src={Logo}></Image>
                     <form className="form" onSubmit={handleSubmit}>
 
                         <Input

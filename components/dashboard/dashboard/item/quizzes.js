@@ -54,19 +54,19 @@ const QuizItem = ({ data }) => {
                 <hr />
                 <div className="items-footer">
                     <div className="footer-item">
-                        <Image src={ClassIcon} />
+                        <Image alt="a class icon" src={ClassIcon} />
                         <p>{data._class.subject}</p>
                     </div>
                     <div className="footer-item">
-                        <Image src={TimeIcon} />
+                        <Image alt="a time icon" src={TimeIcon} />
                         <p>{(new Date(data.endTime) - new Date(data.startTime)) / (1000 * 60)} mins</p>
                     </div>
                     <div className="footer-item">
-                        <Image src={DateIcon} />
+                        <Image alt="a date icon" src={DateIcon} />
                         <p>{new Date(data.startTime).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                     </div>
                     <div className="footer-item">
-                        <Image src={HumanIcon} />
+                        <Image alt="a human icon" src={HumanIcon} />
                         <p>{responses.length}/{data._class.studentCount}</p>
                     </div>
                 </div>

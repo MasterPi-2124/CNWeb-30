@@ -28,7 +28,7 @@ const DropDown = ({ minimized, isShow, buttonList }) => {
                 }}
                 className="p-2 flex flex-row"
               >
-                <Image src={button.img} />
+                <Image alt="" src={button.img} />
                 <Link
                   href={button.path}
                   className="nav-button"

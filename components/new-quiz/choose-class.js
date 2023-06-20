@@ -28,7 +28,7 @@ const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
     return (
         <>
             <h1>Create a new quiz</h1>
-            <Image src={Logo}></Image>
+            <Image alt="logo" src={Logo}></Image>
             <form className="form" onSubmit={handleSubmit}>
                 <label>First, choose a class to start</label>
                 <Dropdown className="classes-choices">

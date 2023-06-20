@@ -140,7 +140,7 @@ const Menu = ({ currentPath, minimized }) => {
                                 background: currentPath === button.text && "rgba(73, 73, 73, 0.595)",
                             }}
                         >
-                            <Image src={button.img} />
+                            <Image alt="" src={button.img} />
                             <Link
                                 href={button.path}
                                 className="nav-button"
@@ -161,7 +161,7 @@ const Menu = ({ currentPath, minimized }) => {
             </div>
             <div className="menu-down flex items-center">
                 <div>
-                    <Image src={UserIcon} />
+                    <Image alt="an user icon" src={UserIcon} />
                     <Link
                         href="/account"
                         className="nav-button"

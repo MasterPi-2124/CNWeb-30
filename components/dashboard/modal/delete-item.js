@@ -23,7 +23,7 @@ const DeleteItemModal = ({type, data, onConfirm, onClose}) => {
         return (
             <div className="modal space-y-6 w-full mx-auto rounded-md p-6 dark:bg-darkGrey md:p-8">
                 <h1 className="text-mainRed heading-lg">Delete this quiz?</h1>
-                <p className="body-lg">Are you sure you want to delete this quiz? This quiz and it's responses will be deleted. <br/> THIS ACTION CAN NOT BE REVERSED.</p>
+                <p className="body-lg">Are you sure you want to delete this quiz? This quiz and it&apos;s responses will be deleted. <br/> THIS ACTION CAN NOT BE REVERSED.</p>
                 <p>Class ID: {data._class.codename}</p>
                 <div className="flex gap-4">
       
