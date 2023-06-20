@@ -54,7 +54,7 @@ const Modal = ({show, onClose, children, className = 'items-center justify-cente
           initial="hidden"
           animate="visible"
           exit="hidden"
-          className={` fixed left-0 right-0 top-0 bottom-0 bg-opacity-50 flex bg-black z-50 ${className}`}
+          className={`fixed left-0 right-0 top-0 bottom-0 bg-opacity-80 flex bg-black z-50 ${className}`}
         >
           <motion.div className="w-full m-4 max-w-[480px]" ref={modalRef} variants={modalVariant}>
             {children}

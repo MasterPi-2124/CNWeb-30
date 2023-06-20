@@ -8,6 +8,7 @@ import Link from "next/link";
 const API = process.env.NEXT_PUBLIC_API;
 
 const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
+    console.log(classSelected)
     const [submitOK, setSubmitOK] = useState(false);
     const [startDate, setStartDate] = useState();
     const [startTime, setStartTime] = useState();

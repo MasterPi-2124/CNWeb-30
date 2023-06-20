@@ -5,7 +5,8 @@ import "@/styles/new-quiz.css";
 import "@/styles/menu.css";
 import "@/styles/button.css";
 import "@/styles/main-container.css";
-import "@/styles/dashboard-class.css";
+import "@/styles/modal.css";
+import "@/styles/dashboard.css";
 import localFont from 'next/font/local';
 import { ThemeProvider } from "next-themes";
 import { SessionProvider } from "next-auth/react"

@@ -24,12 +24,12 @@ function Dashboard() {
         </div>
         <div className="main-container">
           <div className="content">
-            <div className="quiz-dashboard">
+            <div className="item-dashboard">
               <Link href="/dashboard/quizzes">
                 Quiz Dashboard
               </Link>
             </div>
-            <div className="quiz-dashboard">
+            <div className="item-dashboard">
               <Link href="/dashboard/classes">
                 Class Dashboard
               </Link>

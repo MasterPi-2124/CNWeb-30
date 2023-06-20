@@ -22,7 +22,9 @@ function ExportPage() {
           </a>
         </div>
         <div className="main-container">
-          <Export />
+          <div className="content">
+            <Export />
+          </div>
         </div>
       </div>
     </Layout>

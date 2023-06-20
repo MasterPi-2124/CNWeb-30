@@ -19,3 +19,16 @@ button.ok {
 button.ok:hover {
     background-color: rgb(48, 133, 231);
 }
+
+button.export-button {
+    border: 1px solid rgba(86, 86, 86, 0.736);
+    margin-top: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #21212166;
+}
+
+button.export-button:hover {
+    background-color: #55555566;
+}

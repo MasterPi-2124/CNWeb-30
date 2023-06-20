@@ -7,10 +7,13 @@ const NewQuiz = () => {
     const [submitted, setSubmitted] = useState(false);
 
     useEffect(() => {
-        const savedClass = localStorage.getItem("classSelected");
-        if (savedClass) {
+        const savedClass = JSON.parse(localStorage.getItem("classSelected"));
+        console.log(Object.keys(savedClass).length)
+        if (Object.keys(savedClass).length > 0) {
             setClassSelected(savedClass);
             setSubmitted(true);
+        } else {
+            setSubmitted(false);
         }
     }, []);
 

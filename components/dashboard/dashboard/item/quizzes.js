@@ -4,10 +4,10 @@ import ItemDetailModal from "../../modal/item-detail";
 import DeleteItemModal from "../../modal/delete-item";
 import QRModal from "../../modal/qr-full";
 import { useBoards } from "../../context";
-import ClassIcon from "@/assets/icons/thin/class.svg";
-import TimeIcon from "@/assets/icons/thin/time.svg";
-import DateIcon from "@/assets/icons/thin/date.svg";
-import HumanIcon from "@/assets/icons/thin/human.svg";
+import ClassIcon from "@/assets/icons/thick/class.svg";
+import TimeIcon from "@/assets/icons/thick/time.svg";
+import DateIcon from "@/assets/icons/thick/date.svg";
+import HumanIcon from "@/assets/icons/thick/human.svg";
 import Image from "next/image";
 import axios from "axios";
 
@@ -35,22 +35,16 @@ const QuizItem = ({ data }) => {
 
     return (
         <>
-            <li className="items-group select-none shadow-main px-4 py-6 rounded-lg cursor-pointer dark:bg-darkGrey dark:text-white"
+            <li className="items-group select-none px-4 py-6 rounded-lg cursor-pointer"
                 onClick={() => setOpenItemModal(true)}>
                 <div className="item-title">
-                    <h4 className="heading-md mb-2 group-hover:text-mainPurple">Quiz #{data._id.substring(0, 5)}</h4>
+                    <p className="heading-md mb-2">Quiz #{data._id.substring(0, 8)}</p>
                     {data.status === "In Progress" ? (
                         <button onClick={() => {
-                            setQRModal(true);
                             setOpenItemModal(false);
+                            setQRModal(true);
                         }}>
                             Get QR
-                        </button>
-                    ) : data.status === "Finished" ? (
-                        <button onClick={() => {
-                            setQRModal(true);
-                        }}>
-                            See Result
                         </button>
                     ) : (
                         <></>
@@ -58,20 +52,20 @@ const QuizItem = ({ data }) => {
 
                 </div>
                 <hr />
-                <div className="item-footer">
-                    <div className="footer-class-name">
+                <div className="items-footer">
+                    <div className="footer-item">
                         <Image src={ClassIcon} />
                         <p>{data._class.subject}</p>
                     </div>
-                    <div className="footer-class-name">
+                    <div className="footer-item">
                         <Image src={TimeIcon} />
                         <p>{(new Date(data.endTime) - new Date(data.startTime)) / (1000 * 60)} mins</p>
                     </div>
-                    <div className="footer-class-name">
+                    <div className="footer-item">
                         <Image src={DateIcon} />
                         <p>{new Date(data.startTime).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                     </div>
-                    <div className="footer-class-name">
+                    <div className="footer-item">
                         <Image src={HumanIcon} />
                         <p>{responses.length}/{data._class.studentCount}</p>
                     </div>

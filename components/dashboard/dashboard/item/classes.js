@@ -2,12 +2,11 @@ import { useState } from "react";
 import { useBoards } from "../../context";
 import Modal from "../../modal";
 import ItemDetailModal from "../../modal/item-detail";
-import HumanIcon from "@/assets/icons/thin/human.svg";
-import SubjectIcon from "@/assets/icons/thin/subject.svg";
+import HumanIcon from "@/assets/icons/thick/human.svg";
+import ClassIcon from "@/assets/icons/thick/class.svg";
+import SubjectIcon from "@/assets/icons/thick/subject.svg";
 import Image from "next/image";
 import DeleteItemModal from "../../modal/delete-item";
-
-const API = process.env.NEXT_PUBLIC_API;
 
 const ClassItem = ({ data }) => {
     const [openItemModal, setOpenItemModal] = useState(false);
@@ -16,25 +15,28 @@ const ClassItem = ({ data }) => {
 
     return (
         <>
-            <li className="items-group select-none shadow-main px-4 py-6 rounded-lg cursor-pointer dark:bg-darkGrey dark:text-white"
+            <li className="items-group select-none px-4 py-6 rounded-lg cursor-pointer"
                 onClick={() => setOpenItemModal(true)}>
                 <div className="item-title">
-                    <h4 className="heading-md mb-2 group-hover:text-mainPurple">Quiz #{data._id.substring(0, 5)}</h4>
-                    <h6>{data.subject}</h6>
-                    <hr />
-                    <div className="item-footer">
-                        <div className="footer-class-name">
-                            <Image src={HumanIcon} />
-                            <p>{data.studentCount} students</p>
-                        </div>
-                        <div className="footer-class-name">
-                            <Image src={SubjectIcon} />
-                            <p>{data.subject}</p>
-                        </div>
-
-                    </div>
+                    <p className="heading-md mb-2 group-hover:text-mainPurple">Class #{data.codename}</p>
                 </div>
                 <hr />
+                <div className="items-footer">
+                    <div className="footer-item">
+                        <Image src={HumanIcon} />
+                        <p>{data.studentCount} students</p>
+                    </div>
+
+                    <div className="footer-item">
+                        <Image src={ClassIcon} />
+                        <p>{data.semester}</p>
+                    </div>
+                    <div className="footer-item">
+                        <Image src={SubjectIcon} />
+                        <p>{data.subject}</p>
+                    </div>
+
+                </div>
             </li>
             <Modal show={openItemModal} onClose={() => setOpenItemModal(false)}>
                 <ItemDetailModal
