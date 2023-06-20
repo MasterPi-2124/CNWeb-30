@@ -178,12 +178,3 @@
 .menu-down>div:hover {
     background: rgba(255, 255, 255, 0.178);
 }
-
-.main-container {
-    flex: 1 1 auto;
-    border: 1px solid red;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}

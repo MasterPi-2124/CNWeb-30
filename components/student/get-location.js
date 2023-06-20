@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const GetLocation = ({ quizDetail, classDetail, location, checkLat, checkLon, setLocation, handleSubmit }) => {
+const API = process.env.NEXT_PUBLIC_API;
+const GetLocation = ({ IP, quizDetail, classDetail, location, checkLat, checkLon, setLocation, handleSubmit }) => {
     const [distance, setDistance] = useState(999999);
-
     const getLocation = () => {
+        checkIP();
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
@@ -15,10 +17,22 @@ const GetLocation = ({ quizDetail, classDetail, location, checkLat, checkLon, se
                 (error) => {
                     console.error('Error getting user location:', error);
                 }
-            );
-        } else {
-            console.error('Geolocation is not supported by this browser.');
-        }
+                );
+            } else {
+                console.error('Geolocation is not supported by this browser.');
+            }
+    }
+        
+        const checkIP = async () => {
+            try {
+                await axios.get(`${API}/quizRecords/${quizDetail._id}`).then((res) => {
+                    const responses = res.data.data.studentList;
+                    console.log(responses)
+                })
+            }
+            catch (err) {
+                console.error(err);
+            }
     }
 
     const calculateDistance = (lat1, lon1, lat2, lon2) => {

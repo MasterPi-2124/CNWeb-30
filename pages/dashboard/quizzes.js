@@ -45,7 +45,7 @@ const QuizzesDashboard = (props) => {
 
     return (
         <Layout pageTitle="Quizzes | CNWeb">
-            <div className="dashboard bg-background-1 h-screen bg-center bg-cover bg-no-repeat flex items-center">
+            <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
                 <div className={full ? `sidebar` : `sidebar minimal-size`} ref={sidebar}>
                     <Menu currentPath={"Dashboard"} minimized={full} />
                     <a className={full ? `resize-btn` : `resize-btn minimal-btn`} onClick={resize}>

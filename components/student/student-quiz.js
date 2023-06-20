@@ -4,7 +4,7 @@ import GetName from "./get-name";
 import GetID from "./get-id";
 import GetForm from "./get-form";
 
-const StudentQuiz = ({ quizDetail, classDetail, checkLat, checkLon }) => {
+const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon }) => {
     const [location, setLocation] = useState();
     const [studentName, setStudentName] = useState("");
     const [studentID, setStudentID] = useState();
@@ -62,6 +62,7 @@ const StudentQuiz = ({ quizDetail, classDetail, checkLat, checkLon }) => {
             {
                 (stage === 0) ? (
                     <GetLocation
+                        IP={IP}
                         quizDetail={quizDetail}
                         classDetail={classDetail}
                         location={location}
@@ -89,6 +90,7 @@ const StudentQuiz = ({ quizDetail, classDetail, checkLat, checkLon }) => {
                     />
                 ) : (
                     <GetForm
+                        IP={IP}
                         studentName={studentName}
                         studentID={studentID}
                         quizDetail={quizDetail}
@@ -102,5 +104,3 @@ const StudentQuiz = ({ quizDetail, classDetail, checkLat, checkLon }) => {
 };
 
 export default StudentQuiz;
-
-20.976799, 105.846851

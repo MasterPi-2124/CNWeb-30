@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Logo from "@/assets/logo/cnweb-30.png";
-import { Input, Switch } from "@nextui-org/react";
+import { Input, Textarea } from "@nextui-org/react";
 import axios from "axios";
 import React, { useState } from "react"
+import Link from "next/link";
 
 const API = process.env.NEXT_PUBLIC_API;
 
@@ -44,12 +45,12 @@ const NewClass = () => {
         <>
             {!submitted ? (
                 <div className="content">
-                    <h1>Create a new quiz</h1>
+                    <h1>Create a new Class</h1>
                     <Image src={Logo}></Image>
                     <form className="form" onSubmit={handleSubmit}>
 
                         <Input
-                            width="186px"
+                            className="input"
                             label="Class ID"
                             type="number"
                             placeholder="713412"
@@ -57,14 +58,14 @@ const NewClass = () => {
                         />
 
                         <Input
-                            width="186px"
+                            className="input"
                             label="Subject"
                             placeholder="CN Web"
                             onChange={(e) => setSubject(e.target.value)}
                         />
 
                         <Input
-                            width="186px"
+                            className="input"
                             label="Semester"
                             placeholder="20222"
                             type="number"
@@ -74,8 +75,8 @@ const NewClass = () => {
 
 
                         <Input
-                            width="186px"
-                            label="totalStudent"
+                            className="input"
+                            label="Total Students"
                             placeholder="50"
                             type="number"
                             bordered
@@ -83,8 +84,8 @@ const NewClass = () => {
                         />
 
 
-                        <Input
-                            width="186px"
+                        <Textarea
+                            className="input"
                             label="Description"
                             placeholder="A note here"
                             onChange={(e) => setDescription(e.target.value)}
@@ -101,9 +102,13 @@ const NewClass = () => {
                 </div>
             ) : (
                 <div className="content">
-                    <h1>Class {classID} is created!</h1>
+                    <h1>The class is created sucessfully!</h1>
+                    <br/>
                     <p>You can get the QR code by going to Dashboard - Classes</p>
-                    <button>Let&apos;s go!</button>
+                    <br/>
+                    <button className="ok">
+                        <Link href="/dashboard/classes">Let&apos;s go!</Link>
+                        </button>
                 </div>
             )}
         </>

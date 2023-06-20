@@ -8,13 +8,15 @@ const API = process.env.NEXT_PUBLIC_API;
 export async function getServerSideProps(context) {
     let props = {};
     const quizID = context.params.quiz_id;
+    const IP = context.req.headers['x-forwarded-for'] || context.req.connection.remoteAddress;
 
     try {
         await axios.get(`${API}/quizzes/${quizID}`).then((res) => {
             const quizData = res.data.data;
             props = {
                 quizDetail: quizData,
-                classDetail: quizData._class
+                classDetail: quizData._class,
+                IP: IP
             }
         })
     }
@@ -43,8 +45,8 @@ const QuizForm = (props) => {
 
     return (
         <Layout pageTitle="Quiz | CNWeb-30">
-            <div className="dashboard bg-background-1 h-screen bg-center bg-cover bg-no-repeat flex items-center">
-                <StudentQuiz quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={latitude} checkLon={longitude} />
+            <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
+                <StudentQuiz IP={props.IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={latitude} checkLon={longitude} />
             </div>
         </Layout>
     );

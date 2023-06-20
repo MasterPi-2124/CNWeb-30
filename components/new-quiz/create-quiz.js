@@ -3,8 +3,9 @@ import React, { useState } from "react"
 import { Input, Switch } from "@nextui-org/react";
 import Image from "next/image";
 import Logo from "@/assets/logo/cnweb-30.png";
+import Link from "next/link";
 
-const API = process.env.NEXT_PUBLIC_API
+const API = process.env.NEXT_PUBLIC_API;
 
 const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
     const [submitOK, setSubmitOK] = useState(false);
@@ -37,6 +38,7 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
         console.log(data)
         axios.post(`${API}/quizzes`, data).then(response => {
             console.log(response.data);
+            setSubmitOK(true);
             setStartDate();
             setStartTime();
             setInterval(0);
@@ -45,7 +47,6 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
             setClassSelected({})
             localStorage.setItem("classSelected", JSON.stringify({}))
             console.log(classSelected, startDate, startTime, interval, quizzed, url);
-            setSubmitOK(true);
         }).catch(error => {
             console.error(error)
             setSubmitOK(false);
@@ -56,56 +57,59 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
         <>
             {!submitOK ? (
                 <>
-                    <h1>Create a new quiz</h1>
+                    <h1>Create a new Quiz</h1>
                     <Image src={Logo}></Image>
                     <form className="form" onSubmit={handleSubmit}>
-                        <label>found class {classSelected.className}!</label>
+                        <label>Create a quiz in class {classSelected.className}</label>
 
                         <Input
-                            width="186px"
+                            className="input"
                             required
-                            label="Date"
+                            label="Start Date"
                             type="date"
                             onChange={(e) => setStartDate(e.target.value)}
                         />
 
                         <Input
-                            width="186px"
-                            label="Time"
+                            className="input"
+                            label="Start Time"
                             required
                             type="time"
                             onChange={(e) => setStartTime(e.target.value)}
                         />
 
                         <Input
-                            width="186px"
+                            className="input"
                             required
-                            label="Interval"
+                            label="Interval (in minutes)"
                             type="number"
                             bordered
                             min={0}
                             max={120}
                             onChange={(e) => setInterval(e.target.value)}
                         />
-
-                        <Switch bordered
-                            isSelected={quizzed}
-                            onChange={(e) => setQuizzed(e.target.checked)}
-                        />
+                        <div className="switch">
+                            <label>Google Form included?</label>
+                            <Switch
+                                className="input"
+                                bordered
+                                label="URL included?"
+                                isSelected={quizzed}
+                                onChange={(e) => setQuizzed(e.target.checked)}
+                            />
+                        </div>
                         {console.log(quizzed)}
                         {quizzed ? <Input
-                            label="Url"
+                            className="input"
+                            label="Form URL"
                             required
                             type="url"
-                            labelLeft="https://"
-                            labelRight=".org"
                             onChange={(e) => setURL(e.target.value)}
 
                         /> : <Input
-                            label="Url"
+                            className="input-disabled"
+                            label="Form URL"
                             type="url"
-                            labelLeft="https://"
-                            labelRight=".org"
                             disabled
                         />}
                         {console.log(`Class Name: ${classSelected.className}`)}
@@ -115,14 +119,18 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
                         {console.log(`URL: `, url)}
 
                         <button type="submit">Create</button>
-                        <button onClick={handleReset}>back</button>
+                        <button onClick={handleReset}>Back</button>
                     </form>
                 </>
             ) : (
                 <>
-                    <h1>The quiz for Class {classSelected.className} is created!</h1>
-                    <p>You can get the QR code by going to Dashboard - Quiz - Quiz</p>
-                    <button>Let&apos;s go!</button>
+                    <h1>The quiz is created sucessfully!</h1>
+                    <br/>
+                    <p>You can check detail or get the QR code by going to Dashboard - Quizzes</p>
+                    <br/>
+                    <button className="ok">
+                        <Link href="/dashboard/quizzes">Let&apos;s go!</Link>
+                        </button>
                 </>
             )}
         </>
