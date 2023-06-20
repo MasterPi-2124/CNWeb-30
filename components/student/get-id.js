@@ -1,11 +1,8 @@
 
-import React, { useState } from "react"
+import React from "react"
 import { Input } from "@nextui-org/react";
 
-const API = process.env.NEXT_PUBLIC_API
-
 const GetID = ({ quizDetail, classDetail, studentID, studentName, setStudentID, handleSubmit }) => {
-
 
     return (
         <>
@@ -17,6 +14,7 @@ const GetID = ({ quizDetail, classDetail, studentID, studentName, setStudentID, 
                 <Input
                     width="186px"
                     label="Your full ID"
+                    type="number"
                     onChange={(e) => setStudentID(e.target.value)}
                 />
                 <button type="submit">Continue</button>

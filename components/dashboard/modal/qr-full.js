@@ -43,11 +43,11 @@ const QRModal = ({ startTime, endTime, url }) => {
 
     const timeRemaining = Math.max(0, end - time);
     const seconds = Math.floor((timeRemaining / 1000) % 60);
-    const minutes = Math.floor((timeRemaining / 1000 / 60) % 60);
+    const minutes = Math.floor((timeRemaining / 1000 / 60));
 
     return (
         <div className="modal space-y-6 w-full mx-auto rounded-md p-6 dark:bg-darkGrey md:p-8">
-            {/* {`${url}?lat=${location.lat}&lon=${location.lon}`} */}
+            {`${url}?lat=${location.lat}&lon=${location.lon}`}
             {time < end ? (
                 <div className="qr-wrapper">
                     <QRCodeSVG value={`${url}?lat=${location.lat}&lon=${location.lon}`} />

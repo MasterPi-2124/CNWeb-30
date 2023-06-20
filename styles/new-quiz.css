@@ -1,8 +1,8 @@
 .main-container .content {
-    /* background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.06);
     border-radius: 20px;
     border: 1px solid rgba(86, 86, 86, 0.736);
-    backdrop-filter: blur(15px); */
+    backdrop-filter: blur(15px);
     align-items: center;
     display: flex;
     flex-direction: column;

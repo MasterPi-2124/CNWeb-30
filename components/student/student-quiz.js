@@ -3,24 +3,33 @@ import GetLocation from "./get-location";
 import GetName from "./get-name";
 import GetID from "./get-id";
 import GetForm from "./get-form";
+import Cookies from "js-cookie";
 
 const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon }) => {
     const [location, setLocation] = useState();
     const [studentName, setStudentName] = useState("");
     const [studentID, setStudentID] = useState();
     const [stage, setStage] = useState(0);
+    const [submit, setSubmit] = useState(false);
 
     useEffect(() => {
-        const studentLocation = localStorage.getItem("studentLocation");
-        const studentName = localStorage.getItem("studentName");
-        const studentID = localStorage.getItem("studentID");
+        const studentLocation = Cookies.get("studentLocation");
+        const studentName = Cookies.get("studentName");
+        const studentID = Cookies.get("studentID");
+        const submit = Cookies.get("submit");
+
         if (studentLocation) {
-            setLocation(studentLocation);
+            setLocation(JSON.parse(studentLocation));
             if (studentName) {
-                setStudentName(studentName);
+                setStudentName(JSON.parse(studentName));
                 if (studentID) {
-                    setStudentID(studentID);
-                    setStage(3);
+                    setStudentID(JSON.parse(studentID));
+                    if (submit) {
+                        setSubmit(true);
+                        setStage(4);
+                    } else {
+                        setStage(3);
+                    }
                 } else {
                     setStage(2);
                 }
@@ -34,28 +43,32 @@ const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        let date = new Date();
+        date.setTime(date.getTime() + (2 * 60 * 1000)); // 2 mins from now
+
         if (location) {
-            localStorage.setItem("studentLocation", JSON.stringify(location));
+            Cookies.set("studentLocation", JSON.stringify(location), { expires: date, secure: true, sameSite: 'strict' });
             if (studentName) {
-                localStorage.setItem("studentName", JSON.stringify(studentName));
+                Cookies.set("studentName", JSON.stringify(studentName), { expires: date, secure: true, sameSite: 'strict' });
                 if (studentID) {
-                    localStorage.setItem("studentID", JSON.stringify(studentID));
-                    setStage(3);
+                    Cookies.set("studentID", JSON.stringify(studentID), { expires: date, secure: true, sameSite: 'strict' });
+                    if (submit) {
+                        Cookies.set("submit", true, { expires: date, secure: true, sameSite: 'strict' });
+                        setStage(4);
+                        console.log(submit, stage)
+                    } else {
+                        setStage(3);
+                    }
                 } else {
                     setStage(2);
                 }
             } else {
                 setStage(1);
-
             }
         } else {
             setStage(0);
         }
     };
-
-    const handleReset = () => {
-        setStage(0);
-    }
 
     return (
         <div className="content">
@@ -88,7 +101,7 @@ const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon }) => {
                         setStudentID={setStudentID}
                         handleSubmit={handleSubmit}
                     />
-                ) : (
+                ) : (stage === 3) ? (
                     <GetForm
                         IP={IP}
                         studentName={studentName}
@@ -96,7 +109,18 @@ const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon }) => {
                         quizDetail={quizDetail}
                         classDetail={classDetail}
                         studentLocation={location}
+                        submit={submit}
+                        setSubmit={setSubmit}
+                        handleSubmit={handleSubmit}
                     />
+                ) : (stage == 4) ? (
+                    <div>
+                        Your response has been received.
+                    </div>
+                ) : (
+                    <div>
+                        Your response could not be saved.
+                    </div>
                 )
             }
         </div>
