@@ -74,6 +74,8 @@ const GetLocation = ({ IP, quizDetail, classDetail, location, checkLat, checkLon
                     ) : (
                         <div>
                             <p>This seems like you are not at the class right now. You must be in the class to access to the quiz.</p>
+                            <p>Your current location: ({location.latitude}, {location.longitude})</p>
+                            <p>Your distance to the class: {distance} meters</p>
                             <button onClick={reportFail}>Bye!</button>
                         </div>
                     )}
