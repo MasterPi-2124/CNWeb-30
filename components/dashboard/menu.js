@@ -57,6 +57,13 @@ const navButton = [
 
 const Menu = ({ currentPath, minimized }) => {
     const [isShows, setIsShows] = useState([]);
+    const [mounted, setMounted] = useState(false);
+    const { systemTheme, theme, setTheme } = useTheme();
+    
+    useEffect(() => {
+        setMounted(true);
+    }, [])
+
     useEffect(() => {
         let showArray = navButton.map((_) => {
             return false;
@@ -80,11 +87,6 @@ const Menu = ({ currentPath, minimized }) => {
         }
     };
 
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => {
-        setMounted(true);
-    }, [])
-    const { systemTheme, theme, setTheme } = useTheme();
     const renderThemeChanger = () => {
         if (!mounted) return null;
         const currentTheme = theme === "system" ? systemTheme : theme;
