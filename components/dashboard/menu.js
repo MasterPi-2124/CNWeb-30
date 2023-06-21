@@ -91,19 +91,19 @@ const Menu = ({ currentPath, minimized }) => {
 
         if (currentTheme === "dark") {
             return (
-                <div>
-                    <Image src={LightIcon} alt="sun icon" className="invert dark:invert-0" role="button" onClick={() => setTheme('light')} />
+                <a onClick={() => setTheme('light')} style={{ "cursor": "pointer" }}>
+                    <Image src={LightIcon} alt="sun icon" className="invert dark:invert-0" />
                     <p>Light Mode</p>
-                </div>
+                </a>
             )
         }
 
         else {
             return (
-                <div>
-                    <Image src={DarkIcon} alt="moon icon" className="invert dark:invert-0" role="button" onClick={() => setTheme('dark')} />
+                <a onClick={() => setTheme('dark')} style={{ "cursor": "pointer" }}>
+                    <Image src={DarkIcon} alt="moon icon" className="invert dark:invert-0" />
                     <p>Dark Mode</p>
-                </div>
+                </a>
             )
         }
     };
@@ -127,7 +127,8 @@ const Menu = ({ currentPath, minimized }) => {
             <div className="menu-bar">
                 {navButton.map((button, index) => {
                     return (
-                        <div
+                        <Link
+                            href={button.path}
                             key={index}
                             onMouseEnter={() => {
                                 handleMouseEnter(button, index);
@@ -139,6 +140,7 @@ const Menu = ({ currentPath, minimized }) => {
                             style={{
                                 background: currentPath === button.text && "rgba(73, 73, 73, 0.595)",
                             }}
+
                         >
                             <Image alt="" src={button.img} />
                             <Link
@@ -155,23 +157,22 @@ const Menu = ({ currentPath, minimized }) => {
                                     isShow={isShows[index]}
                                 />
                             )}
-                        </div>
+                        </Link>
                     );
                 })}
             </div>
             <div className="menu-down flex items-center">
-                <div>
+                <Link href="/account">
                     <Image alt="an user icon" src={UserIcon} />
-                    <Link
-                        href="/account"
+                    <div
                         className="nav-button"
                         style={{
                             color: currentPath === "Account" && "#C4181A",
                         }}
                     >
                         Account
-                    </Link>
-                </div>
+                    </div>
+                </Link>
                 {renderThemeChanger()}
             </div>
         </Navbar>
