@@ -119,7 +119,7 @@
 }
 
 .menu .menu-bar {
-    min-height: calc(100vh - 80px - 40px - 24px - 120px);
+    min-height: calc(98vh - 40px - 80px - 120px);
     margin-bottom: 0px;
 }
 
