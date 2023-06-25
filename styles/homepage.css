@@ -1,0 +1,69 @@
+main.homepage h1 {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+main.homepage .anchor {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+}
+
+main.homepage .heading {
+    /* border: 1px solid red; */
+    height: 800px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    background: linear-gradient(0deg, rgba(21, 21, 21, 1) 0%, rgba(17, 17, 17, 1) 65%);
+}
+
+.heading h1 {
+    top: 30%;
+    position: inherit;
+    margin-left: 50px;
+    max-width: 500px;
+}
+
+.heading a {
+    position: inherit;
+    top: 35%;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 200;
+    border: 1px solid rgba(86, 86, 86, 0.736);
+    padding: 10px 30px;
+    border-radius: 12px;
+    background-color: #21212166;
+}
+
+.anchor h1 {
+    margin: 20px 0px;
+}
+
+.anchor p {
+    font-weight: 100;
+}
+
+.how-it-works p {
+    border: 1px solid red;
+    align-self:flex-start;
+    margin-left: 50px;
+    max-width: 40%;
+}
+
+.how-it-works .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+}
+
+.how-it-works img {
+    height: 800px;
+    object-fit: contain;
+    position: absolute;
+}

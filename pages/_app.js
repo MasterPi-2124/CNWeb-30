@@ -3,6 +3,7 @@ import "@/styles/header.css";
 import "@/styles/auth.css";
 import "@/styles/new-quiz.css";
 import "@/styles/menu.css";
+import "@/styles/homepage.css";
 import "@/styles/button.css";
 import "@/styles/main-container.css";
 import "@/styles/modal.css";

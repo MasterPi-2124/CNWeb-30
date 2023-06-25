@@ -1,6 +1,8 @@
 .header-container {
-  border-bottom: 1px solid rgb(211, 211, 211);
+  border-bottom: 1px solid rgb(133, 133, 133);
   padding: 1rem 3rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
 }
 
 .header-container .container-fluid {
@@ -27,18 +29,6 @@
   justify-items: center;
 }
 
-/* .sub-nav-li { 
-  color: #909090
-}
-
-.sub-nav-li:hover {
-  color: #C4181A !important;
-}
-
-.header-mobile {
-  display: none;
-} */
-
 @media only screen and (max-width: 1000px) {
   .header-web {
     display: none !important;
@@ -47,9 +37,4 @@
   .header-mobile {
     display: block !important;
   }
-
-  /* .header-container {
-    padding: 1.5rem 5% !important;
-    z-index: 99 !important;
-  } */
 }

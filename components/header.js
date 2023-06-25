@@ -11,15 +11,15 @@ import { useTheme } from "next-themes";
 const navButton = [
     {
         text: "How It Works",
-        path: "/how-it-works",
+        path: "#how-it-works",
     },
     {
         text: "Project",
-        path: "/project",
+        path: "#project",
     },
     {
         text: "About Us",
-        path: "/about-us",
+        path: "#about-us",
     },
 ];
 
@@ -79,7 +79,7 @@ const Header = ({ currentPath }) => {
                 })}
             </div>
             <div className="header-right flex items-center">
-                <Link className="get-started leading-10 bg-indigo-700 font-thin text-white w-32 items-center text-center" href="/login">
+                <Link className="get-started leading-10 font-thin text-white w-32 items-center text-center" href="/login">
                     Get Started
                 </Link>
                 {renderThemeChanger()}
