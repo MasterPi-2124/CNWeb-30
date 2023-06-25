@@ -15,6 +15,7 @@ export default function Home() {
         <div className='heading'>
           <Image
             src={Abstract}
+            alt="an abstract image"
             style={{
               position: "absolute",
               right: '0px',
@@ -35,12 +36,13 @@ export default function Home() {
         <div className='how-it-works anchor' id="how-it-works">
           <div className='background'>
             <Image
+              alt="a map"
               src={DottedMap}
             />
             <div className='gradient-filter'></div>
           </div>
           <h1>How It Works</h1>
-          <p>When a new quiz is created, teacher's location will also included in the quiz, and it will also look for student's current location to check if that student is in a class or not. </p>
+          <p>When a new quiz is created, teacher&apos;s location will also included in the quiz, and it will also look for student&apos;s current location to check if that student is in a class or not. </p>
         </div>
         <div className='project anchor' id="project">
           <h1>Project</h1>
