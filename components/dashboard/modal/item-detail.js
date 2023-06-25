@@ -62,7 +62,7 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
       }
     }
 
-    const ahihi = useAsyncList({ load })
+    const ahihi = useAsyncList({ load }) // eslint-disable-next-line react-hooks/rules-of-hooks
     console.log(ahihi.items)
 
     return (

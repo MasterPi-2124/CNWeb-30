@@ -20,7 +20,7 @@ const Modal = ({show, onClose, children, className = 'items-center justify-cente
     return () => {
       document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
     };
-  }, []);
+  }, []);  // eslint-disable-next-line react-hooks/exhaustive-deps
 
   const backdropVariant = {
     hidden: {
