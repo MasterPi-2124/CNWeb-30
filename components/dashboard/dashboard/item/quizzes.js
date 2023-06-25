@@ -14,7 +14,7 @@ import axios from "axios";
 const API = process.env.NEXT_PUBLIC_API;
 const HOST = process.env.NEXT_PUBLIC_BASE_URL;
 
-const QuizItem = ({ data }) => {
+const QuizItem = ({ data, token }) => {
     const [openItemModal, setOpenItemModal] = useState(false);
     const [deleteModal, setDeleteModal] = useState(false);
     const [qrModal, setQRModal] = useState(false);

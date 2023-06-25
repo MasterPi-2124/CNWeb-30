@@ -1,16 +1,43 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
-import { signIn } from "next-auth";
+import axios from "axios";
+import Cookies from "universal-cookie";
+
+const API = process.env.NEXT_PUBLIC_API;
+const cookies = new Cookies();
 
 const LogInForm = ({ currentPath }) => {
     const router = useRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
+    const [signedIn, setSignedIn] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // TODO: handle form submission
+
+        const data = {
+            email: email,
+            password: password
+        }
+        console.log(data);
+
+        axios.post(`${API}/users/login`, data).then(response => {
+            console.log(response);
+            setEmail("");
+            setPassword("");
+            setRememberMe(false);
+            setSignedIn(true);
+            cookies.set("TOKEN", response.data.data.token, {
+                path: "/"
+            })
+            router.push('/dashboard');
+        }).catch(error => {
+            console.log(error);
+            setSignedIn(false);
+            setPassword("");
+            alert("Email or password is incorrect!");
+        })
     };
     return (
         <div className="auth-form flex flex-row items-center">
@@ -22,7 +49,7 @@ const LogInForm = ({ currentPath }) => {
             ) : new Date().getHours() < 18 ? (
                 <div className="left-form text-right w-6/12 pr-5">
                     <h1 className="text-4xl font-bold">Good Afternoon!</h1>
-                    <p className="leading-7 font-thin">Hope you bring pizza!</p>
+                    <p className="leading-7 font-thin">How is it going?</p>
                 </div>
             ) : (
                 <div className="left-form text-right w-6/12 pr-5">
@@ -68,13 +95,12 @@ const LogInForm = ({ currentPath }) => {
                             </span>
                         </label>
                     </div>
-                    <button type="submit" className="h-12 bg-blue w-full font-thin text-lg">Sign In</button>
+                    <button type="submit" className="h-12 w-full font-thin text-lg">Sign In</button>
                 </form>
 
                 <div className="separator flex items-center text-center">Or</div>
-                <button type="button" className="h-12 bg-blue w-full font-thin text-lg" onClick={() => signIn()}>Continue with Google</button>
-                <button type="button" className="h-12 bg-blue w-full font-thin text-lg" onClick={() => router.push('/register')}>Don&apos;t have an account? Sign Up</button>
-                <a className="block font-thin text-center underline w-full">Forgot your password?</a>
+                <button type="button" className="h-12 w-full font-thin text-lg" onClick={() => router.push('/register')}>Don&apos;t have an account? Sign Up</button>
+                <a className="forgot block font-thin text-center underline w-full">Forgot your password?<br/>Sorry I can&apos;t help, I&apos;m even not a button lol</a>
             </div>
 
 

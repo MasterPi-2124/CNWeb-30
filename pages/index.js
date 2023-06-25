@@ -48,7 +48,7 @@ export default function Home() {
                 Manage your classrooms in an easiest way ever
               </h1>
               <Link href="/dashboard">
-                Get started
+                Go to Dashboard
               </Link>
             </ParallaxBanner>
           </div>
@@ -80,7 +80,7 @@ export default function Home() {
                       <>
                         <h1>How It Works</h1>
                         <p>
-                          When a new quiz is created, teacher&apos;s location will also included in the quiz,
+                          When a new quiz is created, teacher&apos;s location will be also included in the quiz,
                           and it will also look for student&apos;s current location to check if that student is
                           in a class or not.
                         </p>
@@ -96,15 +96,14 @@ export default function Home() {
                 height: "100%",
                 position: "relative"
               }}
-            >
-            </ParallaxBanner>
+            />
           </div>
 
           <div className='project anchor' id="project">
             <h1>Project</h1>
             <p>
-              We use NextJS and MongoDB for the front-end code and back-end code,
-              which is hosted in Hetzner and proxied behind Nginx and Cloudflare.
+              We use NextJS and ExpressJS for the front-end and back-end code,
+              which is hosted in Hetzner servers and proxied behind Nginx and Cloudflare.
             </p>
             <ParallaxBanner
               className='techs'
@@ -114,12 +113,13 @@ export default function Home() {
                     children: (
                       <div className='techs'>
                         {projects.map((project, index) => (
-                          <Link href={project.link} key={index}>
+                          <Link href={project.link} key={index}
+                          >
                             <Image
                               alt="tech we used"
                               src={project.logo}
-                              width={120}
-                              height={120}
+                              width={200}
+                              height={200}
                             />
                           </Link>
                         )
@@ -134,10 +134,9 @@ export default function Home() {
               }
               style={{
                 height: "100px",
-                marginTop: "30px"
+                marginTop: "30px",
               }}
-            >
-            </ParallaxBanner>
+            />
           </div>
 
           <div className='about-us anchor' id="about-us">

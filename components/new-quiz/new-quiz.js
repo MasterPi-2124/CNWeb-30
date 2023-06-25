@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import ChooseClass from "./choose-class";
 import CreateQuiz from "./create-quiz";
 
-const NewQuiz = () => {
+const NewQuiz = ({ token }) => {
     const [classSelected, setClassSelected] = useState({});
     const [submitted, setSubmitted] = useState(false);
 
@@ -37,12 +37,14 @@ const NewQuiz = () => {
                     classSelected={classSelected}
                     setClassSelected={setClassSelected}
                     handleSubmit={handleSubmit}
+                    token={token}
                 />
             ) : (
                 <CreateQuiz
                     classSelected={classSelected}
                     setClassSelected={setClassSelected}
                     handleReset={handleReset}
+                    token={token}
                 />
             )}
         </div>

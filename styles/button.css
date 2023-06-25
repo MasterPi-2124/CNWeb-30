@@ -6,7 +6,7 @@ form button {
 }
 
 form button:hover {
-    background-color: rgb(48, 133, 231);
+    background-color: #55555566;
 }
 
 button.ok {
@@ -17,7 +17,7 @@ button.ok {
 }
 
 button.ok:hover {
-    background-color: rgb(48, 133, 231);
+    background-color: #55555566;
 }
 
 button.export-button {

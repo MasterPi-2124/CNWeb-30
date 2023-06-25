@@ -38,6 +38,7 @@
     "react-scroll-parallax": "^3.4.2",
     "reactstrap": "^9.1.9",
     "tailwindcss": "^3.3.2",
+    "universal-cookie": "^4.0.4",
     "xlsx": "^0.18.5"
   }
 }

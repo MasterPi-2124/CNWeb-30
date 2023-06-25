@@ -4,22 +4,29 @@ import axios from "axios";
 const API = process.env.NEXT_PUBLIC_API;
 const BoardContext = createContext();
 
-function BoardProvider({ data, type, children }) {
+function BoardProvider({ data, type, token, children }) {
   const [boards, setBoards] = useState(data.boards);
-  const currentBoard =  type === "quizzes" ? boards.quizzes : boards.classes;
+  const currentBoard = type === "quizzes" ? boards.quizzes : boards.classes;
   const columns = currentBoard?.columns;
 
   const deleteItem = (itemId) => {
     if (type === "quizzes") {
       try {
-        axios.delete(`${API}/quizzes/${itemId}`).then(() => {
+        axios.delete(
+          `${API}/quizzes/${itemId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            }
+          }
+        ).then(() => {
           const item = currentBoard.items.find((item) => item._id === itemId);
           const column = columns.find((column) => column.name === item.status);
           column.items = column.items.filter((id) => id !== itemId);
           currentBoard.items = currentBoard.items.filter(
             (item) => item.id !== itemId
           );
-          setBoards(prevBoards => ({...prevBoards, ...boards}));
+          setBoards(prevBoards => ({ ...prevBoards, ...boards }));
         });
 
       } catch (err) {
@@ -28,14 +35,21 @@ function BoardProvider({ data, type, children }) {
 
     } else if (type === "classes") {
       try {
-        axios.delete(`${API}/classes/${itemId}`).then(() => {
+        axios.delete(
+          `${API}/classes/${itemId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            }
+          }
+        ).then(() => {
           const item = currentBoard.items.find((item) => item._id === itemId);
           const column = columns.find((column) => column.name === item.semester);
           column.items = column.items.filter((id) => id !== itemId);
           currentBoard.items = currentBoard.items.filter(
             (item) => item.id !== itemId
           );
-          setBoards(prevBoards => ({...prevBoards, ...boards}));
+          setBoards(prevBoards => ({ ...prevBoards, ...boards }));
         });
 
       } catch (err) {

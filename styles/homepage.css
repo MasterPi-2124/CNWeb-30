@@ -37,6 +37,10 @@ main.homepage .heading {
     background-color: #21212166;
 }
 
+.heading a:hover {
+    background-color: #61616166;
+}
+
 .anchor h1 {
     margin: 30px 0px;
 }
@@ -85,11 +89,10 @@ main.homepage .heading {
     display: flex;
     flex-direction: row;
     gap: 100px;
-    /* border: 1px solid red; */
     align-items: center;
 }
 
 .project .techs a img {
-    object-fit: contain;
-    /* border: 1px solid red; */
+    max-width: 150%;
+    object-fit: cover;
 }

@@ -5,12 +5,19 @@ import * as XLSX from "xlsx";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const Export = () => {
+const Export = ({ token }) => {
     const [quizzes, setQuizzes] = useState([]);
     const [quiz, setQuiz] = useState("");
 
     useEffect(() => {
-        axios.get(`${API}/quizzes`).then(res => {
+        axios.get(
+            `${API}/quizzes`,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            }
+        ).then(res => {
             setQuizzes(res.data.data);
         }).catch(err => {
             console.error(err);

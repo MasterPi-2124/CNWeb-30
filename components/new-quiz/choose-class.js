@@ -6,13 +6,20 @@ import Logo from "@/public/logo/cnweb-30.png";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
+const ChooseClass = ({ classSelected, setClassSelected, handleSubmit, token }) => {
     const [classes, setClasses] = useState()
     const selectedValue = useMemo(() => classSelected.className, [classSelected]);
 
     const getClasses = async () => {
         try {
-            await axios.get(`${API}/classes`).then((res) => {
+            await axios.get(
+                `${API}/classes`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    }
+                }
+            ).then((res) => {
                 setClasses(res.data.data)
             })
         }
