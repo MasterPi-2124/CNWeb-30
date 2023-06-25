@@ -134,8 +134,7 @@ export default function Home() {
               }
               style={{
                 height: "100px",
-                marginTop: "30px",
-                border: "1px solid yellow"
+                marginTop: "30px"
               }}
             >
             </ParallaxBanner>
