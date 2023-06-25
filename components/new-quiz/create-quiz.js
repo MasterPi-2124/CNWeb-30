@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react"
 import { Input, Switch } from "@nextui-org/react";
 import Image from "next/image";
-import Logo from "@/assets/logo/cnweb-30.png";
+import Logo from "@/public/logo/cnweb-30.png";
 import Link from "next/link";
 
 const API = process.env.NEXT_PUBLIC_API;

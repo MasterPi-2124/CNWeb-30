@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Image from "next/image";
-import CNWeb from "@/assets/logo/cnweb-30.png";
+import CNWeb from "@/public/logo/cnweb-30.png";
 import LightIcon from "@/assets/icons/thick/sun.svg";
 import DarkIcon from "@/assets/icons/thick/moon.svg";
 import Link from "next/link";

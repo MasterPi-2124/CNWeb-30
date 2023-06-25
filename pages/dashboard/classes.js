@@ -2,7 +2,7 @@ import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
 import React, { useState } from "react";
 import Dashboard from "@/components/dashboard/dashboard";
-import data from "@/components/dashboard/data.json";
+import data from "@/assets/data/dashboard.json";
 import axios from "axios";
 import { BoardProvider } from '@/components/dashboard/context';
 

@@ -4,25 +4,22 @@ main.homepage h1 {
 }
 
 main.homepage .anchor {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: 1000px;
+    border: 1px solid red;
 }
 
 main.homepage .heading {
     /* border: 1px solid red; */
     height: 800px;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: contain;
     position: relative;
     background: linear-gradient(0deg, rgba(21, 21, 21, 1) 0%, rgba(17, 17, 17, 1) 65%);
 }
 
 .heading h1 {
-    top: 30%;
+    top: 40%;
     position: inherit;
     margin-left: 50px;
     max-width: 500px;
@@ -30,7 +27,7 @@ main.homepage .heading {
 
 .heading a {
     position: inherit;
-    top: 35%;
+    top: 45%;
     margin-left: 50px;
     font-size: 20px;
     font-weight: 200;
@@ -41,29 +38,58 @@ main.homepage .heading {
 }
 
 .anchor h1 {
-    margin: 20px 0px;
+    margin: 30px 0px;
 }
 
 .anchor p {
     font-weight: 100;
-}
-
-.how-it-works p {
-    border: 1px solid red;
-    align-self:flex-start;
-    margin-left: 50px;
-    max-width: 40%;
+    font-size: 20px;
 }
 
 .how-it-works .background {
     position: absolute;
     width: 100%;
-    height: 100%;
-    border: 1px solid yellow;
+    height: 1200px;
+    top: 150px;
+    z-index: 0;
 }
 
-.how-it-works img {
-    height: 800px;
-    object-fit: contain;
+.how-it-works .background img {
+    height: 1200px;
+    width: 100%;
+    object-fit: cover;
     position: absolute;
+}
+
+.background img.filter-image {
+    object-fit: stretch;
+}
+
+.how-it-works h1 {
+    z-index: 1;
+    margin-left: 50px;
+    margin-top: 500px;
+    align-self: flex-start;
+}
+
+.how-it-works p {
+    z-index: 1;
+    align-self: flex-start;
+    margin-left: 50px;
+    max-width: 40%;
+}
+
+.project .techs {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    border: 1px solid red;
+    align-items: center;
+}
+
+.project .techs a img {
+    object-fit: contain;
+    /* border: 1px solid red; */
 }

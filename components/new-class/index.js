@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/assets/logo/cnweb-30.png";
+import Logo from "@/public/logo/cnweb-30.png";
 import { Input, Textarea } from "@nextui-org/react";
 import axios from "axios";
 import React, { useState } from "react"

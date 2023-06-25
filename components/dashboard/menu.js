@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import Image from "next/image";
-import CNWeb from "@/assets/logo/cnweb-30.png";
+import CNWeb from "@/public/logo/cnweb-30.png";
 import Link from "next/link";
 import DropDown from "./dropdown";
 import { useTheme } from "next-themes";
