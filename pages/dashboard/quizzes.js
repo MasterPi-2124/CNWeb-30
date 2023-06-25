@@ -4,7 +4,7 @@ import Layout from "@/components/layout";
 import Menu from "@/components/dashboard/menu";
 import Dashboard from "@/components/dashboard/dashboard";
 import { BoardProvider } from '@/components/dashboard/context';
-import data from "@/components/dashboard/data.json";
+import data from "@/assets/data/dashboard.json";
 
 const API = process.env.NEXT_PUBLIC_API;
 
