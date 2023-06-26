@@ -1,129 +1,151 @@
 import Image from 'next/image'
 import Header from "@/components/header";
 import Layout from '@/components/layout';
-import { useEffect, useRef, useState } from "react";
+import Link from 'next/link';
+import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
+
+import { projects } from '@/assets/data/projects';
+import Abstract from "@/assets/imgs/abstract.jpg";
+import DottedMap from "@/assets/imgs/dotted-map.svg";
+import Filter from "@/assets/imgs/filter.svg";
 
 export default function Home() {
   return (
-    <Layout pageTitle="Home | CNWeb">
-      <Header currentPath={"Home"} />
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-          <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-            Get started by editing&nbsp;
-            <code className="font-mono font-bold">pages/index.js</code>
-          </p>
-          <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-            <a
-              className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
+    <ParallaxProvider>
+      <Layout pageTitle="Home | CNWeb">
+        <Header currentPath={"Home"} />
+        <main className="bg-[#111111] min-h-screen items-center justify-between homepage">
+          <div className='heading'>
+            <ParallaxBanner
+              layers={
+                [
+                  {
+                    children: (
+                      <Image
+                        src={Abstract}
+                        alt="an abstract image"
+                        style={{
+                          position: "absolute",
+                          right: '0px',
+                          bottom: '0px',
+                          width: "90%",
+                          transform: "rotate(180deg)",
+                        }}
+                      />
+                    ),
+                    speed: -15,
+                    shouldAlwaysCompleteAnimation: true,
+                  }
+                ]
+              }
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative"
+              }}
             >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className="dark:invert"
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+              <h1>
+                Manage your classrooms in an easiest way ever
+              </h1>
+              <Link href="/dashboard">
+                Go to Dashboard
+              </Link>
+            </ParallaxBanner>
           </div>
-        </div>
 
-        <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-          <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
+          <div className='how-it-works anchor' id="how-it-works">
+            <ParallaxBanner
+              layers={
+                [
+                  {
+                    children: (
+                      <div className='background'>
+                        <Image
+                          alt="a map"
+                          src={DottedMap}
+                          className="dotted-map"
+                        />
+                        <Image
+                          alt="filter"
+                          src={Filter}
+                          className="filter-image"
+                        />
+                      </div>
+                    ),
+                    speed: -15,
+                    shouldAlwaysCompleteAnimation: true,
+                  },
+                  {
+                    children: (
+                      <>
+                        <h1>How It Works</h1>
+                        <p>
+                          When a new quiz is created, teacher&apos;s location will be also included in the quiz,
+                          and it will also look for student&apos;s current location to check if that student is
+                          in a class or not.
+                        </p>
+                      </>
+                    ),
+                    speed: 25,
+                    shouldAlwaysCompleteAnimation: true,
+                  }
+                ]
+              }
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative"
+              }}
+            />
+          </div>
 
-        <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={` mb-3 text-2xl font-semibold`}>
-              Docs{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p
-              className={` m-0 max-w-[30ch] text-sm opacity-50`}
-            >
-              Find in-depth information about Next.js features and API.
+          <div className='project anchor' id="project">
+            <h1>Project</h1>
+            <p>
+              We use NextJS and ExpressJS for the front-end and back-end code,
+              which is hosted in Hetzner servers and proxied behind Nginx and Cloudflare.
             </p>
-          </a>
+            <ParallaxBanner
+              className='techs'
+              layers={
+                [
+                  {
+                    children: (
+                      <div className='techs'>
+                        {projects.map((project, index) => (
+                          <Link href={project.link} key={index}
+                          >
+                            <Image
+                              alt="tech we used"
+                              src={project.logo}
+                              width={200}
+                              height={200}
+                            />
+                          </Link>
+                        )
+                        )}
+                      </div>
+                    ),
+                    // speed: -15,
+                    translateX: [-40, 0],
+                    shouldAlwaysCompleteAnimation: true,
+                  }
+                ]
+              }
+              style={{
+                height: "100px",
+                marginTop: "30px",
+              }}
+            />
+          </div>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={` mb-3 text-2xl font-semibold`}>
-              Learn{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p
-              className={` m-0 max-w-[30ch] text-sm opacity-50`}
-            >
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+          <div className='about-us anchor' id="about-us">
+            <h1>About Us</h1>
+            ahaha
+          </div>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={` mb-3 text-2xl font-semibold`}>
-              Templates 123{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p
-              className={` m-0 max-w-[30ch] text-sm opacity-50`}
-            >
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={` mb-3 text-2xl font-semibold`}>
-              Deploy{' '}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p
-              className={` m-0 max-w-[30ch] text-sm opacity-50`}
-            >
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-    </Layout>
+        </main>
+      </Layout>
+    </ParallaxProvider>
   );
 }
-
-

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/assets/logo/cnweb-30.png";
+import Logo from "@/public/logo/cnweb-30.png";
 import { Input, Textarea } from "@nextui-org/react";
 import axios from "axios";
 import React, { useState } from "react"
@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const NewClass = () => {
+const NewClass = ({ token }) => {
     const [submitted, setSubmitted] = useState(false);
     const [classID, setClassID] = useState(0);
     const [subject, setSubject] = useState("");
@@ -27,7 +27,15 @@ const NewClass = () => {
         }
 
         console.log(data)
-        axios.post(`${API}/classes`, data).then(response => {
+        axios.post(
+            `${API}/classes`,
+            data,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            }
+        ).then(response => {
             console.log(response.data);
             setSubmitted(true);
             setClassID(0);
@@ -103,12 +111,12 @@ const NewClass = () => {
             ) : (
                 <div className="content">
                     <h1>The class is created sucessfully!</h1>
-                    <br/>
+                    <br />
                     <p>You can get the QR code by going to Dashboard - Classes</p>
-                    <br/>
+                    <br />
                     <button className="ok">
                         <Link href="/dashboard/classes">Let&apos;s go!</Link>
-                        </button>
+                    </button>
                 </div>
             )}
         </>

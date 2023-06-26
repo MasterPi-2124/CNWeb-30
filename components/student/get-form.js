@@ -11,7 +11,7 @@ const GetForm = ({ IP, studentName, studentID, quizDetail, classDetail, studentL
         if (submit && event) {
             handleSubmit(event);
         }
-    }, [submit, event]);
+    }, [submit, event]); // eslint-disable-next-line react-hooks/exhaustive-deps
 
     const handleClick = (event) => {
         event.preventDefault();

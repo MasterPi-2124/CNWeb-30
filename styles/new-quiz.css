@@ -44,7 +44,7 @@ label {
 }
 
 form input {
-    background-color: red;
+    /* background-color: red; */
 }
 
 form .input>div {

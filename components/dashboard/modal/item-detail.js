@@ -1,6 +1,7 @@
 import * as XLSX from "xlsx";
 import DeleteIcon from "@/assets/icons/thin/delete.svg";
 import Image from "next/image";
+import { Table, useAsyncList } from "@nextui-org/react";
 
 const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
   if (type === "class") {
@@ -55,6 +56,15 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
       document.body.removeChild(link);
     }
 
+    const load = () => {
+      return {
+        items: responses,
+      }
+    }
+
+    const ahihi = useAsyncList({ load }) // eslint-disable-next-line react-hooks/rules-of-hooks
+    console.log(ahihi.items)
+
     return (
       <div className="modal w-full mx-auto rounded-md p-6 dark:bg-darkGrey md:p-8">
         <div className="flex items-center justify-between gap-4 mb-6">
@@ -88,37 +98,58 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
         </div>
         <div className="responses">
           <h2>Responses:</h2>
-          <table className="responses-list">
-            <thead>
-              <tr>
-                <th>Student</th>
-                <th>Valid</th>
-                <th>Note</th>
-              </tr>
-            </thead>
-            <tbody>
-              {responses.length > 0 ? (
-                responses.map((item) => (
-                  <tr key={item._id}>
-                    <td>
+          <Table headerLined>
+            <Table.Header>
+              <Table.Column width={270}>Student</Table.Column>
+              <Table.Column width={100}>Status</Table.Column>
+              <Table.Column width={"auto"}>IP Address</Table.Column>
+            </Table.Header>
+            {console.log(ahihi.items[0])}
+            {ahihi.items.length > 0 ? (
+              <Table.Body
+                items={ahihi.items}
+                loadingState={ahihi.loadingState}
+                onLoadMore={ahihi.loadMore}>
+                {(item) => (
+                  <Table.Row key={item._id}>
+                    <Table.Cell >
                       <p className="name">
                         {item.studentName}
                       </p>
                       <p className="id">
                         {item.studentId}
                       </p>
-                    </td>
-                    <td>{item.isValid ? 'Yes' : 'No'}</td>
-                    <td>{item.note}</td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td className="empty" colSpan="3">No responses yet</td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                    </Table.Cell>
+                    <Table.Cell>
+                      {item.isValid ? (
+                        <p className="name">
+                          Success
+                        </p>
+                      ) : (
+                        <>
+                          <p className="name">
+                            Fail
+                          </p>
+                          <p className="id">
+                            {item.note}
+                          </p>
+                        </>
+                      )}
+                    </Table.Cell>
+                    <Table.Cell>{item.ipAddress}</Table.Cell>
+                  </Table.Row>
+                )}
+              </Table.Body>
+            ) : (
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell className="empty">No responses yet</Table.Cell>
+                  <Table.Cell className="empty"></Table.Cell>
+                  <Table.Cell className="empty"></Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            )}
+          </Table>
         </div>
 
         {data.status === "Finished" ? (

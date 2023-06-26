@@ -2,12 +2,12 @@ import axios from "axios";
 import React, { useState } from "react"
 import { Input, Switch } from "@nextui-org/react";
 import Image from "next/image";
-import Logo from "@/assets/logo/cnweb-30.png";
+import Logo from "@/public/logo/cnweb-30.png";
 import Link from "next/link";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
+const CreateQuiz = ({ classSelected, setClassSelected, handleReset, token }) => {
     console.log(classSelected)
     const [submitOK, setSubmitOK] = useState(false);
     const [startDate, setStartDate] = useState();
@@ -36,8 +36,18 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
             _class: classSelected.classID
         }
 
+        axios.post("as",)
+
         console.log(data)
-        axios.post(`${API}/quizzes`, data).then(response => {
+        axios.post(
+            `${API}/quizzes`,
+            data,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                }
+            }
+        ).then(response => {
             console.log(response.data);
             setSubmitOK(true);
             setStartDate();
@@ -126,12 +136,12 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
             ) : (
                 <>
                     <h1>The quiz is created sucessfully!</h1>
-                    <br/>
+                    <br />
                     <p>You can check detail or get the QR code by going to Dashboard - Quizzes</p>
-                    <br/>
+                    <br />
                     <button className="ok">
                         <Link href="/dashboard/quizzes">Let&apos;s go!</Link>
-                        </button>
+                    </button>
                 </>
             )}
         </>

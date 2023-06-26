@@ -21,9 +21,8 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'background-1' : "#212121",
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'background-1' : "url('../assets/imgs/abstract.avif')",
       },
       fontFamily: {
         segoe: ['var(--font-segoe)']

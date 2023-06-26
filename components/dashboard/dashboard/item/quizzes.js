@@ -4,7 +4,7 @@ import ItemDetailModal from "../../modal/item-detail";
 import DeleteItemModal from "../../modal/delete-item";
 import QRModal from "../../modal/qr-full";
 import { useBoards } from "../../context";
-import ClassIcon from "@/assets/icons/thick/class.svg";
+import SubjectIcon from "@/assets/icons/thick/subject.svg";
 import TimeIcon from "@/assets/icons/thick/time.svg";
 import DateIcon from "@/assets/icons/thick/date.svg";
 import HumanIcon from "@/assets/icons/thick/human.svg";
@@ -14,7 +14,7 @@ import axios from "axios";
 const API = process.env.NEXT_PUBLIC_API;
 const HOST = process.env.NEXT_PUBLIC_BASE_URL;
 
-const QuizItem = ({ data }) => {
+const QuizItem = ({ data, token }) => {
     const [openItemModal, setOpenItemModal] = useState(false);
     const [deleteModal, setDeleteModal] = useState(false);
     const [qrModal, setQRModal] = useState(false);
@@ -31,7 +31,7 @@ const QuizItem = ({ data }) => {
         } catch (err) {
             console.error(err);
         }
-    }, []);
+    }, []); // eslint-disable-next-line react-hooks/exhaustive-deps
 
     return (
         <>
@@ -53,21 +53,27 @@ const QuizItem = ({ data }) => {
                 </div>
                 <hr />
                 <div className="items-footer">
-                    <div className="footer-item">
-                        <Image alt="a class icon" src={ClassIcon} />
-                        <p>{data._class.subject}</p>
+                    <div>
+
+                        <div className="footer-item">
+                            <Image alt="a class icon" src={SubjectIcon} />
+                            <p>{data._class.subject}</p>
+                        </div>
+                        <div className="footer-item">
+                            <Image alt="a time icon" src={TimeIcon} />
+                            <p>{(new Date(data.endTime) - new Date(data.startTime)) / (1000 * 60)} mins</p>
+                        </div>
                     </div>
-                    <div className="footer-item">
-                        <Image alt="a time icon" src={TimeIcon} />
-                        <p>{(new Date(data.endTime) - new Date(data.startTime)) / (1000 * 60)} mins</p>
-                    </div>
-                    <div className="footer-item">
-                        <Image alt="a date icon" src={DateIcon} />
-                        <p>{new Date(data.startTime).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
-                    </div>
-                    <div className="footer-item">
-                        <Image alt="a human icon" src={HumanIcon} />
-                        <p>{responses.length}/{data._class.studentCount}</p>
+                    <div>
+
+                        <div className="footer-item">
+                            <Image alt="a date icon" src={DateIcon} />
+                            <p>{new Date(data.startTime).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
+                        </div>
+                        <div className="footer-item">
+                            <Image alt="a human icon" src={HumanIcon} />
+                            <p>{responses.length}/{data._class.studentCount}</p>
+                        </div>
                     </div>
                 </div>
             </li>

@@ -2,17 +2,24 @@ import axios from "axios";
 import React, { useEffect, useState, useMemo } from "react";
 import { Dropdown } from "@nextui-org/react";
 import Image from "next/image";
-import Logo from "@/assets/logo/cnweb-30.png";
+import Logo from "@/public/logo/cnweb-30.png";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
+const ChooseClass = ({ classSelected, setClassSelected, handleSubmit, token }) => {
     const [classes, setClasses] = useState()
     const selectedValue = useMemo(() => classSelected.className, [classSelected]);
 
     const getClasses = async () => {
         try {
-            await axios.get(`${API}/classes`).then((res) => {
+            await axios.get(
+                `${API}/classes`,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    }
+                }
+            ).then((res) => {
                 setClasses(res.data.data)
             })
         }
