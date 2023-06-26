@@ -55,11 +55,14 @@ const navButton = [
     }
 ];
 
-const Menu = ({ currentPath, minimized }) => {
+const Menu = ({ currentPath }) => {
+    const sidebar = React.createRef();
+    const [width, setWidth] = useState(233);
+    const [full, setFull] = useState(true);
     const [isShows, setIsShows] = useState([]);
     const [mounted, setMounted] = useState(false);
     const { systemTheme, theme, setTheme } = useTheme();
-    
+
     useEffect(() => {
         setMounted(true);
     }, [])
@@ -70,6 +73,33 @@ const Menu = ({ currentPath, minimized }) => {
         });
         setIsShows([...showArray]);
     }, []);
+
+    useEffect(() => {
+        const updateWidth = () => {
+            const container = document.querySelector('.sidebar');
+            if (container) {
+                setWidth(container.offsetWidth);
+            }
+        };
+
+        updateWidth();
+        window.addEventListener('resize', updateWidth);
+
+        return () => {
+            window.removeEventListener('resize', updateWidth);
+        };
+    }, []);
+
+    useEffect(() => {
+         if (width < 233) {
+            console.log(width)
+            setFull(false);
+        }
+    }, [width]);
+
+    const resize = () => {
+        setFull(!full);
+    }
 
     const handleMouseEnter = (button, index) => {
         if (button.subNav) {
@@ -111,73 +141,77 @@ const Menu = ({ currentPath, minimized }) => {
     };
 
     return (
-        <Navbar
-            className="menu"
-            light
-            expand="md"
-        >
-            <div className="logo flex items-center font-semibold text-xl">
-                <Image
-                    src={CNWeb}
-                    alt="cnweb logo"
-                    className="invert dark:invert-0 h-12 w-12"
-                />
-                <NavbarBrand href="/" className="text-black dark:text-white">
+        <div className={full ? `sidebar` : `sidebar minimal-size`} ref={sidebar}>
+            <Navbar
+                className="menu"
+                light
+                expand="md"
+            >
+                <NavbarBrand href="/" className="text-black dark:text-white logo flex items-center font-semibold text-xl">
+                    <Image
+                        src={CNWeb}
+                        alt="cnweb logo"
+                        className="invert dark:invert-0 h-12 w-12"
+                    />
                     CNWeb-30
                 </NavbarBrand>
-            </div>
-            <div className="menu-bar">
-                {navButton.map((button, index) => {
-                    return (
-                        <Link
-                            href={button.path}
-                            key={index}
-                            onMouseEnter={() => {
-                                handleMouseEnter(button, index);
-                            }}
-                            onMouseLeave={() => {
-                                handleMouseLeave(button, index);
-                            }}
-                            className="menu-bar-item"
-                            style={{
-                                background: currentPath === button.text && "rgba(73, 73, 73, 0.595)",
-                            }}
-
-                        >
-                            <Image alt="" src={button.img} />
+                <div className="menu-bar">
+                    {navButton.map((button, index) => {
+                        return (
                             <Link
                                 href={button.path}
-                                className="nav-button"
+                                key={index}
+                                onMouseEnter={() => {
+                                    handleMouseEnter(button, index);
+                                }}
+                                onMouseLeave={() => {
+                                    handleMouseLeave(button, index);
+                                }}
+                                className="menu-bar-item"
+                                style={{
+                                    background: currentPath === button.text && "rgba(73, 73, 73, 0.595)",
+                                }}
 
                             >
-                                {button.text}
+                                <Image alt="" src={button.img} />
+                                <Link
+                                    href={button.path}
+                                    className="nav-button"
+
+                                >
+                                    {button.text}
+                                </Link>
+                                {button.subNav && (
+                                    <DropDown
+                                        minimized={full}
+                                        buttonList={button.subNav}
+                                        isShow={isShows[index]}
+                                    />
+                                )}
                             </Link>
-                            {button.subNav && (
-                                <DropDown
-                                    minimized={minimized}
-                                    buttonList={button.subNav}
-                                    isShow={isShows[index]}
-                                />
-                            )}
-                        </Link>
-                    );
-                })}
-            </div>
-            <div className="menu-down flex items-center">
-                <Link href="/account">
-                    <Image alt="an user icon" src={UserIcon} />
-                    <div
-                        className="nav-button"
-                        style={{
-                            color: currentPath === "Account" && "#C4181A",
-                        }}
-                    >
-                        Account
-                    </div>
-                </Link>
-                {renderThemeChanger()}
-            </div>
-        </Navbar>
+                        );
+                    })}
+                </div>
+                <div className="menu-down flex items-center">
+                    <Link href="/account">
+                        <Image alt="an user icon" src={UserIcon} />
+                        <div
+                            className="nav-button"
+                            style={{
+                                color: currentPath === "Account" && "#C4181A",
+                            }}
+                        >
+                            Account
+                        </div>
+                    </Link>
+                    {renderThemeChanger()}
+                </div>
+            </Navbar>
+            <a className={full ? `resize-btn` : `resize-btn minimal-btn`} onClick={resize}>
+                <span className="up-arrow"></span>
+                <span className="down-arrow"></span>
+            </a>
+        </div>
     );
 };
 

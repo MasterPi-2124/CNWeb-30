@@ -11,7 +11,7 @@ const DropDown = ({ minimized, isShow, buttonList }) => {
           left: minimized === false && "80px" || "200px",
           borderRadius: "10px",
           border: "1px solid rgba(86, 86, 86, 0.736)",
-          zIndex: 14,
+          zIndex: 9999999,
         }}
       >
         <ul
