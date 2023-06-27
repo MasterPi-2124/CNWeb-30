@@ -3,28 +3,33 @@ import Layout from "@/components/layout";
 import React, { useState, useEffect } from "react";
 import Dashboard from "@/components/dashboard/dashboard";
 import data from "@/assets/data/dashboard.json";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import Link from "next/link";
 import { BoardProvider } from '@/components/dashboard/context';
+import validToken from "@/services/validToken";
 import Cookies from "universal-cookie";
 
-const cookies = new Cookies();
 const API = process.env.NEXT_PUBLIC_API;
-const token = cookies.get("TOKEN");
 
 const ClassesDashboard = () => {
+    const cookies = new Cookies();
+    const [token, setToken] = useState(cookies.get("TOKEN"))
     const [props, setProps] = useState(data);
-    console.log(token)
+
+    useEffect(() => {
+        const token = cookies.get("TOKEN");
+        if (validToken(token)) {
+            setToken(token);
+        } else {
+            setToken(null);
+        }
+
+    }, [token]);
 
     useEffect(() => {
         try {
-            axios.get(
+            instanceCoreApi.get(
                 `${API}/classes?groupBy=semester`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    }
-                }
             ).then((res) => {
                 let classes = [];
                 let columns = [];
@@ -48,7 +53,7 @@ const ClassesDashboard = () => {
         catch (err) {
             console.error(err);
         }
-    }, [])
+    }, []);
 
     return (
         <Layout pageTitle="Classes | CNWeb">

@@ -1,13 +1,24 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Cookies from "universal-cookie";
-
-const cookies = new Cookies();
-const token = cookies.get("TOKEN");
+import validToken from "@/services/validToken";
 
 function Dashboard() {
+  const cookies = new Cookies();
+  const [token, setToken] = useState(cookies.get("TOKEN"))
+
+  useEffect(() => {
+    const token = cookies.get("TOKEN");
+    if (validToken(token)) {
+      setToken(token);
+    } else {
+      setToken(null);
+    }
+
+  }, [token]);
+
   return (
     <Layout pageTitle="Dashboard | CNWeb">
       <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">

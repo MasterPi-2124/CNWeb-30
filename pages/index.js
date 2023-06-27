@@ -8,6 +8,10 @@ import { projects } from '@/assets/data/projects';
 import Abstract from "@/assets/imgs/abstract.jpg";
 import DottedMap from "@/assets/imgs/dotted-map.svg";
 import Filter from "@/assets/imgs/filter.svg";
+import Tech_1 from "@/assets/imgs/tech-1.svg";
+import Tech_2 from "@/assets/imgs/tech-2.png";
+import Tech_3 from "@/assets/imgs/tech-3.png";
+import Tech_4 from "@/assets/imgs/tech-4.png";
 
 export default function Home() {
   return (
@@ -80,7 +84,7 @@ export default function Home() {
                       <>
                         <h1>How It Works</h1>
                         <p>
-                          When a new quiz is created, teacher&apos;s location will be also included in the quiz,
+                          When a new quiz is created, teacher&apos;s location will be included in the quiz,
                           and it will also look for student&apos;s current location to check if that student is
                           in a class or not.
                         </p>
@@ -135,6 +139,70 @@ export default function Home() {
               style={{
                 height: "100px",
                 marginTop: "30px",
+              }}
+            />
+
+            <ParallaxBanner
+              className='diagram'
+              layers={[
+                {
+                  children: (
+                    <Image
+                      className='tech-1'
+                      alt="tech we used"
+                      src={Tech_1}
+                    />
+                  ),
+                  translateY: [25, -20],
+                  shouldAlwaysCompleteAnimation: true,
+                },
+                {
+                  children: (
+                    <Image
+                      className='tech-2'
+                      alt="tech we used"
+                      src={Tech_2}
+                    />
+                  ),
+                  translateY: [45, -30],
+                  shouldAlwaysCompleteAnimation: true,
+                },
+                {
+                  children: (
+                    <Image
+                      className='tech-3'
+                      alt="tech we used"
+                      src={Tech_3}
+                      onClick={() =>
+                        window.open(
+                          `https://github.com/MasterPi-2124/CNWeb30-Backend`
+                        )}
+                    />
+                  ),
+                  translateY: [70, -40],
+                  shouldAlwaysCompleteAnimation: true,
+                },
+                {
+                  children: (
+                    <Image
+                      className='tech-4'
+                      alt="tech we used"
+                      src={Tech_4}
+                      onClick={() =>
+                        window.open(
+                          `https://github.com/MasterPi-2124/CNWeb-30`
+                        )}
+                    />
+                  ),
+                  translateY: [100, -70],
+                  shouldAlwaysCompleteAnimation: true,
+                }
+              ]
+              }
+              style={{
+                width: "100%",
+                height: "100%",
+                position: "relative"
               }}
             />
           </div>

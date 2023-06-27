@@ -96,3 +96,44 @@ main.homepage .heading {
     max-width: 150%;
     object-fit: cover;
 }
+
+.project .diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    align-content: center;
+    align-self: center;
+}
+
+.project .diagram div {
+    justify-content: center;
+    align-items: center;
+    inset: 20px !important;
+    display: flex;
+}
+
+.project .diagram img.tech-1 {
+    height: 90%;
+    width: auto;
+}
+
+.project .diagram img.tech-2 {
+    height: 90%;
+    width: auto;
+}
+
+.project .diagram img.tech-3, img.tech-4 {
+    height: 60%;
+    width: auto;
+    cursor: pointer;
+}
+
+.project .diagram img.tech-3 {
+    margin-left: 400px;
+}
+
+.project .diagram img.tech-4 {
+    margin-right: 400px;
+}
