@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 
 const API = process.env.NEXT_PUBLIC_API
 
@@ -23,7 +23,7 @@ const GetForm = ({ IP, studentName, studentID, quizDetail, classDetail, studentL
             note: "OK"
         }
         console.log(data)
-        axios.put(`${API}/quizRecords/${quizDetail._id}`, data).then(response => {
+        instanceCoreApi.put(`${API}/quizRecords/${quizDetail._id}`, data).then(response => {
             console.log(response.data);
             setSubmit(true);
             setEvent(event);

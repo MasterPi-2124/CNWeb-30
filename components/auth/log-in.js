@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import Cookies from "universal-cookie";
 
 const API = process.env.NEXT_PUBLIC_API;
@@ -22,7 +22,7 @@ const LogInForm = ({ currentPath }) => {
         }
         console.log(data);
 
-        axios.post(`${API}/users/login`, data).then(response => {
+        instanceCoreApi.post(`${API}/users/login`, data).then(response => {
             console.log(response);
             setEmail("");
             setPassword("");

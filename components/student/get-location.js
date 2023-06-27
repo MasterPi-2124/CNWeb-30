@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 
 const API = process.env.NEXT_PUBLIC_API;
 const GetLocation = ({ IP, quizDetail, classDetail, location, checkLat, checkLon, setLocation, handleSubmit }) => {
@@ -25,7 +25,7 @@ const GetLocation = ({ IP, quizDetail, classDetail, location, checkLat, checkLon
         
         const checkIP = async () => {
             try {
-                await axios.get(`${API}/quizRecords/${quizDetail._id}`).then((res) => {
+                await instanceCoreApi.get(`${API}/quizRecords/${quizDetail._id}`).then((res) => {
                     const responses = res.data.data.studentList;
                     console.log(responses)
                 })

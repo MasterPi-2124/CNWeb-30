@@ -1,4 +1,4 @@
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import React, { useState } from "react"
 import { Input, Switch } from "@nextui-org/react";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const CreateQuiz = ({ classSelected, setClassSelected, handleReset, token }) => {
+const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
     console.log(classSelected)
     const [submitOK, setSubmitOK] = useState(false);
     const [startDate, setStartDate] = useState();
@@ -36,18 +36,8 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset, token }) => 
             _class: classSelected.classID
         }
 
-        axios.post("as",)
-
         console.log(data)
-        axios.post(
-            `${API}/quizzes`,
-            data,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                }
-            }
-        ).then(response => {
+        instanceCoreApi.post(`${API}/quizzes`, data).then(response => {
             console.log(response.data);
             setSubmitOK(true);
             setStartDate();

@@ -1,30 +1,34 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Cookies from "universal-cookie";
 import Layout from "@/components/layout";
 import Menu from "@/components/dashboard/menu";
-import Dashboard from "@/components/dashboard/dashboard";
-import Link from "next/link";
-import { BoardProvider } from '@/components/dashboard/context';
+import validToken from "@/services/validToken";
 import data from "@/assets/data/dashboard.json";
-import Cookies from "universal-cookie";
+import React, { useState, useEffect } from "react";
+import { instanceCoreApi } from "@/services/setupAxios";
+import Dashboard from "@/components/dashboard/dashboard";
+import { BoardProvider } from '@/components/dashboard/context';
 
-const cookies = new Cookies();
 const API = process.env.NEXT_PUBLIC_API;
-const token = cookies.get("TOKEN");
 
 const QuizzesDashboard = () => {
-    const [props, setProps] = useState(data);
+    const cookies = new Cookies();
+    const [boardsData, setBoardsData] = useState();
+    const [token, setToken] = useState(cookies.get("TOKEN"));
+
+    useEffect(() => {
+        const token = cookies.get("TOKEN");
+        if (validToken(token)) {
+            setToken(token);
+        } else {
+            setToken(null);
+        }
+
+    }, [token]);
 
     useEffect(() => {
         try {
-            axios.get(
-                `${API}/quizzes/`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    }
-                }
-            ).then((res) => {
+            instanceCoreApi.get(`${API}/quizzes/`).then((res) => {
                 data.boards.quizzes.items = res.data.data;
                 data.boards.quizzes.columns.map((column, i) => {
                     let temp = [];
@@ -35,7 +39,7 @@ const QuizzesDashboard = () => {
                     })
                     column.items = temp;
                 })
-                setProps(data);
+                setBoardsData(data);
             })
         }
         catch (err) {
@@ -43,6 +47,7 @@ const QuizzesDashboard = () => {
         }
     }, [])
 
+    console.log(boardsData)
     return (
         <Layout pageTitle="Quizzes | CNWeb">
             <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
@@ -50,8 +55,8 @@ const QuizzesDashboard = () => {
                     <>
                         <Menu currentPath={"Dashboard"} />
                         <div className="main-container">
-                            <BoardProvider data={props} type="quizzes" token={token} >
-                                <Dashboard token={token} />
+                            <BoardProvider data={boardsData} type="quizzes" >
+                                <Dashboard />
                             </BoardProvider>
                         </div>
                     </>

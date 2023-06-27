@@ -1,20 +1,20 @@
-import Menu from "@/components/dashboard/menu";
-import Layout from "@/components/layout";
-import React, { useState, useEffect } from "react";
-import Dashboard from "@/components/dashboard/dashboard";
-import data from "@/assets/data/dashboard.json";
-import { instanceCoreApi } from "@/services/setupAxios";
 import Link from "next/link";
-import { BoardProvider } from '@/components/dashboard/context';
-import validToken from "@/services/validToken";
 import Cookies from "universal-cookie";
+import Layout from "@/components/layout";
+import Menu from "@/components/dashboard/menu";
+import validToken from "@/services/validToken";
+import data from "@/assets/data/dashboard.json";
+import React, { useState, useEffect } from "react";
+import { instanceCoreApi } from "@/services/setupAxios";
+import Dashboard from "@/components/dashboard/dashboard";
+import { BoardProvider } from '@/components/dashboard/context';
 
 const API = process.env.NEXT_PUBLIC_API;
 
 const ClassesDashboard = () => {
     const cookies = new Cookies();
-    const [token, setToken] = useState(cookies.get("TOKEN"))
     const [boardsData, setBoardsData] = useState();
+    const [token, setToken] = useState(cookies.get("TOKEN"))
 
     useEffect(() => {
         const token = cookies.get("TOKEN");
@@ -28,9 +28,7 @@ const ClassesDashboard = () => {
 
     useEffect(() => {
         try {
-            instanceCoreApi.get(
-                `${API}/classes?groupBy=semester`,
-            ).then((res) => {
+            instanceCoreApi.get(`${API}/classes?groupBy=semester`).then((res) => {
                 let classes = [];
                 let columns = [];
                 res.data.data.map((semester, id) => {
@@ -45,7 +43,7 @@ const ClassesDashboard = () => {
                 })
                 data.boards.classes.items = classes;
                 data.boards.classes.columns = columns;
-                setBoardsData(data)
+                setBoardsData(data);
 
             })
         }
@@ -62,8 +60,8 @@ const ClassesDashboard = () => {
                     <>
                         <Menu currentPath={"Dashboard"} />
                         <div className="main-container">
-                            <BoardProvider data={boardsData} type="classes" token={token}>
-                                <Dashboard token={token} />
+                            <BoardProvider data={boardsData} type="classes">
+                                <Dashboard />
                             </BoardProvider>
                         </div>
                     </>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import { useRouter } from 'next/router';
 
 const API = process.env.NEXT_PUBLIC_API;
@@ -31,7 +31,7 @@ const RegisterForm = ({ currentPath }) => {
 
             console.log(data);
 
-            axios.post(`${API}/users/register`, data).then(response => {
+            instanceCoreApi.post(`${API}/users/register`, data).then(response => {
                 console.log(response);
                 setEmail("");
                 setPassword("");

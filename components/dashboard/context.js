@@ -1,40 +1,38 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 
 const API = process.env.NEXT_PUBLIC_API;
 const BoardContext = createContext();
 
-function BoardProvider({ data, type, token, children }) {
+function BoardProvider({ data, type, children }) {
     const [boards, setBoards] = useState();
     const [currentBoard, setCurrentBoard] = useState();
-    const [columns, setColumns] = useState();
 
     useEffect(() => {
         setBoards(data?.boards);
         setCurrentBoard(type === "quizzes" ? data?.boards?.quizzes : data?.boards?.classes);
-        setColumns(type === "quizzes" ? data?.boards?.quizzes?.columns : data?.boards?.classes?.columns)
         console.log({ boards })
     }, [data])
-    console.log("ahihi", currentBoard, boards, columns)
+
+    console.log("ahihi", currentBoard, boards)
 
     const deleteItem = (itemId) => {
         if (type === "quizzes") {
             try {
-                axios.delete(
-                    `${API}/quizzes/${itemId}`,
-                    {
-                        headers: {
-                            Authorization: `Bearer ${token}`,
-                        }
-                    }
-                ).then(() => {
+                instanceCoreApi.delete(`${API}/quizzes/${itemId}`).then(() => {
                     const item = currentBoard.items.find((item) => item._id === itemId);
-                    const column = columns.find((column) => column.name === item.status);
-                    column.items = column.items.filter((id) => id !== itemId);
-                    currentBoard.items = currentBoard.items.filter(
-                        (item) => item.id !== itemId
-                    );
+                    const column = currentBoard?.columns?.find((column) => column.name === item.status);
+                    console.log(currentBoard);
+                    const newCurrentBoards = currentBoard;
+
+                    newCurrentBoards.items = currentBoard?.items?.filter(
+                        (item) => item._id !== itemId
+                    )
+                    column.items = column?.items?.filter((id) => id !== itemId);
+
                     setBoards(prevBoards => ({ ...prevBoards, ...boards }));
+                    setCurrentBoard(prevCurrent => ({ ...prevCurrent, ...newCurrentBoards }));
+                    console.log(currentBoard);
                 });
 
             } catch (err) {
@@ -43,30 +41,26 @@ function BoardProvider({ data, type, token, children }) {
 
         } else if (type === "classes") {
             try {
-                axios.delete(
-                    `${API}/classes/${itemId}`,
-                    {
-                        headers: {
-                            Authorization: `Bearer ${token}`,
-                        }
-                    }
-                ).then(() => {
+                instanceCoreApi.delete(`${API}/classes/${itemId}`).then(() => {
                     const item = currentBoard.items.find((item) => item._id === itemId);
-                    const column = columns?.find((column) => column.name === item.semester);
+                    const column = currentBoard?.columns?.find((column) => column.name === item.semester);
+                    console.log(currentBoard);
                     const newCurrentBoards = currentBoard;
-                    
+
                     newCurrentBoards.items = currentBoard?.items?.filter(
                         (item) => item._id !== itemId
                     )
+                    column.items = column?.items?.filter((id) => id !== itemId);
 
-                    // column.items = column?.items?.filter((id) => id !== itemId);
-                    // currentBoard.items = currentBoard?.items?.filter(
-                    //     (item) => item.id !== itemId
-                    // );
-                    console.log(currentBoard)
+                    if (column.items.length === 0) {
+                        newCurrentBoards.columns = currentBoard?.columns?.filter(
+                            (col) => col.name !== column.name
+                        )
+                    }
+
                     setBoards(prevBoards => ({ ...prevBoards, ...boards }));
-                    setCurrentBoard(prevCurrent => ({ ...prevCurrent, ...newCurrentBoards}))
-                    console.log({ currentBoard })
+                    setCurrentBoard(prevCurrent => ({ ...prevCurrent, ...newCurrentBoards }));
+                    console.log(currentBoard);
                 });
 
             } catch (err) {
@@ -79,7 +73,6 @@ function BoardProvider({ data, type, token, children }) {
     const value = {
         boards,
         currentBoard,
-        columns,
         deleteItem,
     };
 

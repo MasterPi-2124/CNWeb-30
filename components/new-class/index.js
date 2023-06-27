@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "@/public/logo/cnweb-30.png";
 import { Input, Textarea } from "@nextui-org/react";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import React, { useState } from "react"
 import Link from "next/link";
 
@@ -27,15 +27,7 @@ const NewClass = ({ token }) => {
         }
 
         console.log(data)
-        axios.post(
-            `${API}/classes`,
-            data,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                }
-            }
-        ).then(response => {
+        instanceCoreApi.post(`${API}/classes`, data).then(response => {
             console.log(response.data);
             setSubmitted(true);
             setClassID(0);

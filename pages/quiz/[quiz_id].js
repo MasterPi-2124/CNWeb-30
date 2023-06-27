@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import StudentQuiz from "@/components/student/student-quiz";
 import { useRouter } from "next/router";
 const API = process.env.NEXT_PUBLIC_API;
@@ -11,7 +11,7 @@ export async function getServerSideProps(context) {
     const IP = context.req.headers['x-forwarded-for'] || context.req.connection.remoteAddress;
 
     try {
-        await axios.get(`${API}/quizzes/${quizID}`).then((res) => {
+        await instanceCoreApi.get(`${API}/quizzes/${quizID}`).then((res) => {
             const quizData = res.data.data;
             props = {
                 quizDetail: quizData,

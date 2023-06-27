@@ -1,11 +1,10 @@
 import { useBoards } from '../context';
 import Column from './column';
 import Item from './item';
-import { useState, useEffect } from 'react';
 
-const Dashboard = ({ token }) => {
+const Dashboard = () => {
     const { currentBoard } = useBoards();
-    console.log(currentBoard)
+    console.log(currentBoard);
 
     return (
         <main className='dashboard overflow-y-hidden flex'>
@@ -15,7 +14,7 @@ const Dashboard = ({ token }) => {
                         {
                             column?.items.map((itemId, j) => {
                                 const item = currentBoard.items?.filter(item => item?._id === itemId)[0];
-                                return <Item type={currentBoard?.name} data={item} key={j} token={token} />
+                                return <Item type={currentBoard?.name} data={item} key={j}/>
                             })
                         }
                     </Column>

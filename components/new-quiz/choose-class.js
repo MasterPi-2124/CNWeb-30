@@ -1,4 +1,4 @@
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import React, { useEffect, useState, useMemo } from "react";
 import { Dropdown } from "@nextui-org/react";
 import Image from "next/image";
@@ -12,14 +12,7 @@ const ChooseClass = ({ classSelected, setClassSelected, handleSubmit, token }) =
 
     const getClasses = async () => {
         try {
-            await axios.get(
-                `${API}/classes`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    }
-                }
-            ).then((res) => {
+            await instanceCoreApi.get(`${API}/classes`).then((res) => {
                 setClasses(res.data.data)
             })
         }

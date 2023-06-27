@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Dropdown } from "@nextui-org/react";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 import * as XLSX from "xlsx";
 
 const API = process.env.NEXT_PUBLIC_API;
@@ -10,14 +10,7 @@ const Export = ({ token }) => {
     const [quiz, setQuiz] = useState("");
 
     useEffect(() => {
-        axios.get(
-            `${API}/quizzes`,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                }
-            }
-        ).then(res => {
+        instanceCoreApi.get(`${API}/quizzes`).then(res => {
             setQuizzes(res.data.data);
         }).catch(err => {
             console.error(err);
@@ -32,7 +25,7 @@ const Export = ({ token }) => {
     }
 
     const getResponses = (quizID) => {
-        axios.get(`${API}/quizRecords/${quizID}`).then(res => {
+        instanceCoreApi.get(`${API}/quizRecords/${quizID}`).then(res => {
             const list = res.data.data.studentList;
             const worksheet = XLSX.utils.json_to_sheet(list);
             const workbook = XLSX.utils.book_new();

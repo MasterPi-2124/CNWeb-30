@@ -9,12 +9,12 @@ import TimeIcon from "@/assets/icons/thick/time.svg";
 import DateIcon from "@/assets/icons/thick/date.svg";
 import HumanIcon from "@/assets/icons/thick/human.svg";
 import Image from "next/image";
-import axios from "axios";
+import { instanceCoreApi } from "@/services/setupAxios";
 
 const API = process.env.NEXT_PUBLIC_API;
 const HOST = process.env.NEXT_PUBLIC_BASE_URL;
 
-const QuizItem = ({ data, token }) => {
+const QuizItem = ({ data }) => {
     const [openItemModal, setOpenItemModal] = useState(false);
     const [deleteModal, setDeleteModal] = useState(false);
     const [qrModal, setQRModal] = useState(false);
@@ -23,7 +23,7 @@ const QuizItem = ({ data, token }) => {
 
     useEffect(() => {
         try {
-            axios.get(`${API}/quizRecords/${data._id}`).then(res => {
+            instanceCoreApi.get(`${API}/quizRecords/${data._id}`).then(res => {
                 console.log("ahihi", res.data)
                 setResponses(res.data.data.studentList);
             })
