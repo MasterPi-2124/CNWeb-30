@@ -18,22 +18,22 @@ const ClassItem = ({ data }) => {
             <li className="items-group select-none px-4 py-6 rounded-lg cursor-pointer"
                 onClick={() => setOpenItemModal(true)}>
                 <div className="item-title">
-                    <p className="heading-md mb-2 group-hover:text-mainPurple">Class #{data.codename}</p>
+                    <p className="heading-md mb-2 group-hover:text-mainPurple">Class #{data?.codename}</p>
                 </div>
                 <hr />
                 <div className="items-footer">
                     <div className="footer-item">
                         <Image alt="a human icon" src={HumanIcon} />
-                        <p>{data.studentCount} students</p>
+                        <p>{data?.studentCount} students</p>
                     </div>
 
                     <div className="footer-item">
                         <Image alt="a class icon" src={ClassIcon} />
-                        <p>{data.semester}</p>
+                        <p>{data?.semester}</p>
                     </div>
                     <div className="footer-item">
                         <Image alt="a subject icon" src={SubjectIcon} />
-                        <p>{data.subject}</p>
+                        <p>{data?.subject}</p>
                     </div>
 
                 </div>

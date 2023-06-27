@@ -27,22 +27,21 @@ const addInterceptor = (instant) => {
         async (response) => {
             const { code } = response
             if (code === 401 || (code === 500 && !response.config.headers.Authorization)) {
-                cookies.clear();
+                cookies.remove("TOKEN");
                 alert("Invalid token!!!");
             }
             return response;
         },
         (err) => {
             if (err.response?.status === 401) {
-                cookies.clear();
+                cookies.remove("TOKEN");
                 alert("Invalid token!!!");
                 window.location.href = '/login'
             }
             return Promise.reject(err)
         }
     )
-
-    return instant
+    return instant;
 }
 
 const createInstance = (api) => {

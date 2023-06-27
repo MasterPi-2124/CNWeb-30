@@ -14,7 +14,7 @@ const API = process.env.NEXT_PUBLIC_API;
 const ClassesDashboard = () => {
     const cookies = new Cookies();
     const [token, setToken] = useState(cookies.get("TOKEN"))
-    const [props, setProps] = useState(data);
+    const [boardsData, setBoardsData] = useState();
 
     useEffect(() => {
         const token = cookies.get("TOKEN");
@@ -33,7 +33,6 @@ const ClassesDashboard = () => {
             ).then((res) => {
                 let classes = [];
                 let columns = [];
-                console.log(res);
                 res.data.data.map((semester, id) => {
                     semester._classes.map(item => {
                         classes.push(item);
@@ -46,8 +45,8 @@ const ClassesDashboard = () => {
                 })
                 data.boards.classes.items = classes;
                 data.boards.classes.columns = columns;
-                setProps(data);
-                console.log(data)
+                setBoardsData(data)
+
             })
         }
         catch (err) {
@@ -55,15 +54,15 @@ const ClassesDashboard = () => {
         }
     }, []);
 
+    console.log(boardsData)
     return (
         <Layout pageTitle="Classes | CNWeb">
             <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
                 {token ? (
                     <>
-                        {console.log("ahoho", props)}
                         <Menu currentPath={"Dashboard"} />
                         <div className="main-container">
-                            <BoardProvider data={props} type="classes" token={token}>
+                            <BoardProvider data={boardsData} type="classes" token={token}>
                                 <Dashboard token={token} />
                             </BoardProvider>
                         </div>
