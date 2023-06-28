@@ -40,7 +40,12 @@ const QuizForm = (props) => {
     const [IP, setIP] = useState("");
 
     useEffect(() =>{
-        instanceCoreApi.get('https://api.myip.com/').then((res) => {
+        instanceCoreApi.get('https://api.myip.com/', {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-Type': 'application/json',
+              }
+        }).then((res) => {
             const { ip } = res.data;
             setIP(ip);
         })
