@@ -8,7 +8,6 @@ const API = process.env.NEXT_PUBLIC_API;
 
 export async function getServerSideProps(context) {
     let props = {};
-
     const decodedPath = decodePath(context.params.encoded_quiz_id);
     const quizID = decodedPath.split('?')[0];
     const queryString = decodedPath.split('?')[1];
@@ -20,12 +19,10 @@ export async function getServerSideProps(context) {
 
     try {
         const { data: { data: quizData } } = await instanceCoreApi.get(`${API}/quizzes/${quizID}`);
-        const { data: { ip } } = await instanceCoreApi.get('https://api.ipify.org/?format=json');
 
         props = {
             quizDetail: quizData,
             classDetail: quizData._class,
-            IP: ip,
             latitude: lat,
             longitude: lon
         }
@@ -33,7 +30,6 @@ export async function getServerSideProps(context) {
     catch (err) {
         console.error(err);
     }
-    console.log(props)
 
     return {
         props,
@@ -41,7 +37,14 @@ export async function getServerSideProps(context) {
 }
 
 const QuizForm = (props) => {
-    console.log("------", props)
+    const [IP, setIP] = useState("");
+
+    useEffect(() =>{
+        instanceCoreApi.get('https://api.ipify.org/?format=json').then((res) => {
+            const { ip } = res.data;
+            setIP(ip);
+        })
+    }, [props])
 
     return (
         <Layout pageTitle="Quiz | CNWeb-30">
@@ -49,7 +52,7 @@ const QuizForm = (props) => {
                 <div className="main-container">
                     {Object.keys(props).length > 0 ? (
                         props.quizDetail.status === "In Progress" ? (
-                            <StudentQuiz IP={props.IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={props.latitude} checkLon={props.longitude} />
+                            <StudentQuiz IP={IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={props.latitude} checkLon={props.longitude} />
                         ) : (
                             <div style={{
                                 display: "flex",
@@ -97,6 +100,3 @@ const QuizForm = (props) => {
 }
 
 export default QuizForm;
-
-
-// wuu0yFvAjjb0i1unYM2mT0iGEumunkRX3Q48gKRDsorMQydOLNy5BnFE6DoFACrsH9LqGkSP8ctyg6iZ1QCIfaJ7gAsn4BiOMGJBcP4jCpK1GKQesUrBioeOKp2bkI
