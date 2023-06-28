@@ -40,7 +40,7 @@ const QuizForm = (props) => {
     const [IP, setIP] = useState("");
 
     useEffect(() =>{
-        instanceCoreApi.get('https://api.ipify.org/?format=json').then((res) => {
+        instanceCoreApi.get('https://api.ipify.org?format=json').then((res) => {
             const { ip } = res.data;
             setIP(ip);
         })
