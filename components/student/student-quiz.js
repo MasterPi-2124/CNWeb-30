@@ -11,7 +11,6 @@ const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon, IDList }
     const [studentID, setStudentID] = useState();
     const [stage, setStage] = useState(0);
     const [submit, setSubmit] = useState(false);
-    console.log(IDList);
 
     useEffect(() => {
         const studentLocation = Cookies.get("studentLocation");
@@ -101,6 +100,7 @@ const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon, IDList }
                         studentName={studentName}
                         setStudentID={setStudentID}
                         handleSubmit={handleSubmit}
+                        IDList={IDList}
                     />
                 ) : (stage === 3) ? (
                     <GetForm
