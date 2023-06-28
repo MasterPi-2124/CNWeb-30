@@ -45,8 +45,9 @@ const QuizForm = (props) => {
             const { ip } = res.data;
             setIP(ip);
             instanceCoreApi.get(`${API}/quizRecords/${props.quizDetail._id}`).then((response) => {
-                const IPList = response.data.studentList.map(item => item.ipAddress);
-                setIDList(response.data.studentList.map(item => item.studentId));
+                console.log(response.data.data.studentList)
+                const IPList = response.data.data.studentList.map(item => item.ipAddress);
+                setIDList(response.data.data.studentList.map(item => item.studentId));
                 const II = IPList.find((item) => item === ip);
                 if (II) setExisted(true)
                 else setExisted(false)
