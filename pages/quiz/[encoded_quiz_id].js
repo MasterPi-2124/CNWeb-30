@@ -40,7 +40,7 @@ const QuizForm = (props) => {
     const [IP, setIP] = useState("");
 
     useEffect(() =>{
-        instanceCoreApi.get('https://api64.ipify.org?format=json', {
+        instanceCoreApi.get('https://cors-anywhere.herokuapp.com/http://api64.ipify.org?format=json', {
         }).then((res) => {
             const { ip } = res.data;
             setIP(ip);
