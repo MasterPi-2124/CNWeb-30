@@ -18,9 +18,7 @@ const GetForm = ({ IP, studentName, studentID, quizDetail, classDetail, studentL
         const data = {
             studentId: studentID,
             studentName: studentName,
-            ipAddress: IP,
-            isValid: true,
-            note: "OK"
+            ipAddress: IP
         }
         console.log(data)
         instanceCoreApi.put(`${API}/quizRecords/${quizDetail._id}`, data).then(response => {
