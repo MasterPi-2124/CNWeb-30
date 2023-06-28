@@ -5,8 +5,6 @@ import { Input } from "@nextui-org/react";
 const API = process.env.NEXT_PUBLIC_API
 
 const GetName = ({ quizDetail, classDetail, studentName, setStudentName, handleSubmit }) => {
-
-
     return (
         <>
             <h1>Welcome to Class {classDetail.codename}!</h1>

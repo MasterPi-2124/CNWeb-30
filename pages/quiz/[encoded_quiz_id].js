@@ -40,19 +40,21 @@ const QuizForm = (props) => {
     const [IDList, setIDList] = useState();
 
     useEffect(() => {
-        instanceCoreApi.get('https://cors-anywhere.herokuapp.com/http://api64.ipify.org?format=json', {
-        }).then((res) => {
-            const { ip } = res.data;
-            setIP(ip);
-            instanceCoreApi.get(`${API}/quizRecords/${props.quizDetail._id}`).then((response) => {
-                console.log(response.data.data.studentList)
-                const IPList = response.data.data.studentList.map(item => item.ipAddress);
-                setIDList(response.data.data.studentList.map(item => item.studentId));
-                const II = IPList.find((item) => item === ip);
-                if (II) setExisted(true)
-                else setExisted(false)
+        if (props.quizDetail.status === "In Progress") {
+            instanceCoreApi.get('https://cors-anywhere.herokuapp.com/http://api64.ipify.org?format=json', {
+            }).then((res) => {
+                const { ip } = res.data;
+                setIP(ip);
+                instanceCoreApi.get(`${API}/quizRecords/${props.quizDetail._id}`).then((response) => {
+                    console.log(response.data.data.studentList)
+                    const IPList = response.data.data.studentList.map(item => item.ipAddress);
+                    setIDList(response.data.data.studentList.map(item => item.studentId));
+                    const II = IPList.find((item) => item === ip);
+                    if (II) setExisted(true)
+                    else setExisted(false)
+                })
             })
-        })
+        }
     }, [props])
 
 
