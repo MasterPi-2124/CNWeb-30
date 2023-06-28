@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { QRCodeSVG } from "qrcode.react";
+import { encodePath } from "@/services/securePath";
 
-const QRModal = ({ startTime, endTime, url }) => {
+const QRModal = ({ startTime, endTime, quizID, url }) => {
     const [location, setLocation] = useState({});
     const [time, setTime] = useState(new Date().getTime());
     const end = new Date(endTime).getTime();
@@ -47,10 +48,10 @@ const QRModal = ({ startTime, endTime, url }) => {
 
     return (
         <div className="modal space-y-6 w-full mx-auto rounded-md p-6 dark:bg-darkGrey md:p-8">
-            {`${url}?lat=${location.lat}&lon=${location.lon}`}
+            {`${url}/${encodePath(`${quizID}?lat=${location.lat}&lon=${location.lon}`)}`}
             {time < end ? (
                 <div className="qr-wrapper">
-                    <QRCodeSVG value={`${url}?lat=${location.lat}&lon=${location.lon}`} />
+                    <QRCodeSVG value={`${url}/${encodePath(`${quizID}?lat=${location.lat}&lon=${location.lon}`)}`} />
                 </div>
             ) : (
             <></>

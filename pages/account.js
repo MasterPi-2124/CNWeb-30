@@ -1,23 +1,34 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
-import React, { useState } from "react";
-import Export from "@/components/export"
+import React, { useState, useEffect } from "react";
+import Account from "@/components/account"
 import Cookies from "universal-cookie";
 import Link from "next/link";
+import validToken from "@/services/validToken";
 
-const cookies = new Cookies();
-const token = cookies.get("TOKEN");
+function AccountPage() {
+  const cookies = new Cookies();
+  const [token, setToken] = useState(cookies.get("TOKEN"));
 
-function ExportPage() {
+  useEffect(() => {
+    const token = cookies.get("TOKEN");
+    if (validToken(token)) {
+      setToken(token);
+    } else {
+      setToken(null);
+    }
+
+  }, [token]);
+
   return (
-    <Layout pageTitle="Export | Dashboard">
+    <Layout pageTitle="Account | Dashboard">
       <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
         {token ? (
           <>
-            <Menu currentPath={"Export"} />
+            <Menu currentPath={"Account"} />
             <div className="main-container">
               <div className="content">
-                <Export />
+                <Account cookies={cookies} setToken={setToken} />
               </div>
             </div>
           </>
@@ -36,4 +47,4 @@ function ExportPage() {
   );
 }
 
-export default ExportPage;
+export default AccountPage;

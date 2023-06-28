@@ -25,7 +25,6 @@
     "axios": "^1.4.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "formik": "^2.4.1",
     "framer-motion": "^10.12.16",
     "js-cookie": "^3.0.5",
     "next": "^13.4.5",

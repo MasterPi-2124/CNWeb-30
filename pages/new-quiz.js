@@ -1,14 +1,25 @@
 import Menu from "@/components/dashboard/menu";
 import Layout from "@/components/layout";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewQuiz from "@/components/new-quiz/new-quiz"
 import Cookies from "universal-cookie";
 import Link from "next/link";
-
-const cookies = new Cookies();
-const token = cookies.get("TOKEN");
+import validToken from "@/services/validToken";
 
 function NewQuizPage() {
+  const cookies = new Cookies();
+  const [token, setToken] = useState(cookies.get("TOKEN"));
+
+  useEffect(() => {
+    const token = cookies.get("TOKEN");
+    if (validToken(token)) {
+      setToken(token);
+    } else {
+      setToken(null);
+    }
+
+  }, [token]);
+
   return (
     <Layout pageTitle="New Quiz | Dashboard">
       <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
@@ -16,7 +27,7 @@ function NewQuizPage() {
           <>
             <Menu currentPath={"New Quiz"} />
             <div className="main-container">
-              <NewQuiz token={token} />
+              <NewQuiz />
             </div>
           </>
         ) : (
@@ -35,3 +46,5 @@ function NewQuizPage() {
 }
 
 export default NewQuizPage;
+
+// 649b265a46b3b8dc5c8da020

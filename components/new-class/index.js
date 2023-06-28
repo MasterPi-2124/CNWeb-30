@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const NewClass = ({ token }) => {
+const NewClass = () => {
     const [submitted, setSubmitted] = useState(false);
     const [classID, setClassID] = useState(0);
     const [subject, setSubject] = useState("");

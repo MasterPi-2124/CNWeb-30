@@ -106,7 +106,8 @@ const QuizItem = ({ data }) => {
                 <QRModal
                     startTime={data.startTime}
                     endTime={data.endTime}
-                    url={`${HOST}/quiz/${data._id}`}
+                    quizID={data._id}
+                    url={`${HOST}/quiz`}
                 />
             </Modal>
         </>

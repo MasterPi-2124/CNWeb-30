@@ -5,7 +5,7 @@ import * as XLSX from "xlsx";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const Export = ({ token }) => {
+const Export = () => {
     const [quizzes, setQuizzes] = useState([]);
     const [quiz, setQuiz] = useState("");
 

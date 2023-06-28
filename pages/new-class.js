@@ -27,7 +27,7 @@ function NewClassPage() {
           <>
             <Menu currentPath={"New Class"} />
             <div className="main-container">
-              <NewClass token={token} />
+              <NewClass />
             </div>
           </>
         ) : (

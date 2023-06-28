@@ -174,13 +174,9 @@ const Menu = ({ currentPath }) => {
 
                             >
                                 <Image alt="" src={button.img} />
-                                <Link
-                                    href={button.path}
-                                    className="nav-button"
-
-                                >
+                                <p>
                                     {button.text}
-                                </Link>
+                                </p>
                                 {button.subNav && (
                                     <DropDown
                                         minimized={full}
@@ -193,16 +189,18 @@ const Menu = ({ currentPath }) => {
                     })}
                 </div>
                 <div className="menu-down flex items-center">
-                    <Link href="/account">
+                    <Link 
+                    href="/account"
+                    className="menu-bar-item"
+                    style={{
+                        background: currentPath === "Account" && "rgba(73, 73, 73, 0.595)",
+                        marginBottom: "10px"
+                    }}
+                    >
                         <Image alt="an user icon" src={UserIcon} />
-                        <div
-                            className="nav-button"
-                            style={{
-                                color: currentPath === "Account" && "#C4181A",
-                            }}
-                        >
+                        <p>
                             Account
-                        </div>
+                        </p>
                     </Link>
                     {renderThemeChanger()}
                 </div>

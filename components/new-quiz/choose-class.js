@@ -6,7 +6,7 @@ import Logo from "@/public/logo/cnweb-30.png";
 
 const API = process.env.NEXT_PUBLIC_API;
 
-const ChooseClass = ({ classSelected, setClassSelected, handleSubmit, token }) => {
+const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
     const [classes, setClasses] = useState()
     const selectedValue = useMemo(() => classSelected.className, [classSelected]);
 
