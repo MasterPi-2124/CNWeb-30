@@ -15,7 +15,7 @@ export async function getServerSideProps(context) {
     const lat = searchParam.get('lat');
     const lon = searchParam.get('lon');
 
-    console.log(quizID, lat, lon)
+    console.log(context.req.socket.remoteAddress, context.req.connection.remoteAddress, context.req.headers['x-forwarded-for'])
 
     try {
         const { data: { data: quizData } } = await instanceCoreApi.get(`${API}/quizzes/${quizID}`);
