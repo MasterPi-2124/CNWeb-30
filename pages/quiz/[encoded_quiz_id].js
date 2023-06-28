@@ -41,15 +41,18 @@ const QuizForm = (props) => {
 
     useEffect(() => {
         if (props.quizDetail.status === "In Progress") {
-            instanceCoreApi.get('https://cors-anywhere.herokuapp.com/http://api64.ipify.org?format=json', {
+            instanceCoreApi.get('https://freeipapi.com/api/json', {
             }).then((res) => {
-                const { ip } = res.data;
-                setIP(ip);
+                const { ipAddress } = res.data;
+                setIP(ipAddress);
                 instanceCoreApi.get(`${API}/quizRecords/${props.quizDetail._id}`).then((response) => {
                     console.log(response.data.data.studentList)
                     const IPList = response.data.data.studentList.map(item => item.ipAddress);
+                    const ss = response.data.data.studentList.map(item => item.studentId)
+                    console.log(ss);
                     setIDList(response.data.data.studentList.map(item => item.studentId));
-                    const II = IPList.find((item) => item === ip);
+                    const II = IPList.find((item) => item === ipAddress);
+                    console.log(IP)
                     if (II) setExisted(true)
                     else setExisted(false)
                 })
@@ -65,7 +68,11 @@ const QuizForm = (props) => {
                     {Object.keys(props).length > 0 ? (
                         !existed ? (
                             props.quizDetail.status === "In Progress" ? (
+                                <>
+                                
+                                {console.log("ahihi", IDList)}
                                 <StudentQuiz IP={IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={props.latitude} checkLon={props.longitude} IDList={IDList} />
+                                </>
                             ) : (
                                 <div style={{
                                     display: "flex",
