@@ -15,8 +15,6 @@ export async function getServerSideProps(context) {
     const lat = searchParam.get('lat');
     const lon = searchParam.get('lon');
 
-    console.log(context.req.socket.remoteAddress, context.req.connection.remoteAddress, context.req.headers['x-forwarded-for'])
-
     try {
         const { data: { data: quizData } } = await instanceCoreApi.get(`${API}/quizzes/${quizID}`);
 
@@ -38,22 +36,53 @@ export async function getServerSideProps(context) {
 
 const QuizForm = (props) => {
     const [IP, setIP] = useState("");
+    const [existed, setExisted] = useState();
+    const [IDList, setIDList] = useState();
 
-    useEffect(() =>{
+    useEffect(() => {
         instanceCoreApi.get('https://cors-anywhere.herokuapp.com/http://api64.ipify.org?format=json', {
         }).then((res) => {
             const { ip } = res.data;
             setIP(ip);
+            instanceCoreApi.get(`${API}/quizRecords/${props.quizDetail._id}`).then((response) => {
+                const IPList = response.data.studentList.map(item => item.ipAddress);
+                setIDList(response.data.studentList.map(item => item.studentId));
+                const II = IPList.find((item) => item === ip);
+                if (II) setExisted(true)
+                else setExisted(false)
+            })
         })
     }, [props])
+
 
     return (
         <Layout pageTitle="Quiz | CNWeb-30">
             <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
                 <div className="main-container">
                     {Object.keys(props).length > 0 ? (
-                        props.quizDetail.status === "In Progress" ? (
-                            <StudentQuiz IP={IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={props.latitude} checkLon={props.longitude} />
+                        !existed ? (
+                            props.quizDetail.status === "In Progress" ? (
+                                <StudentQuiz IP={IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={props.latitude} checkLon={props.longitude} IDList={IDList} />
+                            ) : (
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center"
+                                }}>
+                                    <h1 style={{
+                                        fontSize: "60px",
+                                        fontWeight: "700"
+                                    }}>
+                                        The party was over!!
+                                    </h1>
+                                    <p style={{
+                                        fontWeight: "100",
+                                        fontSize: "20px"
+                                    }}>
+                                        Sorry late bird, sometimes you have to realize that nothing is eternal, like life, or even this quiz.
+                                    </p>
+                                </div>
+                            )
                         ) : (
                             <div style={{
                                 display: "flex",
@@ -64,13 +93,13 @@ const QuizForm = (props) => {
                                     fontSize: "60px",
                                     fontWeight: "700"
                                 }}>
-                                    The party was end!!
+                                    Gotcha cheater!!
                                 </h1>
                                 <p style={{
                                     fontWeight: "100",
                                     fontSize: "20px"
                                 }}>
-                                    Sorry we can only take you half way there, because the server did not want to talk to us lmao.
+                                    Sorry but we only have one chance to try, and you already wasted it lol.
                                 </p>
                             </div>
                         )

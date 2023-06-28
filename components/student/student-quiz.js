@@ -5,12 +5,13 @@ import GetID from "./get-id";
 import GetForm from "./get-form";
 import Cookies from "js-cookie";
 
-const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon }) => {
+const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon, IDList }) => {
     const [location, setLocation] = useState();
     const [studentName, setStudentName] = useState("");
     const [studentID, setStudentID] = useState();
     const [stage, setStage] = useState(0);
     const [submit, setSubmit] = useState(false);
+    console.log(IDList);
 
     useEffect(() => {
         const studentLocation = Cookies.get("studentLocation");
