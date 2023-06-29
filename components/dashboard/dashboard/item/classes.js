@@ -3,8 +3,9 @@ import { useBoards } from "../../context";
 import Modal from "../../modal";
 import ItemDetailModal from "../../modal/item-detail";
 import HumanIcon from "@/assets/icons/thick/human.svg";
-import ClassIcon from "@/assets/icons/thick/class.svg";
+import QuizIcon from "@/assets/icons/thick/quiz.svg";
 import SubjectIcon from "@/assets/icons/thick/subject.svg";
+import DateIcon from "@/assets/icons/thick/date.svg";
 import Image from "next/image";
 import DeleteItemModal from "../../modal/delete-item";
 
@@ -22,20 +23,27 @@ const ClassItem = ({ data }) => {
                 </div>
                 <hr />
                 <div className="items-footer">
-                    <div className="footer-item">
-                        <Image alt="a human icon" src={HumanIcon} />
-                        <p>{data?.studentCount} students</p>
+                    <div>
+                        <div className="footer-item">
+                            <Image alt="a subject icon" src={SubjectIcon} />
+                            <p>{data?.subject}</p>
+                        </div>
+                        <div className="footer-item">
+                            <Image alt="a subject icon" src={QuizIcon} />
+                            <p>{data?.quizzes.length} quizzes</p>
+                        </div>
                     </div>
 
-                    <div className="footer-item">
-                        <Image alt="a class icon" src={ClassIcon} />
-                        <p>{data?.semester}</p>
+                    <div>
+                        <div className="footer-item">
+                            <Image alt="a human icon" src={HumanIcon} />
+                            <p>{data?.studentCount} students</p>
+                        </div>
+                        <div className="footer-item">
+                            <Image alt="a class icon" src={DateIcon} />
+                            <p>{data?.semester}</p>
+                        </div>
                     </div>
-                    <div className="footer-item">
-                        <Image alt="a subject icon" src={SubjectIcon} />
-                        <p>{data?.subject}</p>
-                    </div>
-
                 </div>
             </li>
             <Modal show={openItemModal} onClose={() => setOpenItemModal(false)}>

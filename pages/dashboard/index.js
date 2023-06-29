@@ -41,14 +41,14 @@ function Dashboard() {
             </div>
           </>
         ) : (
-          <>
             <div className="main-container">
               <div className="content">
                 <p>You are not logged in. Please log in to continue.</p>
-                <Link href="/login">Log In</Link>
+                <button className="ok mt-5">
+                  <Link href="/login">Log In</Link>
+                </button>
               </div>
             </div>
-          </>
         )}
       </div>
     </Layout >

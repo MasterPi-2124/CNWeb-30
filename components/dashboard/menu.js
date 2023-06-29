@@ -10,7 +10,6 @@ import DarkIcon from "@/assets/icons/thin/moon.svg";
 import DashboardIcon from "@/assets/icons/thin/dashboard.svg";
 import ExportIcon from "@/assets/icons/thin/export.svg";
 import NotiIcon from "@/assets/icons/thin/notification.svg";
-import PreIcon from "@/assets/icons/thin/settings.svg";
 import UserIcon from "@/assets/icons/thin/human.svg";
 import QuizIcon from "@/assets/icons/thin/quiz.svg";
 import ClassIcon from "@/assets/icons/thin/class.svg";
@@ -169,7 +168,8 @@ const Menu = ({ currentPath }) => {
                                 }}
                                 className="menu-bar-item"
                                 style={{
-                                    background: currentPath === button.text && "rgba(73, 73, 73, 0.595)",
+                                    background: currentPath === button.text && "linear-gradient(145deg, #4f4f4f, #2d2d2d)",
+                                    boxShadow: currentPath === button.text && "7px 7px 22px #242424, -7px -7px 22px #383838",
                                 }}
 
                             >

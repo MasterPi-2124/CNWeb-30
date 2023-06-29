@@ -14,7 +14,7 @@ const Dashboard = () => {
                         {
                             column?.items.map((itemId, j) => {
                                 const item = currentBoard.items?.filter(item => item?._id === itemId)[0];
-                                return <Item type={currentBoard?.name} data={item} key={j}/>
+                                return <Item type={currentBoard?.name} data={item} key={j} />
                             })
                         }
                     </Column>

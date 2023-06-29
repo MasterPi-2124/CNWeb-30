@@ -45,11 +45,11 @@ const Export = () => {
     }
 
     return (
-        <>
+        <div className="content dark:bg-dark-background bg-light-background text-light-text dark:text-dark-text border border-solid border-light-border dark:border-dark-border">
             <form className="form" onSubmit={handleExport}>
-                <label>First, choose a quiz to export</label>
-                <Dropdown className="classes-choices">
-                    <Dropdown.Button flat>
+                <label>Choose a quiz to export</label>
+                <Dropdown>
+                    <Dropdown.Button flat className="classes-choices">
                         {quiz ? quiz : 'Choose a quiz'}
                     </Dropdown.Button>
                     <Dropdown.Menu
@@ -61,25 +61,39 @@ const Export = () => {
                         selectedKeys={quiz}
                     >
                         {quizzes?.map((data) => {
-                            return <Dropdown.Item
-                                key={data._id}
-                                style={{ display: 'flex' }}
-                                description={`Class ID: ${data._class.codename}`}
-                            >
+                            return <Dropdown.Item key={data._id}>
                                 <button
                                     onClick={() => {
                                         setQuiz(data._id);
                                     }}
+                                    style={{
+                                        padding: "10px 0px"
+                                    }}
+                                    className="w-full dropdown-item"
                                 >
-                                    {data._id}
+                                    <p style={{
+                                        textAlign: "left",
+                                        color: "white"
+                                    }}
+                                    >
+                                        {data._id}
+                                    </p>
+                                    <p style={{
+                                        textAlign: "left",
+                                        color: "rgb(177, 177, 177)",
+                                        fontSize: "10px"
+                                    }}
+                                    >
+                                        Class ID: {data._class.codename}
+                                    </p>
                                 </button>
                             </Dropdown.Item>
                         })}
                     </Dropdown.Menu>
                 </Dropdown>
-                <button type="submit">Export</button>
+                <button className="dark:bg-dark-background" type="submit">Export</button>
             </form>
-        </>
+        </div>
     )
 };
 

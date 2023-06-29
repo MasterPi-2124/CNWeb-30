@@ -3,21 +3,41 @@ form button {
     padding: 10px;
     border-radius: 12px;
     background-color: #21212166;
+    transition-duration: 200ms;
 }
 
-form button:hover {
-    background-color: #55555566;
+button:hover {
+    background-color: rgba(255, 255, 255, 0.124) !important;
+    box-shadow: 7px 7px 22px #242424,
+    -7px -7px 22px #383838;
+}
+
+button.dropdown-item:hover {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+button.delete:hover {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+button.get-qr:hover {
+    box-shadow: none;
 }
 
 button.ok {
     border: 1px solid rgba(86, 86, 86, 0.736);
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 12px;
-    background-color: #21212166;
+    background-color: rgba(255, 255, 255, 0.06) !important;
 }
 
 button.ok:hover {
-    background-color: #55555566;
+    background-color: rgba(255, 255, 255, 0.124) !important;
+    /* background: linear-gradient(145deg, #232323, #1e1e1e); */
+box-shadow:  6px 6px 10px #1a1a1a,
+-6px -6px 10px #282828;
 }
 
 button.export-button {
@@ -27,8 +47,4 @@ button.export-button {
     width: 100%;
     border-radius: 12px;
     background-color: #21212166;
-}
-
-button.export-button:hover {
-    background-color: #55555566;
 }

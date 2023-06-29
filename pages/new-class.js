@@ -31,14 +31,14 @@ function NewClassPage() {
             </div>
           </>
         ) : (
-          <>
-            <div className="main-container">
-              <div className="content">
-                <p>You are not logged in. Please log in to continue.</p>
+          <div className="main-container">
+            <div className="content">
+              <p>You are not logged in. Please log in to continue.</p>
+              <button className="ok mt-5">
                 <Link href="/login">Log In</Link>
-              </div>
+              </button>
             </div>
-          </>
+          </div>
         )}
       </div>
     </Layout>

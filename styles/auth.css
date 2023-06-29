@@ -123,6 +123,7 @@ form div input:checked+label span:first-child:before {
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #ffffff 100%);
+  border: none;
 }
 
 .right-form .separator::after {
@@ -143,10 +144,12 @@ form div input:checked+label span:first-child:before {
   border: 1px solid rgba(86, 86, 86, 0.736);
   border-radius: 12px;
   background-color: #21212166;
+  transition-duration: 200ms;
 }
 
-.right-form > button:hover {
+.right-form button:hover {
     background-color: #55555566;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.578);
 }
 
 .right-form a.forgot {

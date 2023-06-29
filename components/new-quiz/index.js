@@ -31,21 +31,23 @@ const NewQuiz = () => {
     }
 
     return (
-        <div className="content">
-            {(!submitted) ? (
+        (!submitted) ? (
+            <div className="content dark:bg-dark-background bg-light-background text-light-text dark:text-dark-text border border-solid border-light-border dark:border-dark-border">
                 <ChooseClass
                     classSelected={classSelected}
                     setClassSelected={setClassSelected}
                     handleSubmit={handleSubmit}
                 />
-            ) : (
+            </div>
+        ) : (
+            <div className="content text-light-text dark:text-dark-text">
                 <CreateQuiz
                     classSelected={classSelected}
                     setClassSelected={setClassSelected}
                     handleReset={handleReset}
                 />
-            )}
-        </div>
+            </div>
+        )
     );
 };
 

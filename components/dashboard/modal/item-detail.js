@@ -5,11 +5,20 @@ import { Table, useAsyncList } from "@nextui-org/react";
 
 const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
   if (type === "class") {
+    const load = () => {
+      return {
+        items: data.quizzes,
+      }
+    }
+
+    const ahihi = useAsyncList({ load }) // eslint-disable-next-line react-hooks/rules-of-hooks
+    console.log(ahihi.items)
+
     return (
       <div className="modal w-full mx-auto rounded-md p-6 dark:bg-darkGrey md:p-8">
         <div className="flex items-center justify-between gap-4 mb-6">
           <h1 className="heading-lg">Class #{data.codename}</h1>
-          <button className="h-8 w-8" onClick={() => switchToDelete()}>
+          <button className="h-8 w-8 delete" onClick={() => switchToDelete()}>
             <Image
               src={DeleteIcon}
               alt="vertical ellipsis"
@@ -35,6 +44,48 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
           <p className="body-lg text-mediumGrey">
             Note: {data.note}
           </p>
+        </div>
+        <div className="responses">
+          <h2>Quizzes:</h2>
+          <Table headerLined>
+            <Table.Header>
+              <Table.Column width={270}>Quiz ID</Table.Column>
+              <Table.Column width={100}>Status</Table.Column>
+              <Table.Column width={"auto"}>Form</Table.Column>
+            </Table.Header>
+            {console.log(ahihi.items[0])}
+            {ahihi.items.length > 0 ? (
+              <Table.Body
+                items={ahihi.items}
+                loadingState={ahihi.loadingState}
+                onLoadMore={ahihi.loadMore}>
+                {(item) => (
+                  <Table.Row key={item._id}>
+                    <Table.Cell >
+                      <p className="name">
+                        {item._id}
+                      </p>
+                      <p className="id">
+                      {new Date(item.startTime).toLocaleString()}
+                      </p>
+                    </Table.Cell>
+                    <Table.Cell>
+                      {item.status}
+                    </Table.Cell>
+                    <Table.Cell>{item.formLink}</Table.Cell>
+                  </Table.Row>
+                )}
+              </Table.Body>
+            ) : (
+              <Table.Body>
+                <Table.Row>
+                  <Table.Cell className="empty">No quizzes yet</Table.Cell>
+                  <Table.Cell className="empty"></Table.Cell>
+                  <Table.Cell className="empty"></Table.Cell>
+                </Table.Row>
+              </Table.Body>
+            )}
+          </Table>
         </div>
       </div>
     )
@@ -69,7 +120,7 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
       <div className="modal w-full mx-auto rounded-md p-6 dark:bg-darkGrey md:p-8">
         <div className="flex items-center justify-between gap-4 mb-6">
           <h1 className="heading-lg">Quiz #{data._id.substring(0, 5)}</h1>
-          <button className="h-8 w-8" onClick={() => switchToDelete()}>
+          <button className="h-8 w-8 delete" onClick={() => switchToDelete()}>
             <Image
               src={DeleteIcon}
               alt="vertical ellipsis"
@@ -164,6 +215,6 @@ const ItemDetailModal = ({ type, data, responses, switchToDelete }) => {
       </div>
     )
   }
-
 }
+
 export default ItemDetailModal

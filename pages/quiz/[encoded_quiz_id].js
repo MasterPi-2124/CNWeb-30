@@ -1,7 +1,7 @@
 import Layout from "@/components/layout";
 import React, { useState, useEffect } from "react";
 import { instanceCoreApi } from "@/services/setupAxios";
-import StudentQuiz from "@/components/student/student-quiz";
+import StudentQuiz from "@/components/student";
 import { decodePath } from "@/services/securePath";
 
 const API = process.env.NEXT_PUBLIC_API;

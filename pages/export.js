@@ -22,25 +22,23 @@ function ExportPage() {
 
   return (
     <Layout pageTitle="Export | Dashboard">
-      <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
+      <div className="dashboard dark:bg-[#212121] bg-[#e0e0e0] dark:text-white text-black h-screen bg-center bg-cover bg-no-repeat flex items-center">
         {token ? (
           <>
             <Menu currentPath={"Export"} />
             <div className="main-container">
-              <div className="content">
                 <Export />
-              </div>
             </div>
           </>
         ) : (
-          <>
-            <div className="main-container">
-              <div className="content">
-                <p>You are not logged in. Please log in to continue.</p>
+          <div className="main-container">
+            <div className="content">
+              <p>You are not logged in. Please log in to continue.</p>
+              <button className="ok mt-5">
                 <Link href="/login">Log In</Link>
-              </div>
+              </button>
             </div>
-          </>
+          </div>
         )}
       </div>
     </Layout>

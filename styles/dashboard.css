@@ -17,17 +17,15 @@
     background: rgba(255, 255, 255, 0.06);
     border-radius: 20px;
     border: 1px solid rgba(86, 86, 86, 0.736);
-    backdrop-filter: blur(15px);
     max-height: 80vh;
-    justify-content: space-around;
-    width: 90%;
-    min-width: 1050px;
-    max-width: 1500px;
-    padding: 40px 60px;
+    max-width: 90% !important;
+    overflow: scroll;
+    padding: 40px 50px;
+    gap: 30px;
 }
 
 main .dashboard-column {
-    width: 31%;
+    min-width: 400px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.06);
     border-radius: 10px;
@@ -36,7 +34,8 @@ main .dashboard-column {
 
 .dashboard-column ul {
     overflow: auto;
-    height: 95%;
+    height: calc(100% - 50px);
+    padding-right: 3px;
 }
 
 .dashboard-column ul::-webkit-scrollbar {
@@ -58,6 +57,11 @@ main .dashboard-column {
     border-radius: 20px;
     border: 1px solid rgba(86, 86, 86, 0.736);
     backdrop-filter: blur(15px);
+    transition-duration: 200ms;
+}
+
+.dashboard-column ul .items-group:hover {
+    background: rgba(255, 255, 255, 0.168);
 }
 
 .items-group .item-title {

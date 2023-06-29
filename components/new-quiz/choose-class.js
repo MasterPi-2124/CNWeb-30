@@ -30,9 +30,9 @@ const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
             <h1>Create a new quiz</h1>
             <Image alt="logo" src={Logo}></Image>
             <form className="form" onSubmit={handleSubmit}>
-                <label>First, choose a class to start</label>
-                <Dropdown className="classes-choices">
-                    <Dropdown.Button flat>
+                <label className="dark:text-dark-text text-light-text">First, choose a class to start</label>
+                <Dropdown>
+                    <Dropdown.Button flat className="classes-choices">
                         {selectedValue ? selectedValue : 'Choose a class'}
                     </Dropdown.Button>
                     <Dropdown.Menu
@@ -44,27 +44,39 @@ const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
                         selectedKeys={classSelected.classID}
                     >
                         {classes?.map((data) => {
-                            return <Dropdown.Item
-                                key={data.subject}
-                                style={{ display: 'flex' }}
-                                description={`Class ID: ${data.codename}`}
-                            >
+                            return <Dropdown.Item key={data.subject}>
                                 <button
-                                    onClick={() => {
-                                        setClassSelected({
-                                            classID: data._id,
-                                            className: data.subject
-                                        });
-                                        console.log(classSelected);
+                                    onClick={() => setClassSelected({
+                                        classID: data._id,
+                                        className: data.subject,
+                                        codename: data.codename
+                                    })}
+                                    style={{
+                                        padding: "10px 0px"
                                     }}
+                                    className="w-full dropdown-item"
                                 >
-                                    {data.subject}
+                                    <p style={{
+                                        textAlign: "left",
+                                        color: "white"
+                                    }}
+                                    >
+                                        {data.subject}
+                                    </p>
+                                    <p style={{
+                                        textAlign: "left",
+                                        color: "rgb(177, 177, 177)",
+                                        fontSize: "10px"
+                                    }}
+                                    >
+                                        Class ID: {data.codename}
+                                    </p>
                                 </button>
                             </Dropdown.Item>
                         })}
                     </Dropdown.Menu>
                 </Dropdown>
-                <button type="submit">Continue</button>
+                <button className="dark:bg-dark-background" type="submit">Continue</button>
             </form>
         </>
     );

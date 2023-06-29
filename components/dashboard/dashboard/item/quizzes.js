@@ -35,12 +35,14 @@ const QuizItem = ({ data }) => {
 
     return (
         <>
-            <li className="items-group select-none px-4 py-6 rounded-lg cursor-pointer"
-                onClick={() => setOpenItemModal(true)}>
+            <li
+                className="items-group select-none px-4 py-6 rounded-lg cursor-pointer"
+                onClick={() => setOpenItemModal(true)}
+            >
                 <div className="item-title">
                     <p className="heading-md mb-2">Quiz #{data._id.substring(0, 8)}</p>
                     {data.status === "In Progress" ? (
-                        <button onClick={() => {
+                        <button className="get-qr" onClick={() => {
                             setOpenItemModal(false);
                             setQRModal(true);
                         }}>
@@ -54,7 +56,6 @@ const QuizItem = ({ data }) => {
                 <hr />
                 <div className="items-footer">
                     <div>
-
                         <div className="footer-item">
                             <Image alt="a class icon" src={SubjectIcon} />
                             <p>{data._class.subject}</p>

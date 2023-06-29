@@ -28,14 +28,12 @@ const addInterceptor = (instant) => {
             const { code } = response
             if (code === 401 || (code === 500 && !response.config.headers.Authorization)) {
                 cookies.remove("TOKEN");
-                alert("Invalid token!!!");
             }
             return response;
         },
         (err) => {
             if (err.response?.status === 401) {
                 cookies.remove("TOKEN");
-                alert("Invalid token!!!");
                 window.location.href = '/login'
             }
             return Promise.reject(err)

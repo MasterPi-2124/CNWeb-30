@@ -25,7 +25,7 @@ function LoginPage() {
   return (
     <Layout pageTitle="Log In | CNWeb">
       {!token ? (
-        <div className="log-in bg-background-1 h-screen bg-center bg-cover bg-no-repeat flex items-center justify-center">
+        <div className="log-in bg-background-abstract h-screen bg-center bg-cover bg-no-repeat flex items-center justify-center">
           <LogInForm />
         </div>
       ) : (<></>)}

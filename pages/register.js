@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 function RegisterPage() {
   return (
     <Layout pageTitle="Register | CNWeb">
-      <div className="log-in bg-background-1 h-screen bg-center bg-cover bg-no-repeat flex items-center justify-center">
+      <div className="log-in bg-background-abstract h-screen bg-center bg-cover bg-no-repeat flex items-center justify-center">
         <RegisterForm />
       </div>
     </Layout>
