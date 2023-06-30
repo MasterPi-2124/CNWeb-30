@@ -68,11 +68,7 @@ const QuizForm = (props) => {
                     {Object.keys(props).length > 0 ? (
                         !existed ? (
                             props.quizDetail.status === "In Progress" ? (
-                                <>
-                                
-                                {console.log("ahihi", IDList)}
                                 <StudentQuiz IP={IP} quizDetail={props.quizDetail} classDetail={props.classDetail} checkLat={props.latitude} checkLon={props.longitude} IDList={IDList} />
-                                </>
                             ) : (
                                 <div style={{
                                     display: "flex",

@@ -8,7 +8,20 @@ const GetForm = ({ IP, studentName, studentID, quizDetail, classDetail, studentL
     const [event, setEvent] = useState(null);
 
     useEffect(() => {
+        if (quizDetail.formLink === "") {
+            console.log(quizDetail.formLink)
+            const fakeEvent = {
+                preventDefault: () => { },
+                target: null,
+            }
+            console.log("submit", submit);
+            handleClick(fakeEvent);
+        }
+    }, [quizDetail.formLink]);
+
+    useEffect(() => {
         if (submit && event) {
+            console.log(event);
             handleSubmit(event);
         }
     }, [submit, event]); // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -32,33 +45,32 @@ const GetForm = ({ IP, studentName, studentID, quizDetail, classDetail, studentL
     }
 
     return (
-        <>
-            {ready ? (
-                <div>
-                    Quiz Status: {quizDetail.status}<br />
-                    Class Name: {classDetail.subject} <br />
-                    Student Name: {studentName} <br />
-                    Student ID: {studentID} <br />
-                    Student Location: ({studentLocation.latitude}, {studentLocation.longitude}) <br />
-                    <iframe src={quizDetail.formLink} width="640" height="534" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    <button type="submit" onClick={handleClick}>
-                        Finish
-                    </button>
-                </div>
-            ) : (
-                <div>
-                    You will enter the quiz, and it will last for 15 minutes. Are you ready?<br />
-                    Quiz Status: {quizDetail.status}<br />
-                    Class Name: {classDetail.subject} <br />
-                    Student Name: {studentName} <br />
-                    Student ID: {studentID} <br />
-                    Student Location: ({studentLocation.latitude}, {studentLocation.longitude}) <br />
-                    <button onClick={() => setReady(true)}>Ready</button>
-                </div>
-            )}
-        </>
+        ready ? (
+            <div>
+                Quiz Status: {quizDetail.status}<br />
+                Class Name: {classDetail.subject} <br />
+                Student Name: {studentName} <br />
+                Student ID: {studentID} <br />
+                Student Location: ({studentLocation.latitude}, {studentLocation.longitude}) <br />
+                <iframe src={quizDetail.formLink} width="640" height="534" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} onClick={handleClick} type="submit">
+                    Finish
+                </button>
+            </div>
+        ) : (
+            <div>
+                You will enter the quiz. Finish the q Are you ready?<br />
+                Quiz Status: {quizDetail.status}<br />
+                Class Name: {classDetail.subject} <br />
+                Student Name: {studentName} <br />
+                Student ID: {studentID} <br />
+                Student Location: ({studentLocation.latitude}, {studentLocation.longitude}) <br />
 
-
+                <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} onClick={() => setReady(true)}>
+                    Ready
+                </button>
+            </div>
+        )
     );
 };
 

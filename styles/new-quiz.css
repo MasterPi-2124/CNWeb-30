@@ -77,10 +77,6 @@ label {
     font-weight: 200 !important;
 }
 
-form input {
-    /* background-color: red; */
-}
-
 form .input>div {
     background-color: #7c7c7c44;
     color: white;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { instanceCoreApi } from "@/services/setupAxios";
 
 const API = process.env.NEXT_PUBLIC_API;
@@ -17,22 +17,22 @@ const GetLocation = ({ IP, quizDetail, classDetail, location, checkLat, checkLon
                 (error) => {
                     console.error('Error getting user location:', error);
                 }
-                );
-            } else {
-                console.error('Geolocation is not supported by this browser.');
-            }
+            );
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+        }
     }
-        
-        const checkIP = async () => {
-            try {
-                await instanceCoreApi.get(`${API}/quizRecords/${quizDetail._id}`).then((res) => {
-                    const responses = res.data.data.studentList;
-                    console.log(responses)
-                })
-            }
-            catch (err) {
-                console.error(err);
-            }
+
+    const checkIP = async () => {
+        try {
+            await instanceCoreApi.get(`${API}/quizRecords/${quizDetail._id}`).then((res) => {
+                const responses = res.data.data.studentList;
+                console.log(responses)
+            })
+        }
+        catch (err) {
+            console.error(err);
+        }
     }
 
     const calculateDistance = (lat1, lon1, lat2, lon2) => {
@@ -58,36 +58,38 @@ const GetLocation = ({ IP, quizDetail, classDetail, location, checkLat, checkLon
         console.log("reported to server")
     }
 
-
     return (
-        <div className="content">
+        <>
             <h1>Welcome to Class {classDetail.codename}!</h1>
-            <p>Subject: {classDetail.subject} - {classDetail.semester}</p>
+            <p>{classDetail.subject} - {classDetail.semester}</p>
             <br />
             {location ? (
-                <>
-                    {distance <= 40000 ? (
-                        <div>
-                            <p>Thank you. Press &quot;Start&quot; button below to continue</p>
-                            <button type="submit" onClick={handleSubmit}>Start</button>
-                        </div>
-                    ) : (
-                        <div>
-                            <p>This seems like you are not at the class right now. You must be in the class to access to the quiz.</p>
-                            <p>Your current location: ({location.latitude}, {location.longitude})</p>
-                            <p>Your distance to the class: {distance} meters</p>
-                            <button onClick={reportFail}>Bye!</button>
-                        </div>
-                    )}
-                </>
+                distance <= 40000 ? (
+                    <>
+                        <p>Thank you. Press &quot;Start&quot; button below to continue</p>
+                        <button className="ok" style={{ marginTop: "20px", padding: "10px 50px", transitionDuration: "200ms" }} onClick={handleSubmit}>
+                            Start
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <p>This seems like you are not at the class right now. You must be in the class to access to the quiz.</p>
+                        <p>Your current location: ({location.latitude}, {location.longitude})</p>
+                        <p>Your distance to the class: {distance} meters</p>
+                        <button className="ok" style={{ marginTop: "20px", padding: "10px 30px", transitionDuration: "200ms" }} onClick={reportFail}>
+                            Bye!
+                        </button>
+                    </>
+                )
             ) : (
-                <div>
+                <>
                     <p>Before continuing, please grant access to your Location</p>
-                    <button onClick={getLocation}>Get Location</button>
-                </div>
-            )
-            }
-        </div>
+                    <button className="ok" style={{ marginTop: "20px", padding: "10px 50px", transitionDuration: "200ms" }} onClick={getLocation}>
+                        Get Location
+                    </button>
+                </>
+            )}
+        </>
     );
 };
 

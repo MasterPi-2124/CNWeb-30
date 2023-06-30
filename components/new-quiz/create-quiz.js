@@ -92,7 +92,6 @@ const CreateQuiz = ({ classSelected, setClassSelected, handleReset }) => {
                             />
                             <div className="switch">
                                 <label>Google Form included?</label>
-                                
                                 <Switch
                                     className="input"
                                     bordered

@@ -27,9 +27,7 @@ function AccountPage() {
           <>
             <Menu currentPath={"Account"} />
             <div className="main-container">
-              <div className="content">
                 <Account cookies={cookies} setToken={setToken} />
-              </div>
             </div>
           </>
         ) : (

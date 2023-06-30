@@ -45,6 +45,8 @@ const StudentQuiz = ({ IP, quizDetail, classDetail, checkLat, checkLon, IDList }
         event.preventDefault();
         let date = new Date();
         date.setTime(date.getTime() + (2 * 60 * 1000)); // 2 mins from now
+        console.log("stage: ", stage)
+        console.log("submit: ", submit)
 
         if (location) {
             Cookies.set("studentLocation", JSON.stringify(location), { expires: date, secure: true, sameSite: 'strict' });

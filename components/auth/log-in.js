@@ -54,7 +54,7 @@ const LogInForm = ({ currentPath }) => {
             ) : (
                 <div className="left-form text-right w-6/12 pr-5">
                     <h1 className="text-4xl font-bold">Good Evening!</h1>
-                    <p className="leading-7 font-thin">How was your day?</p>
+                    <p className="leading-7 font-thin">How is your day?</p>
                 </div>
             )}
             <div className="separator w-px h-full ml-5" />

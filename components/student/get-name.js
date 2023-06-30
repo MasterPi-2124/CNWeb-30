@@ -1,23 +1,23 @@
-
-import React, { useState } from "react"
+import React from "react"
 import { Input } from "@nextui-org/react";
 
-const API = process.env.NEXT_PUBLIC_API
-
-const GetName = ({ quizDetail, classDetail, studentName, setStudentName, handleSubmit }) => {
+const GetName = ({ classDetail, setStudentName, handleSubmit }) => {
     return (
         <>
             <h1>Welcome to Class {classDetail.codename}!</h1>
-            <p>Subject: {classDetail.subject} - {classDetail.semester}</p>
+            <p>{classDetail.subject} - {classDetail.semester}</p>
             <br />
-            <form className="form" onSubmit={handleSubmit}>
-                <label>What&apos;s your full name?</label>
+            <form className="form" onSubmit={handleSubmit} style={{ alignItems: "center", maxWidth: "unset" }}>
+                <p style={{ fontSize: "20px", marginTop: "10px" }}>What&apos;s your full name?</p>
                 <Input
-                    width="186px"
-                    label="Your full name"
+                    className="input"
+                    required
+                    width="300px"
                     onChange={(e) => setStudentName(e.target.value)}
                 />
-                <button type="submit">Continue</button>
+                <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} type="submit">
+                    Continue
+                </button>
             </form>
         </>
     );

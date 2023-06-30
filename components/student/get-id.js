@@ -23,18 +23,21 @@ const GetID = ({ quizDetail, classDetail, studentID, studentName, setStudentID, 
                 <h1>Welcome to Class {classDetail.codename}!</h1>
                 <p>Subject: {classDetail.subject} - {classDetail.semester}</p>
                 <br />
-                <form className="form" onSubmit={handleSubmit}>
-                    <label>Hello {studentName}, what&apos;s your ID?</label>
+                <form className="form" onSubmit={handleSubmit} style={{ alignItems: "center", maxWidth: "unset" }}>
+                    <p style={{ fontSize: "20px", marginTop: "10px" }}>What&apos;s your ID?</p>
                     <Input
-                        width="186px"
-                        label="Your full ID"
+                        width="300px"
                         type="number"
+                        className="input"
+                        required
+                        min={0}
                         onChange={(e) => checkID(e.target.value)}
                     />
-                    <button type="submit">Continue</button>
+                    <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} type="submit">
+                        Continue
+                    </button>
                 </form>
             </>
-
         ) : (
             <>
                 <div style={{

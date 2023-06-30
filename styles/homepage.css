@@ -112,6 +112,7 @@ main.homepage .heading {
     align-items: center;
     inset: 20px !important;
     display: flex;
+    position: sticky;
 }
 
 .project .diagram img.tech-1 {
@@ -136,4 +137,13 @@ main.homepage .heading {
 
 .project .diagram img.tech-4 {
     margin-right: 400px;
+}
+
+.project .ahihi {
+    border: 1px solid red;
+    /* position: relative; */
+}
+
+.project .ahihi > div {
+    border: 1px solid blue;
 }
