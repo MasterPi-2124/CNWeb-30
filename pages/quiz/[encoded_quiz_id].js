@@ -9,20 +9,15 @@ const API = process.env.NEXT_PUBLIC_API;
 export async function getServerSideProps(context) {
     let props = {};
     const decodedPath = decodePath(context.params.encoded_quiz_id);
-    const quizID = decodedPath.split('?')[0];
-    const queryString = decodedPath.split('?')[1];
-    const searchParam = new URLSearchParams(queryString);
-    const lat = searchParam.get('lat');
-    const lon = searchParam.get('lon');
+    const [quizID, lat, lon ] = decodedPath.split('/');
 
     try {
         const { data: { data: quizData } } = await instanceCoreApi.get(`${API}/quizzes/${quizID}`);
-
         props = {
             quizDetail: quizData,
             classDetail: quizData._class,
-            latitude: lat,
-            longitude: lon
+            latitude: parseFloat(lat),
+            longitude: parseFloat(lon)
         }
     }
     catch (err) {
@@ -63,6 +58,7 @@ const QuizForm = (props) => {
 
     return (
         <Layout pageTitle="Quiz | CNWeb-30">
+            {console.log(props.quizDetail._id, props.latitude, props.longitude)}
             <div className="dashboard bg-[#212121] h-screen bg-center bg-cover bg-no-repeat flex items-center">
                 <div className="main-container">
                     {Object.keys(props).length > 0 ? (
