@@ -91,7 +91,7 @@ export default function Home() {
                           in a class or not.
                           <br/>
                           <br/>
-                          Quiz ID and teacher's location is protected by AES/GCM + SHA256 encryption algorithms and thus, making sure the location is identical for every students in the class.
+                          Quiz ID and teacher&apos;s location is protected by AES/GCM + SHA256 encryption algorithms and thus, making sure the location is identical for every students in the class.
                         </p>
                       </>
                     ),
@@ -250,7 +250,7 @@ export default function Home() {
                       }}>
                         <h1>Project Management</h1>
                         <p>
-                          We take advantage of Github Project together with Backend and Frontend repositories to manage all issues and features right in Github. This improves the project's speed and helps the team focus and save time.
+                          We take advantage of Github Project together with Backend and Frontend repositories to manage all issues and features right in Github. This improves the project&apos;s speed and helps the team focus and save time.
                         </p>
                         <div style={{marginTop: "80px"}}>
                           <a className='item-dashboard' href="https://github.com/MasterPi-2124/CNWeb-30" style={{padding: "40px 80px"}}>
