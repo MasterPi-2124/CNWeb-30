@@ -91,7 +91,7 @@ export default function Home() {
                           in a class or not.
                           <br/>
                           <br/>
-                          Quiz ID and teacher&apos;s location is protected by AES/GCM + SHA256 encryption algorithms and thus, making sure the location is identical for every students in the class.
+                          Quiz ID and teacher&apos;s location are protected by AES/GCM + SHA256 encryption algorithms and thus, making sure the location is identical for every students in the class.
                         </p>
                       </>
                     ),
