@@ -51,7 +51,7 @@ const QRModal = ({ startTime, endTime, quizID, url }) => {
             {console.log("---------", location, Object.keys(location).length)}
             {time < end && Object.keys(location).length > 0 ? (
                 <div className="qr-wrapper">
-                    {`${url}/${encodePath(`${quizID}/${location.lat}/${location.lon}`)}`}
+                    {/* {`${url}/${encodePath(`${quizID}/${location.lat}/${location.lon}`)}`} */}
                     <QRCodeSVG value={`${url}/${encodePath(`${quizID}/${location.lat}/${location.lon}`)}`} />
                 </div>
             ) : (

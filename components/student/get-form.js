@@ -45,31 +45,43 @@ const GetForm = ({ IP, studentName, studentID, quizDetail, classDetail, studentL
     }
 
     return (
-        ready ? (
-            <div>
-                Quiz Status: {quizDetail.status}<br />
-                Class Name: {classDetail.subject} <br />
-                Student Name: {studentName} <br />
-                Student ID: {studentID} <br />
-                Student Location: ({studentLocation.latitude}, {studentLocation.longitude}) <br />
-                <iframe src={quizDetail.formLink} width="640" height="534" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} onClick={handleClick} type="submit">
-                    Finish
-                </button>
-            </div>
-        ) : (
-            <div>
-                You will enter the quiz. Finish the q Are you ready?<br />
-                Quiz Status: {quizDetail.status}<br />
-                Class Name: {classDetail.subject} <br />
-                Student Name: {studentName} <br />
-                Student ID: {studentID} <br />
-                Student Location: ({studentLocation.latitude}, {studentLocation.longitude}) <br />
+        quizDetail.formLink !== "" ? (
+            ready ? (
+                <>
+                    <h1>Welcome to Class {classDetail.codename}!</h1>
+                    <p>Subject: {classDetail.subject} - {classDetail.semester}</p>
+                    <br />
+                    <br />
+                    <iframe src={quizDetail.formLink} width="1000" height="1400-" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <br />
+                    <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} onClick={handleClick} type="submit">
+                        Finish
+                    </button>
+                </>
+            ) : (
+                <>
+                    {console.log(quizDetail)}
+                    <h1>Welcome to Class {classDetail.codename}!</h1>
+                    <p>Subject: {classDetail.subject} - {classDetail.semester}</p>
+                    <p>
+                        You will enter the quiz. Finish the quiz first and then press &apos;Finish&apos; button to submit.
+                    </p>
+                    <br />
+                    <h3>----------------------</h3>
+                    <div>
+                        <p>Your Name: {studentName}</p>
+                        <p>Your ID: {studentID}</p>
+                        <p>Your location: ({studentLocation.latitude}, {studentLocation.longitude})</p>
+                    </div>
+                    <br />
 
-                <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} onClick={() => setReady(true)}>
-                    Ready
-                </button>
-            </div>
+                    <button className="ok" style={{ padding: "10px 50px", transitionDuration: "200ms" }} onClick={() => setReady(true)}>
+                        Ready
+                    </button>
+                </>
+            )
+        ) : (
+            <>Thank you</>
         )
     );
 };
