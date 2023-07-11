@@ -18,8 +18,8 @@ const navButton = [
         path: "#project",
     },
     {
-        text: "About Us",
-        path: "#about-us",
+        text: "Github",
+        path: "#github",
     },
 ];
 

@@ -147,3 +147,46 @@ main.homepage .heading {
 .project .ahihi > div {
     border: 1px solid blue;
 }
+
+.asd-container {
+    height: 32px;
+    margin-top: 700px;
+    width: 1200px;
+    margin-right: 50px;
+    margin-left: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    /* border: 1px solid red; */
+}
+
+.github .background {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.github .background img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.background img.filter-image {
+    object-fit: stretch;
+}
+
+.github h1 {
+    z-index: 10;
+}
+
+.github p {
+    z-index: 10;
+    max-width: 40%;
+}
+
+.github .background-filter {
+    height: 100%;
+    width: 100%;
+    background-color: #000000e1;
+    backdrop-filter: blur(2px);
+}

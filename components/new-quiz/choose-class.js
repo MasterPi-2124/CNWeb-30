@@ -69,7 +69,7 @@ const ChooseClass = ({ classSelected, setClassSelected, handleSubmit }) => {
                                         fontSize: "10px"
                                     }}
                                     >
-                                        Class ID: {data.codename}
+                                        Class ID: {data.codename} - {data.semester}
                                     </p>
                                 </button>
                             </Dropdown.Item>
