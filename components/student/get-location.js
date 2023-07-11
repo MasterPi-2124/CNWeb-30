@@ -64,7 +64,7 @@ const GetLocation = ({ IP, quizDetail, classDetail, location, checkLat, checkLon
             <p>{classDetail.subject} - {classDetail.semester}</p>
             <br />
             {location ? (
-                distance <= 40000 ? (
+                distance <= 10000 ? (
                     <>
                         <p>Thank you. Press &quot;Start&quot; button below to continue</p>
                         <button className="ok" style={{ marginTop: "20px", padding: "10px 50px", transitionDuration: "200ms" }} onClick={handleSubmit}>
